@@ -1,0 +1,40 @@
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-xs-max: ($screen-sm - 1);
+$screen-sm-max: ($screen-md - 1);
+$screen-md-max: ($screen-lg - 1);
+$screen-lg-max: ($screen-xl - 1);
+
+// Main header
+
+.header {
+  height: 100vh;
+  background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
+  box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7);
+
+
+  &__logo {
+    margin-right: 20px;
+    width: 270px;
+    .logo {
+      display: block;
+      padding: 15px 0;
+    }
+    img {
+      display: block;
+    }
+  }
+
+  &__text {}
+
+  &__img {
+    img {
+      max-height: 100vh;
+    }
+  }
+
+}

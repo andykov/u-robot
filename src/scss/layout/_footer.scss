@@ -1,0 +1,165 @@
+$footer-background-color: $white-bis !default;
+
+//.footer {
+//  background-color: $footer-background-color;
+//  padding: 3rem 1.5rem 6rem;
+//}
+
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-xs-max: ($screen-sm - 1);
+$screen-sm-max: ($screen-md - 1);
+$screen-md-max: ($screen-lg - 1);
+$screen-lg-max: ($screen-xl - 1);
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 35px;
+  @media screen and (min-width: $screen-md) {
+    padding-top: 65px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    &--left {
+      width: 50%;
+      text-align: center;
+      @media screen and (min-width: $screen-md) {
+        flex-basis: (4 / 14) * 100%;
+        max-width: (4 / 14) * 100%;
+        width: 100%;
+      }
+    }
+
+    &--middle {
+      width: 50%;
+      @media screen and (min-width: $screen-md) {
+        flex-basis: (6 / 14) * 100%;
+        max-width: (6 / 14) * 100%;
+        width: 100%;
+      }
+    }
+
+    &--right {
+      display: flex;
+      width: 100%;
+      text-align: center;
+      padding-top: 17px;
+
+      @media screen and (min-width: $screen-md) {
+        display: block;
+        padding-top: 0;
+        flex-basis: (4 / 14) * 100%;
+        max-width: (4 / 14) * 100%;
+      }
+    }
+  }
+
+  &-logo {
+    width: 121px;
+    margin: 0 auto 60px;
+  }
+
+  &-phone {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+
+    @media screen and (min-width: $screen-md) {
+      font-size: 16px;
+    }
+
+    .icon-svg {
+      display: block;
+      margin: auto;
+      fill: #f8c92e;
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  &-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $screen-md) {
+      padding-top: 10px;
+    }
+
+    &__item {
+      width: 100%;
+      margin-bottom: 15px;
+      padding-left: 27px;
+
+      @media screen and (min-width: $screen-md) {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__link {
+      font-size: 11px;
+      color: #000;
+
+      @media screen and (min-width: $screen-md) {
+        font-size: 14px;
+      }
+      @media screen and (min-width: $screen-lg) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__applinks {
+    width: 50%;
+
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 17px;
+      width: 100%;
+    }
+    .app-btn {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: $screen-md) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__payment {
+    width: 50%;
+    padding-top: 5px;
+    padding-left: 27px;
+
+    @media screen and (min-width: $screen-md) {
+      width: 100%;
+      padding-left: 0;
+      padding-top: 17px;
+    }
+    img {
+      display: block;
+      margin-bottom: 15px;
+
+      @media screen and (min-width: $screen-md) {
+        display: inline-block;
+      }
+    }
+  }
+}

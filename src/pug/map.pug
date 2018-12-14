@@ -1,0 +1,17 @@
+extends templates/main
+	
+block title
+	| Карта
+
+block css
+	// build:css css/combined.css
+	<link href="css/libs.css" rel="stylesheet">
+	<link href="css/template.css" rel="stylesheet">
+	// endbuild
+
+block content
+	
+	h1.search-title Поиск и аренда автомобилей
+	include ../blocks/search/search
+
+	include ../blocks/catalog-tabs/catalog-tabs

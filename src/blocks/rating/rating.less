@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока .rating , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.rating {
+  display: flex;
+
+  &__item {
+    margin-left: 3px;
+    width: 11px;
+    height: 12px;
+    background: url("../img/svg/star.svg") no-repeat;
+
+    &.active {
+      background: url("../img/svg/star-active.svg") no-repeat;
+    }
+  }
+}

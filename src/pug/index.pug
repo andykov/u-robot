@@ -1,0 +1,247 @@
+extends templates/main
+	
+block title
+	| Главная страница
+
+block content
+
+	header.header
+		.container
+			.header__logo
+				a.logo(href="index.html")
+					img(src="img/logo.svg", alt="u-robot.ru")
+			.columns
+				.column.is-7
+					.header__text
+						| Автоматизируй продажи и общение с клиентом
+					
+						| Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.
+					a.button(href="/") Попробуй
+					.label 10 дней бесплатно
+				.column.is-5
+					.header__img
+						img(src="img/design/personage.png", alt="image robot")
+			
+
+	section.section
+		.container
+			.columns
+				.column
+					.card
+						.card-image
+							img(src="img/svg/icon-1.svg", alt="")
+						.card-title Выгодные тарифы
+						
+						.card-body Доступные цены для разного уровня бизнеса и приятные скидки до 50%
+				.column
+					.card
+						.card-image
+							img(src="img/svg/icon-2.svg", alt="")
+						.card-title Максимум возможностей
+						
+						.card-body Поддержка всех мессенджеров и популярных соц. сетях
+				.column
+					.card
+						.card-image
+							img(src="img/svg/icon-3.svg", alt="")
+						.card-title Быстрый старт
+						
+						.card-body Настроить и запустить инструмент можно в течении 20 минут
+	section.section
+		.container
+			.columns
+				.column
+				.column
+					h2 Личный сайт во всех мессенджерах и соц. сетях
+					p Расписать что это значит, чем помогает клиенту и чем это удобно. Расписать что это значит, чем помогает клиенту и чем это удобно.Расписать что это значит, чем помогает клиенту и чем это удобно.
+					.social-choice
+						div Выбери мессенжер который тебе удобен и посмотри как это работает прямо сейчас!
+	section.section
+		.container
+			h2 Автоматизация процессов — для любого сферы
+			.columns
+				.column
+					.card-image
+					.card-title Кафе и рестораны
+					.card-body Общайтесь со своими постоянными клиентами, бронируйте столик и принимайте оплату онлайн в случае доставки
+			.column
+					.card-image
+					.card-title Туристические агенства
+					.card-body Напоминйте клиентами которые уже пользовались вашими услугами, предлагая им интересные туры и акции
+			.column
+					.card-image
+					.card-title Частные мастера
+					.card-body Обрабатывайте более 5000 заявок за 1 минуту, а так же призентуйте свои услуги без личного участия
+			.column
+					.card-image
+					.card-title Интернет магазины
+					.card-body Расширите свои продажи в месенджерах и соц. сетях, а так же подключить онлайн оплату
+			.column
+					.card-image
+					.card-title IT-компании и банки
+					.card-body Уменьшите нагрузку на техническую поддержку своей компании большую часть ответов можно автоматизировать
+			.column
+					.card-image
+					.card-title Все сферы
+					.card-body Для всех сфер, которые сталкиваются с потерей клиентов, привлечению новых и работой уже с существующей клиентской базой
+	section.section
+		.container
+			h2 Скидка 50% на месяц пользования, 5-ти первым представителям разных ниши
+			.columns
+				.column
+					.sale
+						.sale__name Рекламные агенства
+						.sale__sum 4
+				.column
+					.sale
+						.sale__name Салон красоты
+						.sale__sum 1
+				.column
+					.sale
+						.sale__name Кафе и рестораны
+						.sale__sum 1
+				.column
+					.sale
+						.sale__name Интернет магазины
+						.sale__sum 1
+				.column
+					.sale
+						.sale__name Фитнес клубы
+						.sale__sum 1
+				.column
+					.sale
+						.sale__name IT компании
+						.sale__sum 1
+				.column
+					.sale
+						.sale__name Преподователи и репетиторы
+						.sale__sum 1
+			a.button(href="") Хочу U-Robot для свой ниши
+			p 
+				| Если не нашли свою нишу, 
+				a(href="") напишите нам 
+				| и мы подберемя для вас индивидуальное решение
+
+	section.section
+		.container
+			h2 Выгодные тарифы для наших пользователей
+			.notice Попробуйте U-Robot бесплатно: если не понравится, отмените подписку, и платить не придется.
+			.buttons.has-addons.is-centered
+				button.button 1 месяц
+				button.button 
+					| 3 месяца
+					small скидка 10%
+				button.button 
+					| 6 месяцев
+					small скидка 20%
+				button.button 
+					| 12 месяцев
+					small скидка 30%
+			.columns
+				.column
+					.tariff
+						.tariff__head
+							.tariff__name U-Air
+							.tariff__price
+								| 4999
+								span ₽/мес
+						ul.tariff__options
+							li
+								| Электронная визитка
+								| в диалоговом окне мессенджера ( WhatsApp/VIBER/TELEGRAM )
+							li
+								| Персональный виртуальный ассистент
+							li
+								| Планировщик записи клиентов 
+							li
+								| Facebook/VK
+							li
+								| Неограниченая работа с существующей базой клиентов
+							li
+								| Персонализированные предложения 
+							li
+								| Полноценный e-commers
+								| интернет магазин в мессенджере
+							li
+								| Онлайн оплата
+							li
+								| Автоматизированные воронки продаж
+							li
+								| Внутренняя CRM система
+							li
+								| Интеграция с 1С и Битрикс
+						a.button(href="") Начать бесплатно
+				.column
+					.tariff
+						.tariff__head
+							.tariff__name U-Classic
+							.tariff__price
+								| 9999
+								span ₽/мес
+						ul.tariff__options
+							li
+								| Электронная визитка
+								| в диалоговом окне мессенджера ( WhatsApp/VIBER/TELEGRAM )
+							li
+								| Персональный виртуальный ассистент
+							li
+								| Планировщик записи клиентов 
+							li
+								| Facebook/VK
+							li
+								| Неограниченая работа с существующей базой клиентов
+							li
+								| Персонализированные предложения 
+							li
+								| Полноценный e-commers
+								| интернет магазин в мессенджере
+							li
+								| Онлайн оплата
+							li
+								| Автоматизированные воронки продаж
+							li
+								| Внутренняя CRM система
+							li
+								| Интеграция с 1С и Битрикс
+						a.button(href="") Начать бесплатно
+				.column
+					.tariff
+						.tariff__head
+							.tariff__name U-PRO 
+							.tariff__price
+								| 14 999
+								span ₽/мес
+						ul.tariff__options
+							li
+								| Электронная визитка
+								| в диалоговом окне мессенджера ( WhatsApp/VIBER/TELEGRAM )
+							li
+								| Персональный виртуальный ассистент
+							li
+								| Планировщик записи клиентов 
+							li
+								| Facebook/VK
+							li
+								| Неограниченая работа с существующей базой клиентов
+							li
+								| Персонализированные предложения 
+							li
+								| Полноценный e-commers
+								| интернет магазин в мессенджере
+							li
+								| Онлайн оплата
+							li
+								| Автоматизированные воронки продаж
+							li
+								| Внутренняя CRM система
+							li
+								| Интеграция с 1С и Битрикс
+						a.button(href="") Начать бесплатно
+block footer
+	footer.footer
+		.container
+			.footer__logo
+				a.logo(href="index.html")
+					img(src="img/logo.svg", alt="u-robot.ru")
+			p Надежный помощник для вашего бизнеса
+			.footer__copy © 2018, U-Robot

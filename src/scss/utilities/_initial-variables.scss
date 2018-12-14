@@ -1,0 +1,96 @@
+@import "functions";
+
+// Colors
+
+$black: hsl(0, 0%, 4%) !default;
+$black-bis: hsl(0, 0%, 7%) !default;
+$black-ter: hsl(0, 0%, 14%) !default;
+
+$grey-darker: hsl(0, 0%, 21%) !default;
+$grey-dark: hsl(0, 0%, 29%) !default; // #4A4A4A
+$grey: hsl(0, 0%, 48%) !default;
+$grey-light: hsl(0, 0%, 62%) !default; // #9D9D9D
+$grey-lighter: hsl(0, 0%, 94%) !default; // #F0F0F0
+$grey-extra-lighter: hsl(0, 0%, 98%) !default; // #F9F9F9 // добавил
+
+$white-ter: hsl(0, 0%, 96%) !default;
+$white-bis: hsl(0, 0%, 98%) !default;
+$white: hsl(0, 0%, 100%) !default;
+
+$orange: hsl(14, 100%, 53%) !default;
+$yellow: hsl(48, 100%, 67%) !default;
+$green: hsl(97, 54%, 57%) !default; // #85CD57
+$turquoise: $grey-lighter !default;
+$cyan: hsl(204, 86%, 53%) !default;
+$blue: hsl(212, 72%, 59%) !default; // #4A90E2
+$purple: hsl(271, 100%, 71%) !default;
+$red: hsl(348, 100%, 61%) !default;
+
+// Typography
+
+$family-sans-serif: "Open Sans", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$family-monospace: monospace !default;
+$render-mode: optimizeLegibility !default;
+$global-font-size: 14px !default;
+
+$size-1: rem-calc(32px) !default;
+$size-2: rem-calc(24px) !default;
+$size-3: rem-calc(18px) !default;
+$size-4: rem-calc(16px) !default;
+$size-5: rem-calc(14px) !default;
+$size-6: rem-calc(12px) !default;
+$size-7: rem-calc(10px) !default;
+
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+
+// Responsiveness
+
+// The container horizontal gap, which acts as the offset for breakpoints
+//$gap: 64px !default;
+$gap: 33px !default;
+
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+//$tablet: 769px !default;
+$tablet: 992px !default;
+
+// 960px container + 4rem
+//$desktop: 960px + 2 * $gap !default;
+$desktop: 1086px + 2 * $gap !default;
+
+// 1152px container + 4rem
+$widescreen: 1152px + 2 * $gap !default;
+$widescreen-enabled: true !default;
+
+// 1344px container + 4rem
+//$fullhd: 1344px + 2 * $gap !default;
+$fullhd: 1260px + 2 * $gap !default;
+$fullhd-enabled: true !default;
+
+// Miscellaneous
+
+$easing: ease-out !default;
+$radius-small: 2px !default;
+$radius: 4px !default;
+$radius-large: 6px !default;
+$radius-rounded: 290486px !default;
+$speed: 86ms !default;
+
+// Flags
+
+$variable-columns: true !default;
+
+// TODO ПЕРЕНЕСЕНО ИЗ variables.less
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-xs-max: ($screen-sm - 1);
+$screen-sm-max: ($screen-md - 1);
+$screen-md-max: ($screen-lg - 1);
+$screen-lg-max: ($screen-xl - 1);

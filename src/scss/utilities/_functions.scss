@@ -1,0 +1,153 @@
+@function mergeColorMaps($bulma-colors, $custom-colors) {
+  // we return at least bulma hardcoded colors
+  $merged-colors: $bulma-colors;
+  // we want a map as input
+  @if type-of($custom-colors) == "map" {
+    @each $name, $components in $custom-colors {
+      // color name should be a string and colors pair a list with at least one element
+      @if type-of($name) == "string" and (type-of($components) == "list" or type-of($components) == "color") and length($components) >= 1 {
+        $color-base: null;
+        // the param can either be a single color
+        // or a list of 2 colors
+        @if type-of($components) == "color" {
+          $color-base: $components;
+        }
+        @else if type-of($components) == "list" {
+          $color-base: nth($components, 1);
+        }
+        $color-invert: null;
+        // is an inverted color provided in the list
+        @if length($components) > 1 {
+          $color-invert: nth($components, 2);
+        }
+        // we only want a color as base color
+        @if type-of($color-base) == "color" {
+          // if inverted color is not provided or is not a color we compute it
+          @if type-of($color-invert) != "color" {
+            $color-invert: findColorInvert($color-base);
+          }
+          // we merge this colors elements as map with bulma colors (we can override them this way, no multiple definition for the same name)
+          $merged-colors: map_merge($merged-colors, ($name: ($color-base, $color-invert)));
+        }
+      }
+    }
+  }
+  @return $merged-colors;
+}
+
+@function powerNumber($number, $exp) {
+  $value: 1;
+  @if $exp > 0 {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  }
+  @else if $exp < 0 {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+  @return $value;
+}
+
+@function colorLuminance($color) {
+  $color-rgb: ("red": red($color), "green": green($color), "blue": blue($color));
+  @each $name, $value in $color-rgb {
+    $adjusted: 0;
+    $value: $value / 255;
+    @if $value < 0.03928 {
+      $value: $value / 12.92;
+    }
+    @else {
+      $value: ($value + 0.055) / 1.055;
+      $value: powerNumber($value, 2);
+    }
+    $color-rgb: map-merge($color-rgb, ($name: $value));
+  }
+  @return map-get($color-rgb, "red") * 0.2126 + map-get($color-rgb, "green") * 0.7152 + map-get($color-rgb, "blue") * 0.0722;
+}
+
+@function findColorInvert($color) {
+  @if colorLuminance($color) > 0.55 {
+    @return rgba(black, 0.7);
+  }
+  @else {
+    @return white;
+  }
+}
+
+/*
+Convert PX to REM
+Использование:
+padding: rem-calc(10);
+padding: rem-calc(10 15 10 15);
+*/
+
+/*
+Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+@param {Number} $num - Number to strip unit from.
+@returns {Number} The same number, sans unit.
+*/
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+/*
+Converts one or more pixel values into matching rem values.
+@param {Number|List} $values - One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
+
+@param {Number} $base [null] - The base value to use when calculating the `rem`. If you're using Foundation out of the box, this is 16px. If this parameter is `null`, the function will reference the `$base-font-size` variable as the base.
+
+@returns {List} A list of converted values.
+*/
+@function rem-calc($values, $base: null) {
+  $rem-values: ();
+  $count: length($values);
+  /* If no base is defined, defer to the global font size */
+  @if $base == null {
+    $base: $global-font-size;
+  }
+  /* If the base font size is a %, then multiply it by 16px
+     This is because 100% font size = 16px in most all browsers
+  */
+  @if unit($base) == '%' {
+    $base: ($base / 100%) * $global-font-size;
+  }
+  /* Using rem as base allows correct scaling */
+  @if unit($base) == 'rem' {
+    $base: strip-unit($base) * $global-font-size;
+  }
+  @if $count == 1 {
+    @return -to-rem($values, $base);
+  }
+  @for $i from 1 through $count {
+    $rem-values: append($rem-values, -to-rem(nth($values, $i), $base));
+  }
+  @return $rem-values;
+}
+/*
+Converts a pixel value to matching rem value. *Any* value passed, regardless of unit, is assumed to be a pixel value. By default, the base pixel value used to calculate the rem value is taken from the `$global-font-size` variable.
+@access private
+@param {Number} $value - Pixel value to convert.
+@param {Number} $base [null] - Base for pixel conversion.
+@returns {Number} A number in rems, calculated based on the given value and the base pixel value. rem values are passed through as is.
+*/
+@function -to-rem($value, $base: null) {
+  /* Check if the value is a number */
+  @if type-of($value) != 'number' {
+    @warn inspect($value) + ' was passed to rem-calc(), which is not a number.';
+    @return $value;
+  }
+  /* Transform em into rem if someone hands over 'em's */
+  @if unit($value) == 'em' {
+    $value: strip-unit($value) * 1rem;
+  }
+  /* Calculate rem if units for $value is not rem or em */
+  @if unit($value) != 'rem' {
+    $value: strip-unit($value) / strip-unit($base) * 1rem;
+  }
+  /* Turn 0rem into 0 */
+  @if $value == 0rem {
+    $value: 0;
+  }
+  @return $value;
+}

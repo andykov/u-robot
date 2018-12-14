@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока .field-select , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.field-select {
+  select {
+    visibility: hidden; // Лечит баг с открытием дефолтного селекта на iOS
+  }
+  .select2-selection {
+    outline: none;
+  }
+
+  &--not-border {
+    .select2-selection {
+      border: 0;
+    }
+  }
+}

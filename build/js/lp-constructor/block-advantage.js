@@ -1,0 +1,1 @@
+$(function(){function o(){var o=$(window).width(),l=$(".js-owl-tile");l.length&&(o<=767?(l.owlCarousel({items:1,autoplay:!0,loop:!0}),l.addClass("owl-carousel")):(l.owlCarousel().trigger("destroy.owl.carousel"),l.removeClass("owl-carousel")))}o(),$(window).resize(function(){o()})});

@@ -1,0 +1,634 @@
+// В этом файле должны быть стили для БЭМ-блока .catalog-tabs , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+//.layout {
+//  height: 100vh;
+//}
+
+#car-list-map {
+  width: 100%;
+  height: 100%;
+}
+
+.catalog {
+  height: 100%;
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    right: 50px;
+    font-size: 8px;
+    z-index: 1;
+    text-align: center;
+
+    @media screen and (min-width: 736px) {
+      font-size: 10px;
+    }
+
+    span {
+      background-color: #fff;
+      padding: 8px 25px;
+      display: inline-block;
+      border-radius: 0 0 32px 32px;
+      position: relative;
+
+      @media screen and (min-width: @screen-lg) {
+        box-shadow: 0 5px 10px -5px rgba(53, 53, 55, 0.3);
+      }
+    }
+  }
+
+  &__filter {
+
+    .filter-pane-dropdown {
+      height: 100%;
+      overflow: auto;
+    }
+
+  }
+
+  &__layout {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+  }
+
+  &__list {
+    background-color: #fff;
+    height: 100%;
+
+    &-holder {
+      background-color: #fff;
+      position: relative;
+      box-shadow: 5px 0 10px -3px rgba(53, 53, 55, 0.15);
+      z-index: 1;
+      height: 100%;
+    }
+
+    &-head {
+      background-color: #fff;
+      position: fixed;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      box-shadow: 0 5px 10px -5px rgba(53, 53, 55, 0.15);
+      z-index: 4;
+
+      @media screen and (min-width: @screen-lg) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    &-cars {
+      padding-top: 58px;
+    }
+
+    &-pagenav {
+      height: 50px;
+      padding: 6px 0;
+    }
+  }
+
+  &__map {
+    position: relative;
+    display: none;
+    width: 100%;
+  }
+
+  &__preview {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 100%;
+    top: 50%;
+    width: 580px;
+    background-color: rgba(243, 243, 243, 1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s;
+    box-shadow: 5px 5px 15px -5px rgba(53, 53, 55, 0.15);
+
+    &-close {
+      position: absolute;
+      right: -40px;
+      top: 0;
+      padding: 0;
+      background-color: #eee;
+      border: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .car-booking {
+      position: static;
+      width: auto;
+      padding: 0;
+      margin: 0;
+
+      &__action {
+        .btn {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, -50%);
+
+      .car-booking {
+        height: 100%;
+        transition: height 1s;
+      }
+
+      &.top {
+        bottom: auto;
+        top: 0;
+      }
+
+      &.bottom {
+        bottom: 0;
+        top: auto;
+      }
+    }
+  }
+
+  .card {
+    &__photo {
+      height: auto;
+    }
+  }
+
+  // ВИД С КАРТОЙ
+  &--map-open {
+    height: 100%;
+    padding-top: 50px;
+
+    @media screen and (min-width: @screen-lg) {
+      overflow: hidden;
+      padding-top: 0;
+    }
+
+    .catalog {
+
+      &__layout {
+        @media screen and (min-width: @screen-lg) {
+          flex-direction: row;
+        }
+      }
+
+      &__list {
+        position: relative;
+
+        @media screen and (max-width: @screen-md-max) {
+          height: 65%;
+        }
+
+        @media screen and (min-width: @screen-lg) {
+          height: 100%;
+          flex: 1 0 540px;
+          max-width: 540px;
+        }
+
+        @media screen and (min-width: @screen-xl) {
+          flex: 1 0 600px;
+          max-width: 600px;
+        }
+
+        @media screen and (min-width: @screen-lg) {
+          order: 1;
+        }
+
+        &-holder {
+          height: 100%;
+          box-shadow: 5px 0 10px -3px rgba(53, 53, 55, 0.15);
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+        }
+
+        &-head {
+          width: 100%;
+          background-color: #fff;
+          flex: 1 0 60px;
+          height: 50px;
+
+          @media screen and (max-width: @screen-md-max) {
+            top: 52px;
+            z-index: 4;
+          }
+
+          @media screen and (min-width: @screen-lg) {
+            position: static;
+            height: 58px;
+          }
+        }
+
+        &-cars {
+          @media screen and (max-width: @screen-md-max) {
+            padding-top: 0;
+          }
+          @media screen and (min-width: @screen-lg) {
+            height: 100%;
+            overflow: hidden;
+            padding-top: 0;
+          }
+        }
+
+        .card {
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-bottom: 0;
+
+          @media screen and (min-width: @screen-lg) {
+            padding: 5px 20px;
+            display: flex;
+            width: 100%;
+            max-width: none;
+          }
+
+          &__title {
+            padding-right: 70px;
+          }
+
+          &__photo {
+            @media screen and (min-width: @screen-lg) {
+              flex: 0 0 auto;
+              max-width: 180px;
+              margin-right: 20px;
+            }
+
+            @media screen and (min-width: @screen-xl) {
+              width: 180px;
+              flex-basis: 180px;
+            }
+
+            &-link {
+              @media screen and (min-width: @screen-lg) {
+                width: 180px;
+              }
+            }
+
+            .card__price {
+              @media screen and (min-width: @screen-lg) {
+                display: none;
+              }
+            }
+          }
+
+          &__title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 300px;
+
+            span {
+              display: block;
+              font-size: 10px;
+
+              @media screen and (min-width: @screen-md) {
+                font-size: 12px;
+                padding-top: 3px;
+              }
+            }
+          }
+
+          &__address {
+            padding: 0;
+          }
+
+          &__info {
+            @media screen and (min-width: @screen-lg) {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              flex: 1 1 auto;
+            }
+
+            .card__price {
+              display: none;
+
+              @media screen and (min-width: @screen-lg) {
+                display: block;
+              }
+            }
+          }
+
+          @media screen and (min-width: @screen-lg) {
+            &__favorit {
+              right: 0;
+            }
+            &__rating {
+              right: 29px;
+            }
+          }
+
+          &__footer {
+            @media screen and (min-width: @screen-lg) {
+              align-items: flex-end;
+              margin-top: auto;
+            }
+          }
+
+          &:hover {
+            background-color: rgb(241, 241, 241);
+            cursor: pointer;
+            .card__address {
+              &:after {
+                background: linear-gradient(90deg,hsla(0,0%,100%,0) 0,rgb(241, 241, 241) 65%);
+              }
+            }
+          }
+        }
+
+        &-pagenav {
+          position: relative;
+          z-index: 1;
+          box-shadow: 0 -5px 10px -5px rgba(53,53,55,.15);
+        }
+      }
+
+      &__map {
+        display: block;
+        height: 49%;
+        min-height: 228px;
+
+        @media screen and (min-width: @screen-lg) {
+          height: 100vh;
+        }
+        @media screen and (min-width: @screen-lg) {
+          order: 2;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        &--disabled {
+          position: relative;
+          pointer-events: none;
+          &:before {
+            opacity: 1;
+            visibility: visible;
+            background-color: rgba(0, 0, 0, 0.15);
+          }
+        }
+      }
+
+      &__preview {
+        @media screen and (min-width: @screen-lg) {
+          display: block;
+        }
+      }
+    }
+
+    .car-list {
+      height: 100%;
+
+      &__holder {
+        height: ~"calc(100% - 34px)";
+        overflow-y: auto;
+        padding-left: 0;
+        padding-right: 0;
+
+        &-inner {
+          @media screen and (min-width: @screen-lg) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+
+
+.car-list {
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    @media screen and (min-width: @screen-lg) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__count {
+    font-size: 12px;
+    color: rgba(53,53,53,.7);
+
+    @media screen and (max-width: 350px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    b {
+      color: #353535;
+      font-weight: 600;
+    }
+  }
+
+  &__holder {
+    height: 100%;
+
+    @media screen and (min-width: @screen-lg) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &-empty {
+      display: none;
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+      .btn {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-inner {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    &__load-scroll {
+      display: none;
+      text-align: center;
+      padding: 10px;
+      height: 28px;
+      align-items: center;
+      &.show {
+        display: flex;
+      }
+    }
+
+    .card {
+      width: 100%;
+      padding: 0 10px;
+      max-width: 520px;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: 521px) {
+        width: 50%;
+      }
+
+      @media screen and (min-width: @screen-lg) {
+        width: 33.3333%;
+      }
+
+      @media screen and (min-width: @screen-xl) {
+        width: 25%;
+      }
+
+      &--cluster {
+        &:after {
+          content: '';
+          width: 10px;
+          border-right: 4px solid #4acdc9;
+          position: absolute;
+          right: 0;
+          top: 5px;
+          bottom: 5px;
+        }
+      }
+
+      &__favorit {
+        right: 10px;
+      }
+      &__rating {
+        right: 39px;
+      }
+    }
+  }
+
+  &__sorting {
+    font-size: 12px;
+
+    li {
+      display: inline-block;
+      &:first-child:after {
+        content: "|";
+        font-size: 16px;
+        color: #ccc;
+        margin-left: 3px;
+      }
+    }
+
+    &-price {
+
+      &-up,
+      &-down {
+
+
+        //@media screen and (max-width: @screen-md-max) {
+          &:before {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 14px;
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            border-radius: 3px;
+            border: 1px solid #d1d1d1;
+          }
+          &.active {
+            color: rgba(53,53,53,.7);
+          }
+        //}
+
+        //@media screen and (min-width: @screen-lg) {
+          font-size: 12px;
+        //}
+      }
+
+      //@media screen and (max-width: @screen-md-max) {
+        &-up {
+          &:before {
+            content: '\2191';
+          }
+        }
+        &-down {
+          &:before {
+            content: "\2193";
+          }
+        }
+      //}
+
+    }
+
+  }
+}
+
+.catalog-toggle-btn {
+  white-space: nowrap;
+  margin-left: auto;
+  padding: 5px;
+
+  &:hover,
+  &.active {
+    text-decoration: none;
+  }
+
+  span {
+    margin-left: 5px;
+  }
+  @media screen and (max-width: @screen-sm) {
+    font-size: 12px;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.catalog-bottom-text {
+  padding: 20px;
+  text-align: center;
+
+  &__title {
+    padding-bottom: 20px;
+  }
+}
+
+.tippy-tooltip {
+  padding: 8px 10px;
+}
+
+.car-list__load-scroll {
+  padding: 5px 0;
+  text-align: center;
+  background-color: #fff;
+}

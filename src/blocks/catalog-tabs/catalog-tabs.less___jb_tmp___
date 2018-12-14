@@ -1,0 +1,204 @@
+// В этом файле должны быть стили для БЭМ-блока .catalog-tabs , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.catalog-page {
+	height: 100%;
+  	display: flex;
+  	flex-direction: column;
+}
+
+.catalog-tool {
+	padding-top: 40px;
+	.size-h2 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+}
+
+.catalog-pane {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	border-bottom: 1px solid #e5e5e5;
+
+
+	&__sorting {
+		display: flex;
+		.select2-selection {
+			width: 135px;
+		}
+	}
+	&__views {
+		align-self: center;
+		.icon-svg {
+			margin-right: 10px;
+		}
+	}
+}
+.car-filter-result {
+	color: #9d9d9d;
+	padding: 15px 20px 5px;
+
+	span {
+		color: #000;
+		font-weight: 600;
+	}
+}
+.catalog {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 10px;
+	margin: 10px 0;
+	.card {
+		width: 100%;
+		padding: 0 10px;
+
+		@media screen and (min-width: 560px) {
+			width: 50%;
+		}
+
+		@media screen and (min-width: @screen-md) {
+			width: 33.3333%;
+		}
+
+		@media screen and (min-width: @screen-lg) {
+			width: 25%;
+		}
+
+		@media screen and (min-width: @screen-xl) {
+			width: 20%;
+		}
+	}
+}
+.catalog-tabs {
+	display: flex;
+	height: 100%;
+
+	&__sidebar {
+		background-color: #fff;
+		position: relative;
+		flex-shrink: 0;
+		flex-basis: 100%;
+		.card {
+			max-width: none;
+		}
+	}
+
+	&__map {
+		display: none;
+		background: url('http://www.mobil1.co.in/theendlessrace-game/img/preloader.gif') no-repeat center center;
+		background-color: #f2f2f2;
+		background-size: 80px;
+		flex: 1;
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// вид с картой
+	&.open .catalog {
+		// flex-wrap: nowrap;
+		//margin-bottom: 40px;
+	}
+	&.open .pagination {
+		text-align: center;
+	}
+	&.open &__sidebar {
+		overflow-y: scroll;
+		@media screen and (max-width: 991px) {
+			flex: 0 0;
+		}
+		@media screen and (min-width: @screen-lg) {
+			flex-basis: 480px;
+		}
+		@media screen and (min-width: @screen-xl) {
+			flex-basis: 600px;
+		}
+	}
+
+	&.open &__map {
+		display: block;
+	}
+
+	&.open {
+		overflow: hidden;
+		.catalog {
+			display: block;
+		}
+		.card {
+			width: auto;
+			max-width: 100%;
+			display: flex;
+			margin: 10px 0;
+			&__photo {
+				width: 120px;
+				height: auto;
+				flex-basis: 180px;
+				flex-shrink: 0;
+				@media screen and (min-width: @screen-md) {
+					width: 180px;
+					//height: 120px;
+				}
+				.card__price {
+					display: none;
+				}
+			}
+			&__title {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				padding-bottom: 8px;
+				span {
+					display: block;
+					font-size: 10px;
+					@media screen and (min-width: @screen-md) {
+						font-size: 12px;
+						padding-top: 3px;
+					}
+				}
+			}
+			&__address {
+				margin-bottom: auto;
+			}
+			&__info {
+				position: relative;
+				flex: 1;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				padding-left: 10px;
+				overflow: hidden;
+				@media screen and (min-width: @screen-md) {
+					padding-left: 20px;
+				}
+				.card__price {
+					display: block;
+				}
+			}
+			&__footer {
+				.rating {
+					// position: absolute;
+					// right: 0;
+					// top: 0;
+				}
+			}
+		}
+	}
+
+	.pagination {
+		text-align: center;
+		padding-bottom: 20px;
+	}
+}
+
+.catalog-bottom-text {
+	padding: 20px;
+	text-align: center;
+
+	&__title {
+		padding-bottom: 20px;
+	}
+}

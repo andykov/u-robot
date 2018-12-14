@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/*
+Convert PX to REM
+Использование:
+padding: rem-calc(10);
+padding: rem-calc(10 15 10 15);
+*/
+/*
+Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+@param {Number} $num - Number to strip unit from.
+@returns {Number} The same number, sans unit.
+*/
+/*
+Converts one or more pixel values into matching rem values.
+@param {Number|List} $values - One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
+
+@param {Number} $base [null] - The base value to use when calculating the `rem`. If you're using Foundation out of the box, this is 16px. If this parameter is `null`, the function will reference the `$base-font-size` variable as the base.
+
+@returns {List} A list of converted values.
+*/
+/*
+Converts a pixel value to matching rem value. *Any* value passed, regardless of unit, is assumed to be a pixel value. By default, the base pixel value used to calculate the rem value is taken from the `$global-font-size` variable.
+@access private
+@param {Number} $value - Pixel value to convert.
+@param {Number} $base [null] - Base for pixel conversion.
+@returns {Number} A number in rems, calculated based on the given value and the base pixel value. rem values are passed through as is.
+*/
+/*
+Convert PX to REM
+Использование:
+padding: rem-calc(10);
+padding: rem-calc(10 15 10 15);
+*/
+/*
+Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+@param {Number} $num - Number to strip unit from.
+@returns {Number} The same number, sans unit.
+*/
+/*
+Converts one or more pixel values into matching rem values.
+@param {Number|List} $values - One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
+
+@param {Number} $base [null] - The base value to use when calculating the `rem`. If you're using Foundation out of the box, this is 16px. If this parameter is `null`, the function will reference the `$base-font-size` variable as the base.
+
+@returns {List} A list of converted values.
+*/
+/*
+Converts a pixel value to matching rem value. *Any* value passed, regardless of unit, is assumed to be a pixel value. By default, the base pixel value used to calculate the rem value is taken from the `$global-font-size` variable.
+@access private
+@param {Number} $value - Pixel value to convert.
+@param {Number} $base [null] - Base for pixel conversion.
+@returns {Number} A number in rems, calculated based on the given value and the base pixel value. rem values are passed through as is.
+*/
+/*
+Convert PX to REM
+Использование:
+padding: rem-calc(10);
+padding: rem-calc(10 15 10 15);
+*/
+/*
+Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+@param {Number} $num - Number to strip unit from.
+@returns {Number} The same number, sans unit.
+*/
+/*
+Converts one or more pixel values into matching rem values.
+@param {Number|List} $values - One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
+
+@param {Number} $base [null] - The base value to use when calculating the `rem`. If you're using Foundation out of the box, this is 16px. If this parameter is `null`, the function will reference the `$base-font-size` variable as the base.
+
+@returns {List} A list of converted values.
+*/
+/*
+Converts a pixel value to matching rem value. *Any* value passed, regardless of unit, is assumed to be a pixel value. By default, the base pixel value used to calculate the rem value is taken from the `$global-font-size` variable.
+@access private
+@param {Number} $value - Pixel value to convert.
+@param {Number} $base [null] - Base for pixel conversion.
+@returns {Number} A number in rems, calculated based on the given value and the base pixel value. rem values are passed through as is.
+*/
+.image-with-link {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden; }
+  .image-with-link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.01) 33%, #000000 100%);
+    opacity: 1;
+    transition: opacity 0.3s; }
+  .image-with-link:hover:before {
+    opacity: 0.5;
+    transition: opacity 0.4s; }
+  .image-with-link:hover .title {
+    transform: translateY(-15%);
+    transition: transform 0.4s; }
+  .image-with-link a {
+    display: block; }
+  .image-with-link .title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    color: #fff;
+    transform: translateY(0);
+    transition: transform 0.3s; }

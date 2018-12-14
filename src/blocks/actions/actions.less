@@ -1,0 +1,33 @@
+// В этом файле должны быть стили для БЭМ-блока .actions , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.actions {
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto 70px;
+  @media screen and (min-width: @screen-md) {
+    margin: 0 auto 30px;
+  }
+  &__img {
+    max-width: 175px;
+    margin: 0 auto 28px;
+    @media screen and (min-width: @screen-md) {
+      max-width: none;
+      min-height: 182px;
+    }
+    @media screen and (min-width: @screen-lg) {
+      min-height: 202px;
+    }
+  }
+
+  &__title {
+    text-transform: none;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-bottom: 17px;
+    min-height: 32px;
+    color: #353535;
+  }
+}

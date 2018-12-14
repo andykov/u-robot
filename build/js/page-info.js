@@ -1,0 +1,1 @@
+$(function(){tippy("[data-tippy-attr]",{arrow:!0,sticky:!0,inertia:!0,animateFill:!1})});

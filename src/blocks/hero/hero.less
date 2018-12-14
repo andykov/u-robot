@@ -1,0 +1,230 @@
+// В этом файле должны быть стили для БЭМ-блока .hero , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.hero {
+  position: relative;
+  background-color: #676767;
+  height: 458px;
+
+  padding: 70px 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.8;
+  }
+
+  &--info-service:before {
+    background: url("../img/design/bg-hero-info-service.jpg") no-repeat center top / cover;
+  }
+  &--info-owner:before {
+    background: url("../img/design/bg-hero-info-service.jpg") no-repeat center top / cover;
+  }
+  &--info-renter:before {
+    background: url("../img/design/bg-hero-info-service.jpg") no-repeat center top / cover;
+  }
+
+  &--long {
+    height: 532px;
+    .hero__title,
+    .hero__subtitle {
+      font-weight: 600;
+      color: @text-color;
+    }
+    &:before {
+      background: url("../img/design/bg-hero-long.jpg") no-repeat center top / cover;
+    }
+
+  }
+
+  .container {
+    display: flex;
+    height: 100%;
+  }
+
+  &__inner {
+    align-self: center;
+    margin: auto;
+    position: relative;
+  }
+
+  &__title,
+  &__subtitle {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+  }
+
+  &__button {
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  &__nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 150px;
+
+    &-item {
+      display: block;
+      flex: 1;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1;
+      text-align: center;
+      padding: 27px;
+      box-shadow: inset 0 0 0 0 rgba(0, 169, 164, 0);
+      transition: box-shadow 0.2s;
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+        box-shadow: inset 0 -11px 0 0 #00a9a4;
+      }
+
+      &.active {
+        box-shadow: inset 0 -11px 0 0 #00a9a4;
+      }
+    }
+  }
+
+
+  // LANDING PODPISKA
+  &--podpiska {
+    height: calc(~"100vh - 52px");
+    background-color: #000;
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+
+    //@media screen and (max-width: 1199px) {
+    //  height: calc(~"100vh - 52px");
+    //}
+
+    &:before {
+      content: '';
+      background: url("../img/design/bg-landing-podpiska.jpg") no-repeat center center / cover;
+      opacity: 0.3;
+      transform: scale(1);
+      animation: scaleBg 90s linear forwards;
+
+      //animation-duration: 3s;
+      //animation-name: scaleBg;
+    }
+
+    .container {
+      height: 100vh;
+    }
+
+    .hero__title {
+      font-size: 7.5vw; //60px
+      font-weight: bold;
+      line-height: (70 / 60);
+      padding-bottom: 5px;
+      opacity: 0;
+      transform: translateY(-30%);
+      animation: heroMoveBottom 0.5s 0.5s linear forwards;
+
+      @media screen and (min-width: @screen-md) {
+        font-size: 4.6875vw; //60px
+      }
+    }
+    .hero__subtitle {
+      font-size: 6vw; //42px
+      font-weight: 600;
+      line-height: (57 / 42);
+      text-transform: none;
+      padding: 0 25px 30px;
+      opacity: 0;
+      transform: translateY(30%);
+      animation: heroMoveTop 0.5s 0.6s linear forwards;
+
+      @media screen and (min-width: @screen-md) {
+        font-size: 3.28125vw; //42px
+      }
+    }
+    .hero__text {
+      padding: 0 10px 10px;
+      margin: 0 auto;
+      font-size: 3.6vw; // 16px
+      font-weight: 600;
+      line-height: 1.8;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30%);
+      animation: heroMoveTop 0.5s 0.7s linear forwards;
+
+      @media screen and (min-width: @screen-md) {
+        font-size: 2.1vw; // 16px
+        max-width: 730px;
+        line-height: (22 / 16);
+      }
+      @media screen and (min-width: @screen-lg) {
+        font-size: 1.5vw; // 16px
+      }
+      @media screen and (min-width: @screen-xl) {
+        font-size: 1.25vw; // 16px
+      }
+    }
+    .hero__button {
+      .btn {
+        opacity: 0;
+        transform: translateY(30%);
+        animation: heroMoveTop 0.5s 1s linear forwards;
+      }
+    }
+  }
+}
+
+@keyframes scaleBg {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes heroMoveBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes heroMoveTop {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

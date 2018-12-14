@@ -1,0 +1,67 @@
+// В этом файле должны быть стили для БЭМ-блока .mobile-app , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.mobile-app {
+  background: #fbcb2e url('../img/design/bg-mobile-app.png') no-repeat left bottom;
+  display: flex;
+  flex-direction: column;
+  padding-top: 46px;
+  padding-bottom: 17px;
+  height: 100%;
+  margin-bottom: 20px;
+
+  background-size: 780px auto;
+  background-position: -215px bottom;
+
+  @media screen and (min-width: @screen-lg) {
+    background-size: 1080px auto;
+    background-position: -285px bottom;
+    min-height: 520px;
+  }
+
+  @media screen and (min-width: @screen-xl) {
+    background-size: 1255px auto;
+    background-position: center 166px;
+    min-height: 490px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 29px;
+  }
+
+  &__item {
+
+    width: 50%;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 6px;
+
+    @media screen and (min-width: @screen-md) {
+      padding-right: 20px;
+    }
+    @media screen and (min-width: @screen-xl) {
+      max-width: 250px;
+      width: 100%;
+      margin-bottom: 56px;
+      margin-right: 70px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    padding-bottom: 26px;
+    max-width: 300px;
+    width: 100%;
+    @media screen and (min-width: @screen-lg) {
+      font-size: 16px;
+    }
+  }
+}

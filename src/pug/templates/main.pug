@@ -1,0 +1,27 @@
+include ../mixins/svg-icon.pug
+include ../mixins/column-text.pug
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+		title
+			block title
+		link(rel="stylesheet" href="../css/libs.css")
+		link(rel="stylesheet" href="../css-new/global.css")
+
+		block css
+
+	body
+
+		//- include ../../blocks/header/header
+
+		main.layout
+			block content
+
+		footer.footer
+			script(src="../js/libs.js")
+			script(src="../js/main.js")
+			block footer
+
+

@@ -1,0 +1,20 @@
+@charset "utf-8";
+@import "utilities/_all.scss";
+
+// global style libs
+// @import "libs/animate.min.scss";
+// @import "libs/bootstrap-datetimepicker.min.scss";
+// @import "libs/bootstrap-datetimepicker-custom.scss";
+
+// global style
+@import "base/_all.scss";
+@import "elements/_all.scss";
+
+// компоненты на весь сайт
+@import "components/_nav.scss";
+@import "components/_status-ride.scss";
+@import "components/_panel.scss";
+// компоненты на весь сайт
+
+@import "grid/_all.scss";
+@import "layout/_all.scss";

@@ -1,0 +1,17 @@
+.status-ride {
+  display: block;
+  background-color: #00a9a4;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  &.active {
+    background-color: #dc6363;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 10px 13px 0;
+    color: #fff;
+  }
+}

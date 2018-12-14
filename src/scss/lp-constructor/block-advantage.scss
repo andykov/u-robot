@@ -1,0 +1,33 @@
+@import "../utilities/_all.scss";
+
+.advantage {
+  text-align: center;
+
+  &__item {
+
+  }
+
+  &__img {
+    margin-bottom: 28px;
+    min-height: 66px;
+
+    img {
+      max-height: 120px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+    min-height: 48px;
+  }
+
+  &__text {
+    line-height: (24 / 14);
+    small {
+      display: inline-block;
+      color: #969799;
+      line-height: (14.4 / 12);
+    }
+  }
+}

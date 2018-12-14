@@ -1,0 +1,54 @@
+// В этом файле должны быть стили для БЭМ-блока .advantage , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.advantage {
+  padding: 40px 0;
+  &__list {
+    display: flex;
+    padding: 20px 0;
+    .owl-stage-outer {
+      margin-bottom: 10px;
+    }
+    .owl-dots {
+      display: flex;
+    }
+    .owl-dot {
+      padding: 20px 10px;
+      flex: 1;
+      span {
+        display: block;
+        background-color: #d3d3d3;
+        height: 2px;
+      }
+      &.active {
+        span {
+          background-color: #222;
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+    @media screen and (min-width: @screen-md) {
+      flex-basis: (5 / 14) * 100%;
+      max-width: (5 / 14) * 100%;
+    }
+  }
+
+  &__img {
+    margin-bottom: 25px;
+
+    @media screen and (min-width: @screen-md) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+}

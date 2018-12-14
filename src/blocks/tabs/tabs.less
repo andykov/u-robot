@@ -1,0 +1,130 @@
+// В этом файле должны быть стили для БЭМ-блока .tabs , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+//.tabs {
+//
+//  // горизонтальные табы
+//  &-nav {
+//    margin: 0px;
+//    padding: 0px;
+//    list-style: none;
+//
+//    &__link {
+//      background: none;
+//      font-size: 16px;
+//      color: #222;
+//      display: inline-block;
+//      padding: 10px 15px;
+//      cursor: pointer;
+//
+//      &.active,
+//      &:hover {
+//        background: #eff0f4;
+//        color: #00a9a4;
+//      }
+//    }
+//  }
+//
+//  &-body {
+//    &__title {
+//      font-size: 24px;
+//      font-weight: 500;
+//      margin-bottom: 32px;
+//    }
+//    &__item {
+//      display: none;
+//      padding: 36px 40px;
+//
+//      &.active {
+//        display: block;
+//      }
+//
+//      p {
+//        margin-bottom: 34px;
+//      }
+//    }
+//  }
+//
+//  // вертикальные табы
+//  &--vertical {
+//    display: flex;
+//
+//    .tabs-nav {
+//      background-color: #eff0f4;
+//      width: 100%;
+//      max-width: 400px;
+//      padding-top: 33px;
+//      padding-bottom: 33px;
+//
+//      &__link {
+//        display: block;
+//        padding: 17px 40px;
+//      }
+//    }
+//
+//    .tabs-body {
+//      width: 100%;
+//    }
+//  }
+//}
+
+.tabs {
+  position: relative;
+
+  &__item {
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 5px;
+    }
+
+    &.show {
+      .tabs__btn {
+        background: #eff0f4;
+        color: #00a9a4;
+      }
+      .tabs__cont {
+        display: block;
+      }
+    }
+  }
+
+  &__btn {
+    background-color: #eff0f4;
+    font-size: 16px;
+    color: #222;
+    padding: 24px 40px;
+    cursor: pointer;
+
+    &:hover {
+      background: #eff0f4;
+      color: #00a9a4;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      max-width: (4 / @cols ) * 100%;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+
+  &__cont {
+    padding: 17px 40px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 0;
+      margin-left: (4 / @cols ) * 100%;
+    }
+
+    p {
+      margin-bottom: 34px;
+      line-height: 1.3;
+    }
+  }
+}
