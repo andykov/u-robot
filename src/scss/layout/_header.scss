@@ -12,14 +12,22 @@ $screen-lg-max: ($screen-xl - 1);
 // Main header
 
 .header {
+  position: relative;
   height: 100vh;
   background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
   box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7);
 
+  .bubble {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: left top;
+  }
 
   &__logo {
     margin-right: 20px;
     width: 270px;
+    padding-top: 15px;
     .logo {
       display: block;
       padding: 15px 0;
@@ -29,7 +37,15 @@ $screen-lg-max: ($screen-xl - 1);
     }
   }
 
-  &__text {}
+  &__title {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &__text {
+    font-size: $size-3;
+  }
 
   &__img {
     img {

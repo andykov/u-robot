@@ -4,50 +4,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Главная страница
     </title>
-    <link rel="stylesheet" href="../css/libs.css">
+    <link rel="stylesheet" href="../css-new/libs/aos.css">
+    <link rel="stylesheet" href="../css-new/libs/slick.css">
     <link rel="stylesheet" href="../css-new/global.css">
   </head>
   <body>
     <main class="layout">
       <header class="header">
+        <div class="bubble" data-aos="zoom-in-right" data-aos-duration="700"><img src="img/svg/bg-bubble.svg" alt=""></div>
         <div class="container">
           <div class="header__logo"><a class="logo" href="index.html"><img src="img/logo.svg" alt="u-robot.ru"></a></div>
-          <div class="columns">
+          <div class="columns is-vcentered">
             <div class="column is-7">
-              <div class="header__text">
-                Автоматизируй продажи и общение с клиентом
-                Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.
-              </div><a class="button" href="/">Попробуй</a>
-              <div class="label">10 дней бесплатно</div>
+              <div class="header__title" data-aos="fade-up" data-aos-delay="500">Автоматизируй продажи и общение с клиентом</div>
+              <div class="header__text">Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.</div><a class="button" href="/" data-aos="fade-up" data-aos-delay="600">Попробуй</a>
+              <div class="label" data-aos="fade-up" data-aos-delay="650">10 дней бесплатно</div>
             </div>
             <div class="column is-5">
-              <div class="header__img"><img src="img/design/personage.png" alt="image robot"></div>
+              <div class="header__img" data-aos="fade-left" data-aos-delay="500"><img src="img/design/personage.png" alt="image robot"></div>
             </div>
           </div>
         </div>
       </header>
-      <section class="section">
-        <div class="container">
-          <div class="columns">
-            <div class="column">
-              <div class="card">
-                <div class="card-image"><img src="img/svg/icon-1.svg" alt=""></div>
-                <div class="card-title">Выгодные тарифы</div>
-                <div class="card-body">Доступные цены для разного уровня бизнеса и приятные скидки до 50%</div>
+      <section class="section is-pt-0">
+        <div class="container is-fluid">
+          <div class="panel is-top-outside">
+            <div class="columns">
+              <div class="column">
+                <div class="card" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0">
+                  <div class="card__image"><span class="icon is-large is-fill is-rounded"><img src="img/svg/icon-1.svg" alt=""></span></div>
+                  <h3 class="card__title">Выгодные тарифы</h3>
+                  <div class="card__body">Доступные цены для разного уровня бизнеса и приятные скидки до 50%</div>
+                </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="card">
-                <div class="card-image"><img src="img/svg/icon-2.svg" alt=""></div>
-                <div class="card-title">Максимум возможностей</div>
-                <div class="card-body">Поддержка всех мессенджеров и популярных соц. сетях</div>
+              <div class="column">
+                <div class="card" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100">
+                  <div class="card__image"><span class="icon is-large is-fill is-rounded"><img src="img/svg/icon-2.svg" alt=""></span></div>
+                  <h3 class="card__title">Максимум возможностей</h3>
+                  <div class="card__body">Поддержка всех мессенджеров и популярных соц. сетях</div>
+                </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="card">
-                <div class="card-image"><img src="img/svg/icon-3.svg" alt=""></div>
-                <div class="card-title">Быстрый старт</div>
-                <div class="card-body">Настроить и запустить инструмент можно в течении 20 минут</div>
+              <div class="column">
+                <div class="card" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150">
+                  <div class="card__image"><span class="icon is-large is-fill is-rounded"><img src="img/svg/icon-3.svg" alt=""></span></div>
+                  <h3 class="card__title">Быстрый старт</h3>
+                  <div class="card__body">Настроить и запустить инструмент можно в течении 20 минут</div>
+                </div>
               </div>
             </div>
           </div>
@@ -67,92 +69,163 @@
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section is-bg-gray">
         <div class="container">
           <h2>Автоматизация процессов — для любого сферы</h2>
-          <div class="columns">
-            <div class="column">
-              <div class="card-image"></div>
-              <div class="card-title">Кафе и рестораны</div>
-              <div class="card-body">Общайтесь со своими постоянными клиентами, бронируйте столик и принимайте оплату онлайн в случае доставки</div>
+          <div class="columns is-multiline is-tablet">
+            <div class="column is-4">
+              <div class="card" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0">
+                <div class="card__image"><span class="icon is-large is-fill is-rounded"><img src="img/svg/icon-4.svg" alt=""></span></div>
+                <h3 class="card__title">Кафе и рестораны</h3>
+                <div class="card__body">Общайтесь со своими постоянными клиентами, бронируйте столик и принимайте оплату онлайн в случае доставки</div>
+              </div>
             </div>
-          </div>
-          <div class="column">
-            <div class="card-image"></div>
-            <div class="card-title">Туристические агенства</div>
-            <div class="card-body">Напоминйте клиентами которые уже пользовались вашими услугами, предлагая им интересные туры и акции</div>
-          </div>
-          <div class="column">
-            <div class="card-image"></div>
-            <div class="card-title">Частные мастера</div>
-            <div class="card-body">Обрабатывайте более 5000 заявок за 1 минуту, а так же призентуйте свои услуги без личного участия</div>
-          </div>
-          <div class="column">
-            <div class="card-image"></div>
-            <div class="card-title">Интернет магазины</div>
-            <div class="card-body">Расширите свои продажи в месенджерах и соц. сетях, а так же подключить онлайн оплату</div>
-          </div>
-          <div class="column">
-            <div class="card-image"></div>
-            <div class="card-title">IT-компании и банки</div>
-            <div class="card-body">Уменьшите нагрузку на техническую поддержку своей компании большую часть ответов можно автоматизировать</div>
-          </div>
-          <div class="column">
-            <div class="card-image"></div>
-            <div class="card-title">Все сферы</div>
-            <div class="card-body">Для всех сфер, которые сталкиваются с потерей клиентов, привлечению новых и работой уже с существующей клиентской базой</div>
+            <div class="column is-4">
+              <div class="card" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100">
+                <div class="card__image"><span class="icon is-large is-fill is-rounded"><img src="img/svg/icon-5.svg" alt=""></span></div>
+                <h3 class="card__title">Туристические агенства</h3>
+                <div class="card__body">Напоминйте клиентами которые уже пользовались вашими услугами, предлагая им интересные туры и акции</div>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="card" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150">
+                <div class="card__image"><span class="icon is-large is-fill is-rounded"><img src="img/svg/icon-6.svg" alt=""></span></div>
+                <h3 class="card__title">Частные мастера</h3>
+                <div class="card__body">Обрабатывайте более 5000 заявок за 1 минуту, а так же призентуйте свои услуги без личного участия</div>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="card" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="200">
+                <div class="card__image"><span class="icon is-large is-fill is-rounded"><img src="img/svg/icon-7.svg" alt=""></span></div>
+                <h3 class="card__title">Интернет магазины</h3>
+                <div class="card__body">Расширите свои продажи в месенджерах и соц. сетях, а так же подключить онлайн оплату</div>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="card" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="250">
+                <div class="card__image"><span class="icon is-large is-fill is-rounded"><img src="img/svg/icon-8.svg" alt=""></span></div>
+                <h3 class="card__title">IT-компании и банки</h3>
+                <div class="card__body">Уменьшите нагрузку на техническую поддержку своей компании большую часть ответов можно автоматизировать</div>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="card" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="300">
+                <div class="card__image"><span class="icon is-large is-fill is-rounded"><img src="img/svg/icon-9.svg" alt=""></span></div>
+                <h3 class="card__title">Все сферы</h3>
+                <div class="card__body">Для всех сфер, которые сталкиваются с потерей клиентов, привлечению новых и работой уже с существующей клиентской базой</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
-          <h2>Скидка 50% на месяц пользования, 5-ти первым представителям разных ниши</h2>
-          <div class="columns">
-            <div class="column">
-              <div class="sale">
-                <div class="sale__name">Рекламные агенства</div>
-                <div class="sale__sum">4</div>
+          <div class="panel discount">
+            <h2>Скидка 50% на месяц пользования, 5-ти первым представителям разных ниши</h2>
+            <div class="columns is-gapless is-mobile is-multiline">
+              <div class="column is-6-mobile">
+                <div class="discount-item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="0">
+                  <div class="discount-item__cat">Рекламные <br>агенства</div>
+                  <div class="discount-item__count">4</div>
+                </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="sale">
-                <div class="sale__name">Салон красоты</div>
-                <div class="sale__sum">1</div>
+              <div class="column is-6-mobile">
+                <div class="discount-item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="100">
+                  <div class="discount-item__cat">Салон <br>красоты</div>
+                  <div class="discount-item__count">1</div>
+                </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="sale">
-                <div class="sale__name">Кафе и рестораны</div>
-                <div class="sale__sum">1</div>
+              <div class="column is-6-mobile">
+                <div class="discount-item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="150">
+                  <div class="discount-item__cat">Кафе и <br>рестораны</div>
+                  <div class="discount-item__count">1</div>
+                </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="sale">
-                <div class="sale__name">Интернет магазины</div>
-                <div class="sale__sum">1</div>
+              <div class="column is-6-mobile">
+                <div class="discount-item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="200">
+                  <div class="discount-item__cat">Интернет <br>магазины</div>
+                  <div class="discount-item__count">1</div>
+                </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="sale">
-                <div class="sale__name">Фитнес клубы</div>
-                <div class="sale__sum">1</div>
+              <div class="column is-6-mobile">
+                <div class="discount-item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="250">
+                  <div class="discount-item__cat">Фитнес <br>клубы</div>
+                  <div class="discount-item__count">1</div>
+                </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="sale">
-                <div class="sale__name">IT компании</div>
-                <div class="sale__sum">1</div>
+              <div class="column is-6-mobile">
+                <div class="discount-item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="300">
+                  <div class="discount-item__cat">IT <br>компании</div>
+                  <div class="discount-item__count">1</div>
+                </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="sale">
-                <div class="sale__name">Преподователи и репетиторы</div>
-                <div class="sale__sum">1</div>
+              <div class="column is-full-mobile">
+                <div class="discount-item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="350">
+                  <div class="discount-item__cat">Преподователи <br>и репетиторы</div>
+                  <div class="discount-item__count">1</div>
+                </div>
               </div>
-            </div>
-          </div><a class="button" href="">Хочу U-Robot для свой ниши</a>
+            </div><a class="button is-link is-outlined is-medium" href="#">Хочу U-Robot для свой ниши</a>
+          </div>
           <p>
              Если не нашли свою нишу, <a href="">напишите нам </a>и мы подберемя для вас индивидуальное решение</p>
+        </div>
+      </section>
+      <section class="section is-bg-green">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-7 is-offset-5">
+              <h2>10 дней абсолютно бесплатно</h2>
+              <p>Попробуй инструмент бесплатно в своем бизнесе если за 10 дней ты не увидишь пользы, просто отмени подписку</p><a class="button is-link is-outlined is-medium" href="#">Попробуй</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="case">
+            <div class="case__item">
+              <div class="case__top"><img src="img/content/case-store77.png" alt=""><a href="www.store77.net">www.store77.net</a></div>
+              <h2>Интернет-магазин электронных товаров</h2>
+              <p>После внедрения U-Robota, штат менеждеров сократился на 40%, теперь большинство вопросов клиентов обрабатывается в автоматическом режиме.</p>
+              <p>Еще мы создали STORE77 в социальных сетях (VK и FB), интегрировали онлайн оплату и теперь пользователь может покупать любые товары из нашего ассортимента не покидая свою страницу.</p>
+            </div>
+            <div class="case__item">
+              <div class="case__top"><img src="img/content/case-store77.png" alt=""><a href="www.store77.net">www.store77.net</a></div>
+              <h2>Интернет-магазин электронных товаров</h2>
+              <p>После внедрения U-Robota, штат менеждеров сократился на 40%, теперь большинство вопросов клиентов обрабатывается в автоматическом режиме.</p>
+              <p>Еще мы создали STORE77 в социальных сетях (VK и FB), интегрировали онлайн оплату и теперь пользователь может покупать любые товары из нашего ассортимента не покидая свою страницу.</p>
+            </div>
+          </div>
+          <div class="clients">
+            <p>А так же наши клиенты</p>
+            <div class="columns">
+              <div class="column"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="reviews">
+            <div class="reviews__item"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="devices">
+            <div class="columns">
+              <div class="column is-5 is-offset-1">
+                <div class="devices-toggle"><a class="button is-small is-success js-devices-desktop" href="#">Веб версия</a><a class="button is-small js-devices-mobile" href="#">Мобильное приложение</a></div>
+                <h2>Контролируйте бизнес на любых устройствах</h2>
+                <p>В веб версии продукта разработан полноценный личный кабинет в котором вы можете настраивать инструмент, аналитику и просматривать статистику</p><a href="#">Попробуй</a>
+              </div>
+              <div class="column is-6">
+                <div class="devices-img"><img class="devices-img__desktop" src="img/design/macbook.png" alt="macbook.png" data-aos="flip-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0"><img class="devices-img__mobile" src="img/design/iPhone.png" alt="iPhone.png" data-aos="flip-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section">
@@ -160,20 +233,17 @@
           <h2>Выгодные тарифы для наших пользователей</h2>
           <div class="notice">Попробуйте U-Robot бесплатно: если не понравится, отмените подписку, и платить не придется.</div>
           <div class="buttons has-addons is-centered">
-            <button class="button">1 месяц</button>
-            <button class="button">
-               3 месяца<small>скидка 10%</small></button>
-            <button class="button">
-               6 месяцев<small>скидка 20%</small></button>
-            <button class="button">
-               12 месяцев<small>скидка 30%</small></button>
+            <button class="button is-medium js-tariff-period" data-period="1" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0">1 месяц</button>
+            <button class="button is-medium js-tariff-period" data-period="3" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100">3 месяца<small>скидка 10%</small></button>
+            <button class="button is-medium js-tariff-period" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150">6 месяцев<small>скидка 20%</small></button>
+            <button class="button is-medium js-tariff-period" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="200">12 месяцев<small>скидка 30%</small></button>
           </div>
           <div class="columns">
             <div class="column">
-              <div class="tariff">
+              <div class="tariff" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0">
                 <div class="tariff__head">
                   <div class="tariff__name">U-Air</div>
-                  <div class="tariff__price">4999<span>₽/мес</span></div>
+                  <div class="tariff__price"><span class="show" data-period-1>4999</span><span data-period-3>4499</span>₽/мес</div>
                 </div>
                 <ul class="tariff__options">
                   <li>
@@ -193,14 +263,14 @@
                   <li>Автоматизированные воронки продаж</li>
                   <li>Внутренняя CRM система</li>
                   <li>Интеграция с 1С и Битрикс</li>
-                </ul><a class="button" href="">Начать бесплатно</a>
+                </ul><a class="button is-link is-outlined is-medium is-fullwidth" href="">Начать бесплатно</a>
               </div>
             </div>
             <div class="column">
-              <div class="tariff">
+              <div class="tariff" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100">
                 <div class="tariff__head">
                   <div class="tariff__name">U-Classic</div>
-                  <div class="tariff__price">9999<span>₽/мес</span></div>
+                  <div class="tariff__price"><span class="show" data-period-1>9999</span><span data-period-3>8999</span>₽/мес</div>
                 </div>
                 <ul class="tariff__options">
                   <li>
@@ -220,14 +290,14 @@
                   <li>Автоматизированные воронки продаж</li>
                   <li>Внутренняя CRM система</li>
                   <li>Интеграция с 1С и Битрикс</li>
-                </ul><a class="button" href="">Начать бесплатно</a>
+                </ul><a class="button is-link is-outlined is-medium is-fullwidth" href="">Начать бесплатно</a>
               </div>
             </div>
             <div class="column">
-              <div class="tariff">
+              <div class="tariff" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150">
                 <div class="tariff__head">
                   <div class="tariff__name">U-PRO </div>
-                  <div class="tariff__price">14 999<span>₽/мес</span></div>
+                  <div class="tariff__price"><span class="show" data-period-1>14 999</span><span data-period-3>13 499</span>₽/мес</div>
                 </div>
                 <ul class="tariff__options">
                   <li>
@@ -247,7 +317,7 @@
                   <li>Автоматизированные воронки продаж</li>
                   <li>Внутренняя CRM система</li>
                   <li>Интеграция с 1С и Битрикс</li>
-                </ul><a class="button" href="">Начать бесплатно</a>
+                </ul><a class="button is-link is-outlined is-medium is-fullwidth" href="">Начать бесплатно</a>
               </div>
             </div>
           </div>
@@ -255,15 +325,17 @@
       </section>
     </main>
     <footer class="footer">
-      <script src="../js/libs.js"></script>
-      <script src="../js/main.js"></script>
-      <footer class="footer">
+      <footer class="footer is-bg-gray">
         <div class="container">
           <div class="footer__logo"><a class="logo" href="index.html"><img src="img/logo.svg" alt="u-robot.ru"></a></div>
           <p>Надежный помощник для вашего бизнеса</p>
           <div class="footer__copy">© 2018, U-Robot</div>
         </div>
       </footer>
-    </footer>
+    </footer><!-- scripts -->
+    <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <script src="js/libs/aos.js"></script>
+    <script src="js/libs/slick.min.js"></script>
+    <script src="js/template.js"></script>
   </body>
 </html>

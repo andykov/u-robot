@@ -6,47 +6,48 @@ block title
 block content
 
 	header.header
+		.bubble(data-aos="zoom-in-right" data-aos-duration="700")
+			img(src="img/svg/bg-bubble.svg", alt="")
 		.container
 			.header__logo
 				a.logo(href="index.html")
 					img(src="img/logo.svg", alt="u-robot.ru")
-			.columns
+			.columns.is-vcentered
 				.column.is-7
-					.header__text
-						| Автоматизируй продажи и общение с клиентом
-					
-						| Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.
-					a.button(href="/") Попробуй
-					.label 10 дней бесплатно
+					.header__title(data-aos="fade-up" data-aos-delay="500") Автоматизируй продажи и общение с клиентом
+					.header__text Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.
+					a.button(href="/" data-aos="fade-up" data-aos-delay="600") Попробуй
+					.label(data-aos="fade-up" data-aos-delay="650") 10 дней бесплатно
 				.column.is-5
-					.header__img
+					.header__img(data-aos="fade-left" data-aos-delay="500")
 						img(src="img/design/personage.png", alt="image robot")
-			
 
-	section.section
-		.container
-			.columns
-				.column
-					.card
-						.card-image
-							img(src="img/svg/icon-1.svg", alt="")
-						.card-title Выгодные тарифы
-						
-						.card-body Доступные цены для разного уровня бизнеса и приятные скидки до 50%
-				.column
-					.card
-						.card-image
-							img(src="img/svg/icon-2.svg", alt="")
-						.card-title Максимум возможностей
-						
-						.card-body Поддержка всех мессенджеров и популярных соц. сетях
-				.column
-					.card
-						.card-image
-							img(src="img/svg/icon-3.svg", alt="")
-						.card-title Быстрый старт
-						
-						.card-body Настроить и запустить инструмент можно в течении 20 минут
+
+	section.section.is-pt-0
+		.container.is-fluid
+			.panel.is-top-outside
+				.columns
+					.column
+						.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
+							.card__image
+								span.icon.is-large.is-fill.is-rounded
+									img(src="img/svg/icon-1.svg", alt="")
+							h3.card__title Выгодные тарифы
+							.card__body Доступные цены для разного уровня бизнеса и приятные скидки до 50%
+					.column
+						.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100")
+							.card__image
+								span.icon.is-large.is-fill.is-rounded
+									img(src="img/svg/icon-2.svg", alt="")
+							h3.card__title Максимум возможностей
+							.card__body Поддержка всех мессенджеров и популярных соц. сетях
+					.column
+						.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150")
+							.card__image
+								span.icon.is-large.is-fill.is-rounded
+									img(src="img/svg/icon-3.svg", alt="")
+							h3.card__title Быстрый старт
+							.card__body Настроить и запустить инструмент можно в течении 20 минут
 	section.section
 		.container
 			.columns
@@ -56,95 +57,164 @@ block content
 					p Расписать что это значит, чем помогает клиенту и чем это удобно. Расписать что это значит, чем помогает клиенту и чем это удобно.Расписать что это значит, чем помогает клиенту и чем это удобно.
 					.social-choice
 						div Выбери мессенжер который тебе удобен и посмотри как это работает прямо сейчас!
-	section.section
+	section.section.is-bg-gray
 		.container
 			h2 Автоматизация процессов — для любого сферы
-			.columns
-				.column
-					.card-image
-					.card-title Кафе и рестораны
-					.card-body Общайтесь со своими постоянными клиентами, бронируйте столик и принимайте оплату онлайн в случае доставки
-			.column
-					.card-image
-					.card-title Туристические агенства
-					.card-body Напоминйте клиентами которые уже пользовались вашими услугами, предлагая им интересные туры и акции
-			.column
-					.card-image
-					.card-title Частные мастера
-					.card-body Обрабатывайте более 5000 заявок за 1 минуту, а так же призентуйте свои услуги без личного участия
-			.column
-					.card-image
-					.card-title Интернет магазины
-					.card-body Расширите свои продажи в месенджерах и соц. сетях, а так же подключить онлайн оплату
-			.column
-					.card-image
-					.card-title IT-компании и банки
-					.card-body Уменьшите нагрузку на техническую поддержку своей компании большую часть ответов можно автоматизировать
-			.column
-					.card-image
-					.card-title Все сферы
-					.card-body Для всех сфер, которые сталкиваются с потерей клиентов, привлечению новых и работой уже с существующей клиентской базой
+			.columns.is-multiline.is-tablet
+				.column.is-4
+					.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
+						.card__image
+							span.icon.is-large.is-fill.is-rounded
+								img(src="img/svg/icon-4.svg", alt="")
+						h3.card__title Кафе и рестораны
+						.card__body Общайтесь со своими постоянными клиентами, бронируйте столик и принимайте оплату онлайн в случае доставки
+				.column.is-4
+					.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100")
+						.card__image
+							span.icon.is-large.is-fill.is-rounded
+								img(src="img/svg/icon-5.svg", alt="")
+						h3.card__title Туристические агенства
+						.card__body Напоминйте клиентами которые уже пользовались вашими услугами, предлагая им интересные туры и акции
+				.column.is-4
+					.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150")
+						.card__image
+							span.icon.is-large.is-fill.is-rounded
+								img(src="img/svg/icon-6.svg", alt="")
+						h3.card__title Частные мастера
+						.card__body Обрабатывайте более 5000 заявок за 1 минуту, а так же призентуйте свои услуги без личного участия
+				.column.is-4
+					.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="200")
+						.card__image
+							span.icon.is-large.is-fill.is-rounded
+								img(src="img/svg/icon-7.svg", alt="")
+						h3.card__title Интернет магазины
+						.card__body Расширите свои продажи в месенджерах и соц. сетях, а так же подключить онлайн оплату
+				.column.is-4
+					.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="250")
+						.card__image
+							span.icon.is-large.is-fill.is-rounded
+								img(src="img/svg/icon-8.svg", alt="")
+						h3.card__title IT-компании и банки
+						.card__body Уменьшите нагрузку на техническую поддержку своей компании большую часть ответов можно автоматизировать
+				.column.is-4
+					.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="300")
+						.card__image
+							span.icon.is-large.is-fill.is-rounded
+								img(src="img/svg/icon-9.svg", alt="")
+						h3.card__title Все сферы
+						.card__body Для всех сфер, которые сталкиваются с потерей клиентов, привлечению новых и работой уже с существующей клиентской базой
 	section.section
 		.container
-			h2 Скидка 50% на месяц пользования, 5-ти первым представителям разных ниши
-			.columns
-				.column
-					.sale
-						.sale__name Рекламные агенства
-						.sale__sum 4
-				.column
-					.sale
-						.sale__name Салон красоты
-						.sale__sum 1
-				.column
-					.sale
-						.sale__name Кафе и рестораны
-						.sale__sum 1
-				.column
-					.sale
-						.sale__name Интернет магазины
-						.sale__sum 1
-				.column
-					.sale
-						.sale__name Фитнес клубы
-						.sale__sum 1
-				.column
-					.sale
-						.sale__name IT компании
-						.sale__sum 1
-				.column
-					.sale
-						.sale__name Преподователи и репетиторы
-						.sale__sum 1
-			a.button(href="") Хочу U-Robot для свой ниши
+			.panel.discount
+				h2 Скидка 50% на месяц пользования, 5-ти первым представителям разных ниши
+				.columns.is-gapless.is-mobile.is-multiline
+					.column.is-6-mobile
+						.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="0")
+							.discount-item__cat Рекламные !{'<br>'}агенства
+							.discount-item__count 4
+					.column.is-6-mobile
+						.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="100")
+							.discount-item__cat Салон !{'<br>'}красоты
+							.discount-item__count 1
+					.column.is-6-mobile
+						.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="150")
+							.discount-item__cat Кафе и !{'<br>'}рестораны
+							.discount-item__count 1
+					.column.is-6-mobile
+						.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="200")
+							.discount-item__cat Интернет !{'<br>'}магазины
+							.discount-item__count 1
+					.column.is-6-mobile
+						.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="250")
+							.discount-item__cat Фитнес !{'<br>'}клубы
+							.discount-item__count 1
+					.column.is-6-mobile
+						.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="300")
+							.discount-item__cat IT !{'<br>'}компании
+							.discount-item__count 1
+					.column.is-full-mobile
+						.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="350")
+							.discount-item__cat Преподователи !{'<br>'}и репетиторы
+							.discount-item__count 1
+				a.button(href="#").is-link.is-outlined.is-medium Хочу U-Robot для свой ниши
 			p 
 				| Если не нашли свою нишу, 
 				a(href="") напишите нам 
 				| и мы подберемя для вас индивидуальное решение
-
+	
+	section.section.is-bg-green
+		.container
+			.columns
+				.column.is-7.is-offset-5
+					h2 10 дней абсолютно бесплатно
+					p Попробуй инструмент бесплатно в своем бизнесе если за 10 дней ты не увидишь пользы, просто отмени подписку
+					a.button(href="#").is-link.is-outlined.is-medium Попробуй
+					
+	section.section
+		.container
+			.case
+				.case__item
+					.case__top
+						img(src="img/content/case-store77.png", alt="")
+						a(href="www.store77.net") www.store77.net
+					h2 Интернет-магазин электронных товаров
+					p После внедрения U-Robota, штат менеждеров сократился на 40%, теперь большинство вопросов клиентов обрабатывается в автоматическом режиме.
+					p Еще мы создали STORE77 в социальных сетях (VK и FB), интегрировали онлайн оплату и теперь пользователь может покупать любые товары из нашего ассортимента не покидая свою страницу.
+				.case__item
+					.case__top
+						img(src="img/content/case-store77.png", alt="")
+						a(href="www.store77.net") www.store77.net
+					h2 Интернет-магазин электронных товаров
+					p После внедрения U-Robota, штат менеждеров сократился на 40%, теперь большинство вопросов клиентов обрабатывается в автоматическом режиме.
+					p Еще мы создали STORE77 в социальных сетях (VK и FB), интегрировали онлайн оплату и теперь пользователь может покупать любые товары из нашего ассортимента не покидая свою страницу.
+			.clients
+				p А так же наши клиенты
+				.columns
+					.column
+	section.section
+		.container
+			.reviews
+				.reviews__item
+					
+	section.section
+		.container
+			.devices
+				.columns
+					.column.is-5.is-offset-1
+						.devices-toggle
+							a(href="#").button.is-small.is-success.js-devices-desktop Веб версия
+							a(href="#").button.is-small.js-devices-mobile Мобильное приложение
+						h2 Контролируйте бизнес на любых устройствах
+						p В веб версии продукта разработан полноценный личный кабинет в котором вы можете настраивать инструмент, аналитику и просматривать статистику
+						a(href="#") Попробуй
+					.column.is-6
+						.devices-img
+							img(src="img/design/macbook.png", alt="macbook.png" data-aos="flip-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices-img__desktop
+							img(src="img/design/iPhone.png", alt="iPhone.png" data-aos="flip-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices-img__mobile
 	section.section
 		.container
 			h2 Выгодные тарифы для наших пользователей
 			.notice Попробуйте U-Robot бесплатно: если не понравится, отмените подписку, и платить не придется.
 			.buttons.has-addons.is-centered
-				button.button 1 месяц
-				button.button 
+				button.button.is-medium.js-tariff-period(data-period="1" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0") 1 месяц
+				button.button.is-medium.js-tariff-period(data-period="3" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100")
 					| 3 месяца
 					small скидка 10%
-				button.button 
+				button.button.is-medium.js-tariff-period(data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150")
 					| 6 месяцев
 					small скидка 20%
-				button.button 
+				button.button.is-medium.js-tariff-period(data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="200")
 					| 12 месяцев
 					small скидка 30%
 			.columns
 				.column
-					.tariff
+					.tariff(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
 						.tariff__head
 							.tariff__name U-Air
 							.tariff__price
-								| 4999
-								span ₽/мес
+								span(data-period-1).show 4999
+								span(data-period-3) 4499
+								| ₽/мес
 						ul.tariff__options
 							li
 								| Электронная визитка
@@ -170,14 +240,15 @@ block content
 								| Внутренняя CRM система
 							li
 								| Интеграция с 1С и Битрикс
-						a.button(href="") Начать бесплатно
+						a.button(href="").is-link.is-outlined.is-medium.is-fullwidth Начать бесплатно
 				.column
-					.tariff
+					.tariff(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100")
 						.tariff__head
 							.tariff__name U-Classic
 							.tariff__price
-								| 9999
-								span ₽/мес
+								span(data-period-1).show 9999
+								span(data-period-3) 8999
+								| ₽/мес
 						ul.tariff__options
 							li
 								| Электронная визитка
@@ -203,14 +274,15 @@ block content
 								| Внутренняя CRM система
 							li
 								| Интеграция с 1С и Битрикс
-						a.button(href="") Начать бесплатно
+						a.button(href="").is-link.is-outlined.is-medium.is-fullwidth Начать бесплатно
 				.column
-					.tariff
+					.tariff(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150")
 						.tariff__head
 							.tariff__name U-PRO 
 							.tariff__price
-								| 14 999
-								span ₽/мес
+								span(data-period-1).show 14 999
+								span(data-period-3) 13 499
+								| ₽/мес
 						ul.tariff__options
 							li
 								| Электронная визитка
@@ -236,9 +308,10 @@ block content
 								| Внутренняя CRM система
 							li
 								| Интеграция с 1С и Битрикс
-						a.button(href="") Начать бесплатно
+						a.button(href="").is-link.is-outlined.is-medium.is-fullwidth Начать бесплатно
+
 block footer
-	footer.footer
+	footer.footer.is-bg-gray
 		.container
 			.footer__logo
 				a.logo(href="index.html")

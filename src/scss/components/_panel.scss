@@ -1,13 +1,20 @@
-$panel-padding: 30px !default;
+$panel-padding: 80px !default;
 
 .panel {
-  background-color: #FFF;
-  border: 1px solid #F0F0F0;
+  background: #FFFFFF;
   border-radius: 4px;
-  padding: $panel-padding / 2;
+  padding: ($panel-padding / 4) (($panel-padding / 4) + 10);
+  box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
+  border-radius: 10px;
+  max-width: 1260px;
+  margin: 0 auto;
+
+  &.is-top-outside {
+    margin-top: -35px;
+  }
 
   @include tablet {
-    padding: $panel-padding;
+    padding: ($panel-padding / 2) (($panel-padding / 2) + 20);
   }
 
   &__header {

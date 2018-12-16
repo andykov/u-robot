@@ -1,1 +1,0 @@
-$(function(){skrollr.init({mobileCheck:function(){return!1}})});

@@ -1,1 +1,0 @@
-$(function(){$(window).width()<=767&&$("#catalog-tabs").removeClass("open"),$(window).width()<992&&$(".catalog.catalog--map-open .catalog__list-head").css("top",$(".header-fixed").height())});

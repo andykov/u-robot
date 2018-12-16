@@ -1,7 +1,7 @@
 $icon-dimensions: 1.2rem !default;
 $icon-dimensions-small: 1rem !default;
 $icon-dimensions-medium: 2rem !default;
-$icon-dimensions-large: 3rem !default;
+$icon-dimensions-large: 4.5rem !default;
 
 .icon {
   align-items: center;
@@ -23,7 +23,10 @@ $icon-dimensions-large: 3rem !default;
     height: $icon-dimensions-large;
     width: $icon-dimensions-large;
   }
-  &.is-circle {
-    border-radius: $radius-rounded;
+  &.is-rounded {
+    border-radius: $radius-large;
+  }
+  &.is-fill {
+    background-color: rgba(31, 219, 132, 0.1);
   }
 }

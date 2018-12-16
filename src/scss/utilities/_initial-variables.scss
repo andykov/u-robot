@@ -10,8 +10,8 @@ $grey-darker: hsl(0, 0%, 21%) !default;
 $grey-dark: hsl(0, 0%, 29%) !default; // #4A4A4A
 $grey: hsl(0, 0%, 48%) !default;
 $grey-light: hsl(0, 0%, 62%) !default; // #9D9D9D
-$grey-lighter: hsl(0, 0%, 94%) !default; // #F0F0F0
-$grey-extra-lighter: hsl(0, 0%, 98%) !default; // #F9F9F9 // добавил
+$grey-lighter: hsl(0, 0%, 96%) !default; // #F5F5F5
+$grey-extra-lighter: hsl(0, 0%, 98%) !default; // #F9F9F9
 
 $white-ter: hsl(0, 0%, 96%) !default;
 $white-bis: hsl(0, 0%, 98%) !default;
@@ -19,19 +19,19 @@ $white: hsl(0, 0%, 100%) !default;
 
 $orange: hsl(14, 100%, 53%) !default;
 $yellow: hsl(48, 100%, 67%) !default;
-$green: hsl(97, 54%, 57%) !default; // #85CD57
+$green: hsl(152, 79%, 54%) !default; // #2DE691
 $turquoise: $grey-lighter !default;
 $cyan: hsl(204, 86%, 53%) !default;
-$blue: hsl(212, 72%, 59%) !default; // #4A90E2
+$blue: hsl(223, 74%, 54%) !default; // #3363E0
 $purple: hsl(271, 100%, 71%) !default;
 $red: hsl(348, 100%, 61%) !default;
 
 // Typography
 
-$family-sans-serif: "Open Sans", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$family-sans-serif: "Graphik", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 $family-monospace: monospace !default;
 $render-mode: optimizeLegibility !default;
-$global-font-size: 14px !default;
+$global-font-size: 16px !default;
 
 $size-1: rem-calc(32px) !default;
 $size-2: rem-calc(24px) !default;

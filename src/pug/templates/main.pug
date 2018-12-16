@@ -7,7 +7,8 @@ html(lang="ru-RU")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
 		title
 			block title
-		link(rel="stylesheet" href="../css/libs.css")
+		link(rel="stylesheet" href="../css-new/libs/aos.css")
+		link(rel="stylesheet" href="../css-new/libs/slick.css")
 		link(rel="stylesheet" href="../css-new/global.css")
 
 		block css
@@ -20,8 +21,12 @@ html(lang="ru-RU")
 			block content
 
 		footer.footer
-			script(src="../js/libs.js")
-			script(src="../js/main.js")
 			block footer
+		
+		<!-- scripts -->
+		script(src="js/libs/jquery-3.3.1.min.js")
+		script(src="js/libs/aos.js")
+		script(src="js/libs/slick.min.js")
+		script(src="js/template.js")
 
 

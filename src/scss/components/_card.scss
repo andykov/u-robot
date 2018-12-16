@@ -13,11 +13,30 @@ $card-footer-background-color: none !default;
 $card-footer-border-top: 1px solid $border !default;
 
 .card {
-  background-color: $card-background-color;
-  box-shadow: $card-shadow;
-  color: $card-color;
-  max-width: 100%;
   position: relative;
+  padding: 20px 0;
+
+  &__image {
+    margin-bottom: 28px;
+  }
+
+  &__title {
+    position: relative;
+    padding-bottom: 34px;
+    margin-bottom: 19px;
+    line-height: 1;
+    color: #031D5B;
+
+    &::after {
+      content: '';
+      background-color: #2DE691;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 4px;
+    }
+  }
 }
 
 .card-header {
@@ -47,10 +66,6 @@ $card-footer-border-top: 1px solid $border !default;
   padding: 0.75rem;
 }
 
-.card-image {
-  display: block;
-  position: relative;
-}
 
 .card-content {
   background-color: $card-content-background-color;
