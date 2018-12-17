@@ -2,14 +2,14 @@
 
 // Colors
 
-$black: hsl(0, 0%, 4%) !default;
+$black: hsl(0, 0%, 0%) !default;
 $black-bis: hsl(0, 0%, 7%) !default;
 $black-ter: hsl(0, 0%, 14%) !default;
 
 $grey-darker: hsl(0, 0%, 21%) !default;
 $grey-dark: hsl(0, 0%, 29%) !default; // #4A4A4A
 $grey: hsl(0, 0%, 48%) !default;
-$grey-light: hsl(0, 0%, 62%) !default; // #9D9D9D
+$grey-light: hsl(210, 9%, 60%) !default; // #919AA3
 $grey-lighter: hsl(0, 0%, 96%) !default; // #F5F5F5
 $grey-extra-lighter: hsl(0, 0%, 98%) !default; // #F9F9F9
 
@@ -33,8 +33,8 @@ $family-monospace: monospace !default;
 $render-mode: optimizeLegibility !default;
 $global-font-size: 16px !default;
 
-$size-1: rem-calc(32px) !default;
-$size-2: rem-calc(24px) !default;
+$size-1: rem-calc(48px) !default;
+$size-2: rem-calc(32px) !default;
 $size-3: rem-calc(18px) !default;
 $size-4: rem-calc(16px) !default;
 $size-5: rem-calc(14px) !default;

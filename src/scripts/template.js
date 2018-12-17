@@ -57,7 +57,32 @@ $(function() {
 
 
 
-
+        // var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
+        // fluidEl = $("figure");
+        // console.log(allVideos);
+        // allVideos.each(function() {
+    
+        //   $(this)
+        //     // jQuery .data does not work on object/embed elements
+        //     .attr('data-aspectRatio', this.height / this.width)
+        //     .removeAttr('height')
+        //     .removeAttr('width');
+    
+        // });
+    
+        // $(window).resize(function() {
+        //     console.Log('1111');
+        //   var newWidth = fluidEl.width();
+        //   allVideos.each(function() {
+    
+        //     var elel = $(this);
+        //     elel
+        //         .width(newWidth)
+        //         .height(newWidth * elel.attr('data-aspectRatio'));
+    
+        //   });
+    
+        // }).resize();
 
 
         // $().attr('data-period-'+ period).animate({

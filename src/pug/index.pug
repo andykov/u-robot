@@ -13,12 +13,12 @@ block content
 				a.logo(href="index.html")
 					img(src="img/logo.svg", alt="u-robot.ru")
 			.columns.is-vcentered
-				.column.is-7
-					.header__title(data-aos="fade-up" data-aos-delay="500") Автоматизируй продажи и общение с клиентом
-					.header__text Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.
-					a.button(href="/" data-aos="fade-up" data-aos-delay="600") Попробуй
-					.label(data-aos="fade-up" data-aos-delay="650") 10 дней бесплатно
-				.column.is-5
+				.column.is-7-tablet
+					h1.header__title(data-aos="fade-up" data-aos-delay="500") Автоматизируй продажи и общение с клиентом
+					.header__text(data-aos="fade-up" data-aos-delay="600") Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.
+					a.button.is-link(href="/" data-aos="fade-up" data-aos-delay="650") Попробуй
+					.label(data-aos="fade-up" data-aos-delay="700") 10 дней бесплатно
+				.column.is-5-tablet.is-hidden-mobile
 					.header__img(data-aos="fade-left" data-aos-delay="500")
 						img(src="img/design/personage.png", alt="image robot")
 
@@ -48,15 +48,45 @@ block content
 									img(src="img/svg/icon-3.svg", alt="")
 							h3.card__title Быстрый старт
 							.card__body Настроить и запустить инструмент можно в течении 20 минут
+	
+	section.section.is-paddingless
+		figure.video-fullwidth
+			iframe(width="560" height="315" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen)
+
 	section.section
 		.container
-			.columns
+			.integration
+			.columns.is-vcentered
 				.column
+					img(src="img/content/screen.png", alt="")(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="200")
 				.column
 					h2 Личный сайт во всех мессенджерах и соц. сетях
 					p Расписать что это значит, чем помогает клиенту и чем это удобно. Расписать что это значит, чем помогает клиенту и чем это удобно.Расписать что это значит, чем помогает клиенту и чем это удобно.
-					.social-choice
-						div Выбери мессенжер который тебе удобен и посмотри как это работает прямо сейчас!
+					.integration-social
+						ul.integration-social__list
+							li
+								span.icon.is-medium(data-aos="fade-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
+									img(src="img/svg/telegram.svg", alt="telegram")
+							li
+								span.icon.is-medium(data-aos="fade-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
+									img(src="img/svg/viber.svg", alt="viber")
+							li
+								span.icon.is-medium(data-aos="fade-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
+									img(src="img/svg/whatsapp.svg", alt="whatsapp")
+							li
+								span.icon.is-medium(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="200" data-aos-delay="0")
+									img(src="img/svg/messenger.svg", alt="messenger")
+							li
+								span.icon.is-medium(data-aos="fade-right" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
+									img(src="img/svg/vk.svg", alt="vkontakte")
+							li
+								span.icon.is-medium(data-aos="fade-right" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
+									img(src="img/svg/instagram.svg", alt="instagram")
+							li
+								span.icon.is-medium(data-aos="fade-right" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
+									img(src="img/svg/facebook.svg", alt="facebook")
+						div.integration-social__text(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="0") Выбери мессенжер который !{'<br>'} тебе удобен и посмотри как это !{'<br>'}!{'<span>'}работает прямо сейчас!!{'</span>'}
+
 	section.section.is-bg-gray
 		.container
 			h2 Автоматизация процессов — для любого сферы
@@ -106,7 +136,7 @@ block content
 	section.section
 		.container
 			.panel.discount
-				h2 Скидка 50% на месяц пользования, 5-ти первым представителям разных ниши
+				h2 Скидка !{'<span class="has-text-green">50%</span>'} на месяц пользования, !{'<br>'}5-ти первым представителям разных ниши
 				.columns.is-gapless.is-mobile.is-multiline
 					.column.is-6-mobile
 						.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="0")
@@ -136,7 +166,7 @@ block content
 						.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="350")
 							.discount-item__cat Преподователи !{'<br>'}и репетиторы
 							.discount-item__count 1
-				a.button(href="#").is-link.is-outlined.is-medium Хочу U-Robot для свой ниши
+				a.button(href="#").is-link.is-medium Хочу U-Robot для свой ниши
 			p 
 				| Если не нашли свою нишу, 
 				a(href="") напишите нам 
@@ -189,8 +219,8 @@ block content
 						a(href="#") Попробуй
 					.column.is-6
 						.devices-img
-							img(src="img/design/macbook.png", alt="macbook.png" data-aos="flip-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices-img__desktop
-							img(src="img/design/iPhone.png", alt="iPhone.png" data-aos="flip-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices-img__mobile
+							img(src="img/content/macbook.png", alt="macbook.png" data-aos="flip-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices-img__desktop
+							img(src="img/content/iPhone.png", alt="iPhone.png" data-aos="flip-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices-img__mobile
 	section.section
 		.container
 			h2 Выгодные тарифы для наших пользователей
@@ -240,7 +270,7 @@ block content
 								| Внутренняя CRM система
 							li
 								| Интеграция с 1С и Битрикс
-						a.button(href="").is-link.is-outlined.is-medium.is-fullwidth Начать бесплатно
+						a.button(href="").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
 				.column
 					.tariff(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100")
 						.tariff__head
@@ -274,7 +304,7 @@ block content
 								| Внутренняя CRM система
 							li
 								| Интеграция с 1С и Битрикс
-						a.button(href="").is-link.is-outlined.is-medium.is-fullwidth Начать бесплатно
+						a.button(href="").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
 				.column
 					.tariff(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150")
 						.tariff__head
@@ -308,7 +338,7 @@ block content
 								| Внутренняя CRM система
 							li
 								| Интеграция с 1С и Битрикс
-						a.button(href="").is-link.is-outlined.is-medium.is-fullwidth Начать бесплатно
+						a.button(href="").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
 
 block footer
 	footer.footer.is-bg-gray
