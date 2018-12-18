@@ -7,7 +7,6 @@ block content
 
 	header.header
 		.bubble(data-aos="zoom-in-right" data-aos-duration="700")
-			img(src="img/svg/bg-bubble.svg", alt="")
 		.container
 			.header__logo
 				a.logo(href="index.html")
@@ -133,8 +132,6 @@ block content
 								img(src="img/svg/icon-9.svg", alt="")
 						h3.card__title Все сферы
 						.card__body Для всех сфер, которые сталкиваются с потерей клиентов, привлечению новых и работой уже с существующей клиентской базой
-	section.section
-		.container
 			.panel.discount
 				h2 Скидка !{'<span class="has-text-green">50%</span>'} на месяц пользования, !{'<br>'}5-ти первым представителям разных ниши
 				.columns.is-gapless.is-mobile.is-multiline
@@ -167,60 +164,95 @@ block content
 							.discount-item__cat Преподователи !{'<br>'}и репетиторы
 							.discount-item__count 1
 				a.button(href="#").is-link.is-medium Хочу U-Robot для свой ниши
-			p 
-				| Если не нашли свою нишу, 
-				a(href="") напишите нам 
-				| и мы подберемя для вас индивидуальное решение
-	
-	section.section.is-bg-green
+			div.has-text-centered.has-text-grey
+				p
+					| Если не нашли свою нишу, 
+					a(href="") напишите нам 
+					| и мы подберемя для вас индивидуальное решение
+
+	section.section.trial.is-bg-green
 		.container
-			.columns
-				.column.is-7.is-offset-5
-					h2 10 дней абсолютно бесплатно
-					p Попробуй инструмент бесплатно в своем бизнесе если за 10 дней ты не увидишь пользы, просто отмени подписку
-					a.button(href="#").is-link.is-outlined.is-medium Попробуй
+			.columns.is-gapless
+				.column.is-5.is-hidden-mobile
+					.trial__img(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-offset="250" data-aos-duration="300" data-aos-delay="0")
+						img(src="img/design/personage-crop.png", alt="")
+				.column.is-7
+					.trial__text
+						h2(data-aos="fade-up" data-aos-offset="0" data-aos-delay="100") 10 дней абсолютно бесплатно
+						p(data-aos="fade-up" data-aos-offset="0" data-aos-delay="150") Попробуй инструмент бесплатно в своем бизнесе если за 10 дней ты не увидишь пользы, просто отмени подписку
+						a.button(href="#" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200").is-white.is-medium Попробуй
+						.tag-wrap(data-aos="fade-up" data-aos-offset="0" data-aos-delay="250")
+							span.tag.is-white Free
+							span.tag-text 10 дней бесплатно
 					
 	section.section
 		.container
 			.case
-				.case__item
-					.case__top
-						img(src="img/content/case-store77.png", alt="")
-						a(href="www.store77.net") www.store77.net
-					h2 Интернет-магазин электронных товаров
-					p После внедрения U-Robota, штат менеждеров сократился на 40%, теперь большинство вопросов клиентов обрабатывается в автоматическом режиме.
-					p Еще мы создали STORE77 в социальных сетях (VK и FB), интегрировали онлайн оплату и теперь пользователь может покупать любые товары из нашего ассортимента не покидая свою страницу.
-				.case__item
-					.case__top
-						img(src="img/content/case-store77.png", alt="")
-						a(href="www.store77.net") www.store77.net
-					h2 Интернет-магазин электронных товаров
-					p После внедрения U-Robota, штат менеждеров сократился на 40%, теперь большинство вопросов клиентов обрабатывается в автоматическом режиме.
-					p Еще мы создали STORE77 в социальных сетях (VK и FB), интегрировали онлайн оплату и теперь пользователь может покупать любые товары из нашего ассортимента не покидая свою страницу.
+				button.case-prev
+				button.case-next
+				.js-case.case__inner
+					.case__item
+						.case__top
+							img(src="img/content/case-store77.png", alt="")
+							a(href="www.store77.net") www.store77.net
+						h2 Интернет-магазин электронных товаров
+						p После внедрения U-Robota, штат менеждеров сократился на 40%, теперь большинство вопросов клиентов обрабатывается в автоматическом режиме.
+						p Еще мы создали STORE77 в социальных сетях (VK и FB), интегрировали онлайн оплату и теперь пользователь может покупать любые товары из нашего ассортимента не покидая свою страницу.
+					.case__item
+						.case__top
+							img(src="img/content/case-store77.png", alt="")
+							a(href="www.store77.net") www.store77.net
+						h2 Интернет-магазин электронных товаров
+						p После внедрения U-Robota, штат менеждеров сократился на 40%, теперь большинство вопросов клиентов обрабатывается в автоматическом режиме.
+						p Еще мы создали STORE77 в социальных сетях (VK и FB), интегрировали онлайн оплату и теперь пользователь может покупать любые товары из нашего ассортимента не покидая свою страницу.
+			
+	section.section
+		.container
+			.js-reviews.reviews
+				.reviews__item
+					.reviews__img(style="background-image: url(../img/content/review-1-img.png);")
+					.reviews__body
+						.reviews__author Дрозов Алексей
+						.reviews__post Директор депортамента поддержки «Google»
+						.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
+				.reviews__item
+					.reviews__img(style="background-image: url(../img/content/review-1-img.png);")
+					.reviews__body
+						.reviews__author Дрозов Алексей
+						.reviews__post Директор депортамента поддержки «Google»
+						.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
+			.js-reviews-nav.reviews-nav
+				.reviews-nav__item
+					img(src="img/svg/lenovo.svg", alt="")
+				.reviews-nav__item
+					img(src="img/svg/lenovo.svg", alt="")
 			.clients
 				p А так же наши клиенты
 				.columns
 					.column
-	section.section
+						img(src="img/svg/lenovo.svg", alt="")
+					.column
+						img(src="img/svg/redngin.svg", alt="")
+					.column
+						img(src="img/svg/sony.svg", alt="")
+					.column
+						img(src="img/svg/lenovo.svg", alt="")
+					.column
+						img(src="img/svg/redngin.svg", alt="")
+	section.section.devices
 		.container
-			.reviews
-				.reviews__item
-					
-	section.section
-		.container
-			.devices
-				.columns
-					.column.is-5.is-offset-1
-						.devices-toggle
-							a(href="#").button.is-small.is-success.js-devices-desktop Веб версия
-							a(href="#").button.is-small.js-devices-mobile Мобильное приложение
-						h2 Контролируйте бизнес на любых устройствах
-						p В веб версии продукта разработан полноценный личный кабинет в котором вы можете настраивать инструмент, аналитику и просматривать статистику
-						a(href="#") Попробуй
-					.column.is-6
-						.devices-img
-							img(src="img/content/macbook.png", alt="macbook.png" data-aos="flip-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices-img__desktop
-							img(src="img/content/iPhone.png", alt="iPhone.png" data-aos="flip-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices-img__mobile
+			.columns
+				.column.is-5.is-offset-1
+					.devices__toggle
+						a(href="#").button.is-small.is-success.js-devices-desktop Веб версия
+						a(href="#").button.is-small.js-devices-mobile Мобильное приложение
+					h2 Контролируйте бизнес на любых устройствах
+					p В веб версии продукта разработан полноценный личный кабинет в котором вы можете настраивать инструмент, аналитику и просматривать статистику
+					a.button.is-white(href="/" data-aos="fade-up" data-aos-delay="650") Попробуй
+				.column.is-6
+					.devices__img
+						img(src="img/content/macbook.png", alt="macbook.png" data-aos="flip-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices__img-desktop
+						img(src="img/content/iPhone.png", alt="iPhone.png" data-aos="flip-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices__img-mobile
 	section.section
 		.container
 			h2 Выгодные тарифы для наших пользователей

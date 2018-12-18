@@ -3,7 +3,29 @@ AOS.init();
 $(function() {
 
     // slider
-    $('.case').slick();
+    $('.js-case').slick({
+        dots: true,
+        nextArrow:$('.case-next'),
+        prevArrow:$('.case-prev'),
+    });
+
+    $('.js-reviews').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        asNavFor: '.js-reviews-nav',
+    });
+
+    $('.js-reviews-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.js-reviews',
+        dots: false,
+        arrows: false,
+        focusOnSelect: true
+    });
+    
     
     function blurElement(element, size) {
         var filterVal = 'blur(' + size + 'px)';

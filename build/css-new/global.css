@@ -546,6 +546,10 @@ svg {
 html.fancybox-lock {
   overflow: visible !important; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.2rem;
+  line-height: 1; }
+
 h1 {
   font-size: 3rem;
   font-weight: 500;
@@ -2312,7 +2316,7 @@ a.box:active {
     padding-right: 0.917em; }
   .button.is-medium {
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 6px;
     height: 2.778em;
     padding-left: 1.42867em;
     padding-right: 1.42867em;
@@ -2391,6 +2395,10 @@ a.box:active {
 .container {
   margin: 0 auto;
   position: relative; }
+  @media screen and (max-width: 991px) {
+    .container {
+      padding-left: 10px;
+      padding-right: 10px; } }
   @media screen and (min-width: 1152px) {
     .container {
       max-width: 1086px;
@@ -4913,6 +4921,141 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
     transform: translate(-50%, 0);
     width: 300px; } }
 
+.tag-wrap {
+  display: flex;
+  align-items: center; }
+
+.tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .tags .tag {
+    margin-bottom: 0.5rem; }
+    .tags .tag:not(:last-child) {
+      margin-right: 0.5rem; }
+  .tags:last-child {
+    margin-bottom: -0.5rem; }
+  .tags:not(:last-child) {
+    margin-bottom: 1rem; }
+  .tags.has-addons .tag {
+    margin-right: 0; }
+    .tags.has-addons .tag:not(:first-child) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0; }
+    .tags.has-addons .tag:not(:last-child) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0; }
+  .tags.is-centered {
+    justify-content: center; }
+    .tags.is-centered .tag {
+      margin-right: 0.25rem;
+      margin-left: 0.25rem; }
+  .tags.is-right {
+    justify-content: flex-end; }
+    .tags.is-right .tag:not(:first-child) {
+      margin-left: 0.5rem; }
+    .tags.is-right .tag:not(:last-child) {
+      margin-right: 0; }
+
+.tag-text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-left: 10px; }
+
+.tag:not(body) {
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  color: black;
+  display: inline-flex;
+  font-size: 0.875rem;
+  height: 1.25rem;
+  justify-content: center;
+  line-height: 1.5;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  white-space: nowrap;
+  letter-spacing: 0.67px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase; }
+  .tag:not(body) .delete {
+    margin-left: 0.25rem;
+    margin-right: -0.375rem; }
+  .tag:not(body).is-white {
+    background-color: white;
+    color: black; }
+  .tag:not(body).is-black {
+    background-color: black;
+    color: white; }
+  .tag:not(body).is-light {
+    background-color: whitesmoke;
+    color: #363636; }
+  .tag:not(body).is-dark {
+    background-color: #363636;
+    color: whitesmoke; }
+  .tag:not(body).is-primary {
+    background-color: whitesmoke;
+    color: rgba(0, 0, 0, 0.7); }
+  .tag:not(body).is-link {
+    background-color: #3364e1;
+    color: white; }
+  .tag:not(body).is-info {
+    background-color: #209cee;
+    color: white; }
+  .tag:not(body).is-success {
+    background-color: #2de690;
+    color: #fff; }
+  .tag:not(body).is-warning {
+    background-color: #ffdd57;
+    color: rgba(0, 0, 0, 0.7); }
+  .tag:not(body).is-danger {
+    background-color: #ff3860;
+    color: white; }
+  .tag:not(body).is-medium {
+    font-size: 1rem; }
+  .tag:not(body).is-large {
+    font-size: 1.125rem; }
+  .tag:not(body) .icon:first-child:not(:last-child) {
+    margin-left: -0.375em;
+    margin-right: 0.1875em; }
+  .tag:not(body) .icon:last-child:not(:first-child) {
+    margin-left: 0.1875em;
+    margin-right: -0.375em; }
+  .tag:not(body) .icon:first-child:last-child {
+    margin-left: -0.375em;
+    margin-right: -0.375em; }
+  .tag:not(body).is-delete {
+    margin-left: 1px;
+    padding: 0;
+    position: relative;
+    width: 2em; }
+    .tag:not(body).is-delete::before, .tag:not(body).is-delete::after {
+      background-color: currentColor;
+      content: "";
+      display: block;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transform-origin: center center; }
+    .tag:not(body).is-delete::before {
+      height: 1px;
+      width: 50%; }
+    .tag:not(body).is-delete::after {
+      height: 50%;
+      width: 1px; }
+    .tag:not(body).is-delete:hover, .tag:not(body).is-delete:focus {
+      background-color: #e8e8e8; }
+    .tag:not(body).is-delete:active {
+      background-color: #dbdbdb; }
+  .tag:not(body).is-rounded {
+    border-radius: 290486px; }
+
+a.tag:hover {
+  text-decoration: underline; }
+
 .title,
 .subtitle {
   word-break: break-word; }
@@ -5002,6 +5145,9 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
       bottom: 0;
       width: 60px;
       height: 4px; }
+  .card__body {
+    line-height: 1.5;
+    color: #919AA3; }
 
 .card-header {
   background-color: none;
@@ -6264,15 +6410,13 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
   background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
   box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7); }
   .header .bubble {
+    background: url("../img/svg/bg-bubble.svg") no-repeat -58px -20px/cover;
     position: absolute;
     left: -58px;
     top: -20px;
     transform-origin: left top;
     width: 100%;
     height: 100%; }
-    @media screen and (min-width: 992px), print {
-      .header .bubble {
-        width: 487px; } }
     .header .bubble img {
       max-width: none;
       height: 100%; }
@@ -6312,7 +6456,10 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
       max-height: 100vh; }
 
 .section {
-  padding: 5rem 0; }
+  padding: 2.5rem 0; }
+  @media screen and (min-width: 992px), print {
+    .section {
+      padding: 5rem 0; } }
   .section.is-pt-0 {
     padding-top: 0; }
   .section.is-pb-0 {
@@ -6339,7 +6486,14 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
   height: 34px;
   border-radius: 290486px;
   transform: translateY(-50%);
-  z-index: 2; }
+  z-index: 2;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.2; }
+  .slick-arrow:focus {
+    outline: none; }
+  .slick-arrow:hover {
+    opacity: 0.7; }
   .slick-arrow::before {
     content: '';
     display: block;
@@ -6355,17 +6509,48 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
     border-width: 1px;
     transform: rotate(45deg); }
 
-.slick-prev {
+.slick-prev,
+.case-prev {
   left: 0; }
-  .slick-prev:before {
+  .slick-prev:before,
+  .case-prev:before {
     border-color: transparent transparent #919AA3 #919AA3;
     left: 3px; }
 
-.slick-next {
+.slick-next,
+.case-next {
   right: 0; }
-  .slick-next:before {
+  .slick-next:before,
+  .case-next:before {
     border-color: #919AA3 #919AA3 transparent transparent;
     right: 3px; }
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -64px;
+  left: 0;
+  right: 0; }
+  .slick-dots li {
+    padding: 10px; }
+  .slick-dots button {
+    display: block;
+    background: transparent;
+    border: 1px solid #919AA3;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    font-size: 0;
+    cursor: pointer; }
+    .slick-dots button:hover {
+      background-color: #2DE691;
+      border-color: #2DE691; }
+  .slick-dots .slick-active button {
+    background-color: #2DE691;
+    border-color: #2DE691; }
 
 .video-fullwidth {
   position: relative;
@@ -6424,28 +6609,61 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
     .integration-social__text span {
       color: #000; }
 
-.devices-img {
-  position: relative;
-  width: 560px; }
-  .devices-img:after {
-    content: '';
-    display: block;
-    padding-top: 65.54%; }
-  .devices-img__desktop {
+.devices {
+  background-color: #F5F5F5;
+  overflow: hidden; }
+  .devices__toggle {
+    margin-bottom: 20px; }
+    .devices__toggle .button {
+      margin-right: 20px; }
+  .devices__img {
+    position: relative;
+    width: 560px; }
+    .devices__img:after {
+      content: '';
+      display: block;
+      padding-top: 65.54%; }
+    .devices__img-desktop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+    .devices__img-mobile {
+      width: 32.5%;
+      position: absolute;
+      bottom: -48.72px;
+      left: -9.67px; }
+
+.trial {
+  padding-bottom: 0;
+  overflow: hidden; }
+  .trial__img {
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0; }
-  .devices-img__mobile {
-    width: 32.5%;
-    position: absolute;
-    bottom: -48.72px;
-    left: -9.67px; }
+    bottom: 0; }
+    .trial__img img {
+      max-width: 444px; }
+  .trial__text {
+    max-width: 475px;
+    font-size: 1.125rem;
+    color: #288643;
+    padding-bottom: 35px; }
+    @media screen and (min-width: 992px), print {
+      .trial__text {
+        margin-left: 63px; } }
+    .trial__text .button {
+      margin-top: 5px;
+      margin-bottom: 20px;
+      box-shadow: 0px 10px 20px rgba(40, 134, 67, 0.5); }
+      @media screen and (min-width: 992px), print {
+        .trial__text .button {
+          margin-top: 15px;
+          margin-bottom: 32px; } }
 
 .discount {
   padding: 40px 18px;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 41px; }
   .discount h2 {
     line-height: 46px; }
   .discount .column:first-child .discount-item:before {
@@ -6475,13 +6693,70 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
 
 .case {
   position: relative;
-  padding: 40px 60px; }
+  margin-bottom: 64px; }
+  .case__inner {
+    padding: 40px 60px;
+    max-width: 900px;
+    box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
+    border-radius: 10px;
+    margin: 0 auto; }
   .case__item {
     outline: none; }
   .case__top {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+
+.reviews {
+  max-width: 900px;
+  margin: 0 auto; }
+  .reviews__item {
+    background-color: #fff; }
+    @media screen and (min-width: 720px) {
+      .reviews__item {
+        display: flex; } }
+  .reviews__img {
+    width: 100%;
+    flex: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 270px; }
+    @media screen and (min-width: 720px) {
+      .reviews__img {
+        width: 37.77778%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+        width: auto;
+        height: auto; } }
+    .reviews__img:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 79.41176%; }
+  .reviews__body {
+    padding: 20px 10px; }
+    @media screen and (min-width: 720px) {
+      .reviews__body {
+        padding: 30px 60px; } }
+  .reviews__author {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 37px;
+    margin-bottom: 10px; }
+  .reviews__post, .reviews__text {
+    font-size: 1.125rem;
+    line-height: 24px; }
+  .reviews__post {
+    color: #919AA3;
+    margin-bottom: 20px; }
+  .reviews__text {
+    color: #171C34; }
 
 .tariff {
   background-color: #fff;
