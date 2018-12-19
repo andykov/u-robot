@@ -49,7 +49,7 @@ $button-static-border-color: $grey-lighter !default;
 
 @mixin button-medium {
   font-size: rem-calc(14px);
-  font-weight: $weight-medium;
+  font-weight: $radius-large;
   height: 2.778em;
   padding-left: (2.143em / 1.5);
   padding-right: (2.143em / 1.5);

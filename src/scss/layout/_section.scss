@@ -1,9 +1,14 @@
 $section-padding: 5rem 0 !default;
+$section-padding-small: 2.5rem 0 !default;
 $section-padding-medium: 9rem 1.5rem !default;
 $section-padding-large: 18rem 1.5rem !default;
 
 .section {
-  padding: $section-padding;
+  padding: $section-padding-small;
+
+  @include tablet {
+    padding: $section-padding;
+  }
 
   &.is-pt-0 {
     padding-top: 0;

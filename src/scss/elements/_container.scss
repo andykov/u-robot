@@ -3,6 +3,10 @@
   position: relative;
   // padding-left: $gap;
   // padding-right: $gap;
+  @include mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   @include desktop {
     max-width: $desktop - 2 * $gap;
     width: $desktop - 2 * $gap;
