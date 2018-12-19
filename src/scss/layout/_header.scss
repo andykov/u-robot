@@ -24,9 +24,9 @@ $screen-lg-max: ($screen-xl - 1);
     transform-origin: left top;
     width: 100%;
     height: 100%;
-    @include tablet {
-      width: 487px;
-    }
+    // @include tablet {
+    //   width: 487px;
+    // }
 
     img {
       max-width: none;
