@@ -6805,7 +6805,18 @@ a.tag:hover {
     .tariff__head .notice {
       margin-bottom: 22px; }
     .tariff__head .buttons {
-      padding-bottom: 53px; }
+      padding-bottom: 53px;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto; }
+    .tariff__head .button {
+      flex-direction: column;
+      text-transform: none;
+      font-size: 20px;
+      font-weight: 400; }
+      .tariff__head .button small {
+        display: block;
+        font-size: 0.75rem; }
   .tariff__item {
     background-color: #fff;
     padding: 49px 20px 40px;

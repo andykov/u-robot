@@ -464,6 +464,20 @@ $aos-distance: 500px;
 
         .buttons {
             padding-bottom: 53px;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .button {
+            flex-direction: column;
+            text-transform: none;
+            font-size: 20px;
+            font-weight: $weight-normal;
+
+            small {
+                display: block;
+                font-size: $size-6;
+            }
         }
     }
     
