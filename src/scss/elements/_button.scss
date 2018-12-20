@@ -77,7 +77,7 @@ $button-static-border-color: $grey-lighter !default;
   border-width: $button-border-width;
   color: $button-color;
   cursor: pointer;
-  height: 2.143em; // 30px
+  height: 2.778em; // 50px
   justify-content: center;
   padding-bottom: $button-padding-vertical;
   padding-left: $button-padding-horizontal;
@@ -85,6 +85,8 @@ $button-static-border-color: $grey-lighter !default;
   padding-top: $button-padding-vertical;
   text-align: center;
   white-space: nowrap;
+  letter-spacing: 1px;
+  font-weight: $weight-medium;
   strong {
     color: inherit;
   }

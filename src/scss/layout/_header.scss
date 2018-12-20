@@ -31,6 +31,13 @@ $screen-lg-max: ($screen-xl - 1);
       height: 100%;
     }
   }
+  
+  &__intro {
+    .button {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
 
   &__logo {
     margin-right: 20px;

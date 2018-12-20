@@ -78,8 +78,9 @@ $size-large: $size-2 !default;
 $custom-colors: null !default;
 $custom-shades: null !default;
 
+// инвертирование цветов
 $colors: mergeColorMaps((
-        "white": ($white, $black),
+        "white": ($white, $purple),
         "black": ($black, $white),
         "light": ($light, $light-invert),
         "dark": ($dark, $dark-invert),

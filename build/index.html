@@ -16,9 +16,11 @@
           <div class="header__logo"><a class="logo" href="index.html"><img src="img/logo.svg" alt="u-robot.ru"></a></div>
           <div class="columns is-vcentered">
             <div class="column is-7-tablet">
-              <h1 class="header__title" data-aos="fade-up" data-aos-delay="500">Автоматизируй продажи и общение с клиентом</h1>
-              <div class="header__text" data-aos="fade-up" data-aos-delay="600">Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.</div><a class="button is-link" href="/" data-aos="fade-up" data-aos-delay="650">Попробуй</a>
-              <div class="label" data-aos="fade-up" data-aos-delay="700">10 дней бесплатно</div>
+              <div class="header__intro">
+                <h1 class="header__title" data-aos="fade-up" data-aos-delay="500">Автоматизируй продажи и общение с клиентом</h1>
+                <div class="header__text" data-aos="fade-up" data-aos-delay="600">Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.</div><a class="button is-link" href="/" data-aos="fade-up" data-aos-delay="650">Попробуй</a>
+                <div class="label" data-aos="fade-up" data-aos-delay="700">10 дней бесплатно</div>
+              </div>
             </div>
             <div class="column is-5-tablet is-hidden-mobile">
               <div class="header__img" data-aos="fade-left" data-aos-delay="500"><img src="img/design/personage.png" alt="image robot"></div>
@@ -221,6 +223,20 @@
           </div>
         </div>
       </section>
+      <section class="section devices">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-5 is-offset-1">
+              <div class="devices__toggle"><a class="button is-small is-success js-devices-desktop" href="#">Веб версия</a><a class="button is-small js-devices-mobile" href="#">Мобильное приложение</a></div>
+              <h2>Контролируйте бизнес на любых устройствах</h2>
+              <p>В веб версии продукта разработан полноценный личный кабинет в котором вы можете настраивать инструмент, аналитику и просматривать статистику</p><a class="button is-white" href="/" data-aos="fade-up" data-aos-delay="650">Попробуй</a>
+            </div>
+            <div class="column is-6">
+              <div class="devices__img"><img class="devices__img-desktop" src="img/content/macbook.png" alt="macbook.png" data-aos="flip-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0"><img class="devices__img-mobile" src="img/content/iPhone.png" alt="iPhone.png" data-aos="flip-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0"></div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="section">
         <div class="container">
           <div class="reviews">
@@ -256,7 +272,7 @@
             </div>
           </div>
           <div class="clients">
-            <p>А так же наши клиенты</p>
+            <p class="is-size-3">А так же наши клиенты</p>
             <div class="clients__list">
               <div class="columns is-multiline has-text-centered">
                 <div class="column is-narrow"><img src="img/svg/lenovo.svg" alt=""></div>
@@ -270,20 +286,6 @@
                 <div class="column is-narrow"><img src="img/svg/lenovo.svg" alt=""></div>
                 <div class="column is-narrow"><img src="img/svg/redngin.svg" alt=""></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section devices">
-        <div class="container">
-          <div class="columns">
-            <div class="column is-5 is-offset-1">
-              <div class="devices__toggle"><a class="button is-small is-success js-devices-desktop" href="#">Веб версия</a><a class="button is-small js-devices-mobile" href="#">Мобильное приложение</a></div>
-              <h2>Контролируйте бизнес на любых устройствах</h2>
-              <p>В веб версии продукта разработан полноценный личный кабинет в котором вы можете настраивать инструмент, аналитику и просматривать статистику</p><a class="button is-white" href="/" data-aos="fade-up" data-aos-delay="650">Попробуй</a>
-            </div>
-            <div class="column is-6">
-              <div class="devices__img"><img class="devices__img-desktop" src="img/content/macbook.png" alt="macbook.png" data-aos="flip-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0"><img class="devices__img-mobile" src="img/content/iPhone.png" alt="iPhone.png" data-aos="flip-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0"></div>
             </div>
           </div>
         </div>
@@ -302,7 +304,7 @@
           </div>
           <div class="columns">
             <div class="column">
-              <div class="tariff__item" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0">
+              <div class="tariff__item" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-offset="0" data-aos-duration="300" data-aos-delay="0">
                 <div class="tariff__head">
                   <div class="tariff__name">U-Air</div>
                   <div class="tariff__price"><span class="show" data-period-1>4999</span><span data-period-3>4499</span>₽/мес</div>
@@ -329,7 +331,7 @@
               </div>
             </div>
             <div class="column">
-              <div class="tariff__item" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100">
+              <div class="tariff__item" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-offset="0" data-aos-duration="300" data-aos-delay="100">
                 <div class="tariff__head">
                   <div class="tariff__name">U-Classic</div>
                   <div class="tariff__price"><span class="show" data-period-1>9999</span><span data-period-3>8999</span>₽/мес</div>
@@ -356,7 +358,7 @@
               </div>
             </div>
             <div class="column">
-              <div class="tariff__item" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150">
+              <div class="tariff__item" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-offset="0" data-aos-duration="300" data-aos-delay="150">
                 <div class="tariff__head">
                   <div class="tariff__name">U-PRO </div>
                   <div class="tariff__price"><span class="show" data-period-1>14 999</span><span data-period-3>13 499</span>₽/мес</div>
@@ -398,32 +400,30 @@
     <script src="js/libs/jquery-3.3.1.min.js"></script>
     <script src="js/libs/aos.js"></script>
     <script src="js/libs/slick.min.js"></script>
-    <script src="js/template.js"></script>
+    <script defer src="js/template.js"></script>
     <script>
-      $(function() {
-      	var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
-      		fluidEl = $("figure");
-      		console.log(allVideos);
-      	allVideos.each(function() {
-      		$(this)
-      			// jQuery .data does not work on object/embed elements
-      			.attr('data-aspectRatio', this.height / this.width)
-      			.removeAttr('height')
-      			.removeAttr('width');
-      	});
-      	$(window).resize(function() {
-      		console.log('1111');
-      		var newWidth = fluidEl.width();
-      		allVideos.each(function() {
+      //- $(function() {
+      //- 	var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
+      //- 		fluidEl = $("figure");
+      //- 	allVideos.each(function() {
+      //- 		$(this)
+      //- 			// jQuery .data does not work on object/embed elements
+      //- 			.attr('data-aspectRatio', this.height / this.width)
+      //- 			.removeAttr('height')
+      //- 			.removeAttr('width');
+      //- 	});
+      //- 	$(window).resize(function() {
+      //- 		var newWidth = fluidEl.width();
+      //- 		allVideos.each(function() {
       	
-      			var elel = $(this);
-      			elel
-      				.width(newWidth)
-      				.height(newWidth * elel.attr('data-aspectRatio'));
+      //- 			var elel = $(this);
+      //- 			elel
+      //- 				.width(newWidth)
+      //- 				.height(newWidth * elel.attr('data-aspectRatio'));
       	
-      		});
-      	}).resize();
-      });
+      //- 		});
+      //- 	}).resize();
+      //- });
     </script>
   </body>
 </html>

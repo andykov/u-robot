@@ -1,32 +1,6 @@
-AOS.init();
-
 $(function() {
 
-    // slider
-    $('.js-case').slick({
-        dots: true,
-        nextArrow:$('.case .slide-next'),
-        prevArrow:$('.case .slide-prev'),
-    });
-
-    $('.js-reviews').slick({
-        nextArrow:$('.reviews .slide-next'),
-        prevArrow:$('.reviews .slide-prev'),
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        asNavFor: '.js-reviews-nav',
-    });
-
-    $('.js-reviews-nav').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        asNavFor: '.js-reviews',
-        dots: false,
-        arrows: false,
-        focusOnSelect: true
-    });
-    
+    AOS.init(); // init scroll animation
     
     function blurElement(element, size) {
         var filterVal = 'blur(' + size + 'px)';
@@ -41,88 +15,120 @@ $(function() {
            '-moz-transition':'all 0.5s ease-out',
            '-o-transition':'all 0.5s ease-out'
        });
-   
     }
+    
     // button change price tariffs
-    $('.js-tariff-period').on('click', function(){
+    // $('.js-tariff-period').on('click', function(){
 
-        var period = $(this).attr('data-period');
+    //     var period = $(this).attr('data-period');
 
-        // blurElement('.tariff__price span.show', 2);
-
-
-        $({blurRadius: 0}).animate({blurRadius: 10}, {
-            duration: 700,
-            easing: 'swing', // or "linear"
-                             // use jQuery UI or Easing plugin for more options
-            step: function() {
-                $('.tariff__price span.show').css({
-                    "-webkit-filter": "blur("+this.blurRadius+"px)",
-                    "filter": "blur("+this.blurRadius+"px)"
-                });
-            }
-        });
-        $({blurRadius: 10}).animate({blurRadius: 0}, {
-            duration: 700,
-            easing: 'swing', // or "linear"
-                             // use jQuery UI or Easing plugin for more options
-            step: function() {
-                console.log(this.blurRadius);
-                $('.tariff__price span').removeClass('show');
-                $('.tariff__price span[data-period-'+ period + ']').addClass('show');
-                $('.tariff__price span.show').css({
-                    "-webkit-filter": "blur("+this.blurRadius+"px)",
-                    "filter": "blur("+this.blurRadius+"px)"
-                });
-            }
-
-        });
+    //     $({blurRadius: 0}).animate({blurRadius: 10}, {
+    //         duration: 700,
+    //         easing: 'swing',
+    //         step: function() {
+    //             $('.tariff__price span.show').css({
+    //                 "-webkit-filter": "blur("+this.blurRadius+"px)",
+    //                 "filter": "blur("+this.blurRadius+"px)"
+    //             });
+    //         }
+    //     });
+    //     $({blurRadius: 10}).animate({blurRadius: 0}, {
+    //         duration: 700,
+    //         easing: 'swing',
+    //         step: function() {
+    //             console.log(this.blurRadius);
+    //             $('.tariff__price span').removeClass('show');
+    //             $('.tariff__price span[data-period-'+ period + ']').addClass('show');
+    //             $('.tariff__price span.show').css({
+    //                 "-webkit-filter": "blur("+this.blurRadius+"px)",
+    //                 "filter": "blur("+this.blurRadius+"px)"
+    //             });
+    //         }
+    //     });
 
 
 
-        // var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
-        // fluidEl = $("figure");
-        // console.log(allVideos);
-        // allVideos.each(function() {
+    //     // var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
+    //     // fluidEl = $("figure");
+    //     // console.log(allVideos);
+    //     // allVideos.each(function() {
     
-        //   $(this)
-        //     // jQuery .data does not work on object/embed elements
-        //     .attr('data-aspectRatio', this.height / this.width)
-        //     .removeAttr('height')
-        //     .removeAttr('width');
+    //     //   $(this)
+    //     //     // jQuery .data does not work on object/embed elements
+    //     //     .attr('data-aspectRatio', this.height / this.width)
+    //     //     .removeAttr('height')
+    //     //     .removeAttr('width');
     
-        // });
+    //     // });
     
-        // $(window).resize(function() {
-        //     console.Log('1111');
-        //   var newWidth = fluidEl.width();
-        //   allVideos.each(function() {
+    //     // $(window).resize(function() {
+    //         // console.Log('1111');
+    //     //   var newWidth = fluidEl.width();
+    //     //   allVideos.each(function() {
     
-        //     var elel = $(this);
-        //     elel
-        //         .width(newWidth)
-        //         .height(newWidth * elel.attr('data-aspectRatio'));
+    //     //     var elel = $(this);
+    //     //     elel
+    //     //         .width(newWidth)
+    //     //         .height(newWidth * elel.attr('data-aspectRatio'));
     
-        //   });
+    //     //   });
     
-        // }).resize();
+    //     // }).resize();
 
 
-        // $().attr('data-period-'+ period).animate({
-        //     blurRadius: 5
-        //   }, 2000, function() {
-        //     // Анимация завершена.
-        //     console.log('blur');
-        //   });
-        // function percent(number) {
+    //     // $().attr('data-period-'+ period).animate({
+    //     //     blurRadius: 5
+    //     //   }, 2000, function() {
+    //     //     // Анимация завершена.
+    //     //     console.log('blur');
+    //     //   });
+    //     // function percent(number) {
 
-        //     var percent = "30"; // Необходимый процент
-        //     var number_percent = 4999 / 100 * percent;
+    //     //     var percent = "30"; // Необходимый процент
+    //     //     var number_percent = 4999 / 100 * percent;
             
-        //     return Number(number_percent) + Number(4999);
+    //     //     return Number(number_percent) + Number(4999);
             
-        // }
+    //     // }
         
-        // var new_price = percent("1000"); // Новая цена
-    });
+    //     // var new_price = percent("1000"); // Новая цена
+    // });
+
+    // sliders
+    if ($('.js-case').length) {
+        $('.js-case').slick({
+            dots: true,
+            nextArrow:$('.case .slide-next'),
+            prevArrow:$('.case .slide-prev'),
+        });
+    }
+
+    if ($('.js-reviews').length) {
+        $('.js-reviews').slick({
+            nextArrow:$('.reviews .slide-next'),
+            prevArrow:$('.reviews .slide-prev'),
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            asNavFor: '.js-reviews-nav',
+        });
+    }
+
+    if ($('.js-reviews-nav').length) {
+        $('.js-reviews-nav').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.js-reviews',
+            dots: false,
+            arrows: false,
+            focusOnSelect: true
+        });
+    }
+
+    $('.js-case, .js-reviews, .js-reviews-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        console.log(nextSlide);
+        AOS.refreshHard();
+      });
 });
+
+

@@ -247,6 +247,8 @@ $aos-distance: 500px;
         }
 
         .button {
+            width: 100%;
+            max-width: 280px;
             margin-top: 5px;
             margin-bottom: 20px;
             box-shadow: 0px 10px 20px rgba(40, 134, 67, 0.5);
@@ -299,12 +301,24 @@ $aos-distance: 500px;
             line-height: 1;
             color: #000;
         }
-    }    
+    }
+    
+    .button {
+        width: 100%;
+        max-width: 400px;
+    }
 }
 
 .case {
     position: relative;
     margin-bottom: 64px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+    }
 
     &__inner {
         padding: ($panel-padding / 2) (($panel-padding / 2) + 20);
@@ -316,12 +330,7 @@ $aos-distance: 500px;
 
     &__item {
         outline: none;
-    }
-
-    &__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        color: #9B9B9B;
     }
 }
 
@@ -345,8 +354,6 @@ $aos-distance: 500px;
     }
 
     &__item-inner {
-        
-
         @media screen and (min-width: 720px) {
             display: flex;
         }
@@ -369,7 +376,7 @@ $aos-distance: 500px;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
             border-top-right-radius: 0;
-            width: auto;
+            // width: auto;
             height: auto;
         }
 
@@ -413,6 +420,9 @@ $aos-distance: 500px;
 }
 
 .reviews-nav {
+    max-width: 900px;
+    margin: 0 auto;
+
     &__item {
         img {
             margin: auto;
@@ -429,11 +439,13 @@ $aos-distance: 500px;
     padding-top: 55px;
 
     &__list {
-        padding-top: 30px;
+        padding-top: 25px;
     }
 }
 
 .tariff {
+    border-top: 2px solid #F5F5F5;
+    padding-top: 3.75rem;
 
     &__head {
         text-align: center;
@@ -442,10 +454,16 @@ $aos-distance: 500px;
             font-size: 40px;
             font-weight: $weight-normal;
             margin-bottom: 30px;
+            line-height: 64px;
+            color: #32325C;
         }
 
         .notice {
             margin-bottom: 22px;
+        }
+
+        .buttons {
+            padding-bottom: 53px;
         }
     }
     
@@ -454,6 +472,11 @@ $aos-distance: 500px;
         padding: 49px 20px 40px;
         box-shadow: 0px 0px 0px 0px rgba(10, 138, 255, 0), 0px 7px 0px rgba(83, 83, 83, 0);
         transition: box-shadow 0.175s ease-in-out;
+
+        &:hover {
+            box-shadow: 0px -3px 0px 0px rgba(10, 138, 255, 1), 0px 7px 24px rgba(83, 83, 83, 0.1);
+            cursor: default;
+        }
     }
 
     &__name {
@@ -487,10 +510,5 @@ $aos-distance: 500px;
         li {
             margin-bottom: 20px;
         }
-    }
-
-    &:hover {
-        box-shadow: 0px -3px 0px 0px rgba(10, 138, 255, 1), 0px 7px 24px rgba(83, 83, 83, 0.1);
-        cursor: default;
     }
 }
