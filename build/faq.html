@@ -612,60 +612,97 @@
       </section>
     </main>
     <footer class="footer">
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__inner">
-            <div class="footer__col footer__col--left">
-              <div class="footer-logo"><img src="../img/logo.png" alt="Rentride"></div>
-              <div class="footer-phone"><a href="tel:+74951208070">+7(495)120-80-70</a></div>
-            </div>
-            <div class="footer__col footer__col--middle">
-              <ul class="footer-nav">
-                <li class="footer-nav__item"><a class="footer-nav__link">Как это работает</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link">Карта</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link">Подборки</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link">Блог</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link">Как сдать в аренду</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link">Страховка</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link">Помощь</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link">Контакты</a></li>
-              </ul>
-            </div>
-            <div class="footer__col footer__col--right">
-              <div class="footer-applinks"><a class="footer-applinks__link" href="https://play.google.com/store/apps/details?id=ru.sbssoft.rentride.c2c.android.v1"><img src="../img/app-google.png" width="180" alt="Google play store"></a><a class="footer-applinks__link" href="https://itunes.apple.com/us/app/rent-a-ride/id1217024772?l=ru&amp;ls=1&amp;mt=8"><img src="../img/app-apple.png" width="180" alt="Apple app store"></a></div>
-              <div class="footer__payment"><img src="../img/card-mastercard.svg" width="80" alt="Card Mastercard"><img src="../img/card-visa.svg" width="80" alt="Card Visa"></div>
-            </div>
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__col footer__col--left">
+            <div class="footer-logo"><img src="../img/logo.png" alt="Rentride"></div>
+            <div class="footer-phone"><a href="tel:+74951208070">+7(495)120-80-70</a></div>
+          </div>
+          <div class="footer__col footer__col--middle">
+            <ul class="footer-nav">
+              <li class="footer-nav__item"><a class="footer-nav__link">Как это работает</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link">Карта</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link">Подборки</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link">Блог</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link">Как сдать в аренду</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link">Страховка</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link">Помощь</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--right">
+            <div class="footer-applinks"><a class="footer-applinks__link" href="https://play.google.com/store/apps/details?id=ru.sbssoft.rentride.c2c.android.v1"><img src="../img/app-google.png" width="180" alt="Google play store"></a><a class="footer-applinks__link" href="https://itunes.apple.com/us/app/rent-a-ride/id1217024772?l=ru&amp;ls=1&amp;mt=8"><img src="../img/app-apple.png" width="180" alt="Apple app store"></a></div>
+            <div class="footer__payment"><img src="../img/card-mastercard.svg" width="80" alt="Card Mastercard"><img src="../img/card-visa.svg" width="80" alt="Card Visa"></div>
           </div>
         </div>
-      </footer>
+      </div>
     </footer><!-- scripts -->
     <script src="js/libs/jquery-3.3.1.min.js"></script>
     <script src="js/libs/aos.js"></script>
     <script src="js/libs/slick.min.js"></script>
     <script defer src="js/template.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
-      //- $(function() {
-      //- 	var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
-      //- 		fluidEl = $("figure");
-      //- 	allVideos.each(function() {
-      //- 		$(this)
-      //- 			// jQuery .data does not work on object/embed elements
-      //- 			.attr('data-aspectRatio', this.height / this.width)
-      //- 			.removeAttr('height')
-      //- 			.removeAttr('width');
-      //- 	});
-      //- 	$(window).resize(function() {
-      //- 		var newWidth = fluidEl.width();
-      //- 		allVideos.each(function() {
-      	
-      //- 			var elel = $(this);
-      //- 			elel
-      //- 				.width(newWidth)
-      //- 				.height(newWidth * elel.attr('data-aspectRatio'));
-      	
-      //- 		});
-      //- 	}).resize();
-      //- });
+      var player;
+      
+      function onYouTubeIframeAPIReady() {
+      	player = new YT.Player('video-placeholder', {
+      		width: 600,
+      		height: 400,
+      		videoId: 'yUYyg6ILgA0',
+      		playerVars: {
+      			rel: 0,
+      			color: 'white',
+      			playlist: 'taJ60kskkns,FG0fTKAqZ5g'
+      		},
+      		events: {
+      			onReady: initialize
+      		}
+      	});
+      }
+      
+      function initialize(){
+      
+      	// Update the controls on load
+      	//- updateTimerDisplay();
+      	//- updateProgressBar();
+      
+      	// Clear any old interval.
+      	//- clearInterval(time_update_interval);
+      
+      	//- // Start interval to update elapsed time display and
+      	//- // the elapsed part of the progress bar every second.
+      	//- time_update_interval = setInterval(function () {
+      	//- 	//- updateTimerDisplay();
+      	//- 	//- updateProgressBar();
+      	//- }, 1000)
+      }
+      
+      // This function is called by initialize()
+      function updateTimerDisplay(){
+      	// Update current time text display.
+      	$('#current-time').text(formatTime( player.getCurrentTime() ));
+      	$('#duration').text(formatTime( player.getDuration() ));
+      }
+      
+      function formatTime(time){
+      	time = Math.round(time);
+      
+      	var minutes = Math.floor(time / 60),
+      	seconds = time - minutes * 60;
+      
+      	seconds = seconds < 10 ? '0' + seconds : seconds;
+      
+      	return minutes + ":" + seconds;
+      }
+      
+      $('#play-button').on('click', function () {
+      	player.playVideo();
+      });
+      
+      $('#pause-button').on('click', function () {
+      	player.pauseVideo();
+      });
     </script>
   </body>
 </html>

@@ -4,8 +4,8 @@
   // padding-left: $gap;
   // padding-right: $gap;
   @include mobile {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   @include desktop {
     max-width: $desktop - 2 * $gap;

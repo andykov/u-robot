@@ -19,7 +19,7 @@
               <div class="header__intro">
                 <h1 class="header__title" data-aos="fade-up" data-aos-delay="500">Автоматизируй продажи и общение с клиентом</h1>
                 <div class="header__text" data-aos="fade-up" data-aos-delay="600">Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.</div><a class="button is-link" href="/" data-aos="fade-up" data-aos-delay="650">Попробуй</a>
-                <div class="label" data-aos="fade-up" data-aos-delay="700">10 дней бесплатно</div>
+                <div class="tag-wrap" data-aos="fade-up" data-aos-delay="700"><span class="tag is-green">Free</span><span class="tag-text">10 дней бесплатно</span></div>
               </div>
             </div>
             <div class="column is-5-tablet is-hidden-mobile">
@@ -29,7 +29,7 @@
         </div>
       </header>
       <section class="section is-pt-0">
-        <div class="container is-fluid">
+        <div class="container">
           <div class="panel is-top-outside">
             <div class="columns">
               <div class="column">
@@ -58,9 +58,12 @@
         </div>
       </section>
       <section class="section is-paddingless">
-        <figure class="video-fullwidth">
-          <iframe width="560" height="315" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&amp;hd=1&amp;modestbranding=1&amp;iv_load_policy=3&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-        </figure>
+        <div class="video-intro">
+          <div class="videowrapper">
+            <div id="video-placeholder"></div>
+            <div class="video-preview" style="background-image: url(//img.youtube.com/vi/yUYyg6ILgA0/maxresdefault.jpg);"></div>
+          </div>
+        </div>
       </section>
       <section class="section">
         <div class="container">
@@ -296,7 +299,7 @@
             <h2 class="tariff__head-title">Выгодные тарифы для наших пользователей</h2>
             <div class="notice">Попробуйте U-Robot бесплатно: если не понравится, отмените подписку, и платить не придется.</div>
             <div class="buttons has-addons is-centered">
-              <button class="button is-large js-tariff-period" data-period="1" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0">1 месяц</button>
+              <button class="button is-large is-active js-tariff-period" data-period="1" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0">1 месяц</button>
               <button class="button is-large js-tariff-period" data-period="3" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100">3 месяца<small>скидка 10%</small></button>
               <button class="button is-large js-tariff-period" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150">6 месяцев<small>скидка 20%</small></button>
               <button class="button is-large js-tariff-period" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="200">12 месяцев<small>скидка 30%</small></button>
@@ -316,17 +319,17 @@
                   </li>
                   <li>Персональный виртуальный ассистент</li>
                   <li>Планировщик записи клиентов </li>
-                  <li>Facebook/VK</li>
-                  <li>Неограниченая работа с существующей базой клиентов</li>
-                  <li>Персонализированные предложения </li>
-                  <li>
+                  <li class="has-text-grey">Facebook/VK</li>
+                  <li class="has-text-grey">Неограниченая работа с существующей базой клиентов</li>
+                  <li class="has-text-grey">Персонализированные предложения </li>
+                  <li class="has-text-grey">
                     Полноценный e-commers
                     интернет магазин в мессенджере
                   </li>
-                  <li>Онлайн оплата</li>
-                  <li>Автоматизированные воронки продаж</li>
-                  <li>Внутренняя CRM система</li>
-                  <li>Интеграция с 1С и Битрикс</li>
+                  <li class="has-text-grey">Онлайн оплата</li>
+                  <li class="has-text-grey">Автоматизированные воронки продаж</li>
+                  <li class="has-text-grey">Внутренняя CRM система</li>
+                  <li class="has-text-grey">Интеграция с 1С и Битрикс</li>
                 </ul><a class="button is-link is-outlined is-large is-fullwidth" href="">Начать бесплатно</a>
               </div>
             </div>
@@ -346,14 +349,14 @@
                   <li>Facebook/VK</li>
                   <li>Неограниченая работа с существующей базой клиентов</li>
                   <li>Персонализированные предложения </li>
-                  <li>
+                  <li class="has-text-grey">
                     Полноценный e-commers
                     интернет магазин в мессенджере
                   </li>
-                  <li>Онлайн оплата</li>
-                  <li>Автоматизированные воронки продаж</li>
-                  <li>Внутренняя CRM система</li>
-                  <li>Интеграция с 1С и Битрикс</li>
+                  <li class="has-text-grey">Онлайн оплата</li>
+                  <li class="has-text-grey">Автоматизированные воронки продаж</li>
+                  <li class="has-text-grey">Внутренняя CRM система</li>
+                  <li class="has-text-grey">Интеграция с 1С и Битрикс</li>
                 </ul><a class="button is-link is-outlined is-large is-fullwidth" href="">Начать бесплатно</a>
               </div>
             </div>
@@ -389,41 +392,80 @@
       </section>
     </main>
     <footer class="footer">
-      <footer class="footer is-bg-gray">
-        <div class="container">
-          <div class="footer__logo"><a class="logo" href="index.html"><img src="img/logo.svg" alt="u-robot.ru"></a></div>
-          <p>Надежный помощник для вашего бизнеса</p>
+      <div class="container">
+        <div class="footer__logo"><a href="/"><img src="img/logo.svg" alt="u-robot.ru"></a></div>
+        <div class="has-text-grey">
+          <div class="footer__text">Надежный помощник для вашего бизнеса</div>
           <div class="footer__copy">© 2018, U-Robot</div>
         </div>
-      </footer>
+      </div>
     </footer><!-- scripts -->
     <script src="js/libs/jquery-3.3.1.min.js"></script>
     <script src="js/libs/aos.js"></script>
     <script src="js/libs/slick.min.js"></script>
     <script defer src="js/template.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
-      //- $(function() {
-      //- 	var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
-      //- 		fluidEl = $("figure");
-      //- 	allVideos.each(function() {
-      //- 		$(this)
-      //- 			// jQuery .data does not work on object/embed elements
-      //- 			.attr('data-aspectRatio', this.height / this.width)
-      //- 			.removeAttr('height')
-      //- 			.removeAttr('width');
-      //- 	});
-      //- 	$(window).resize(function() {
-      //- 		var newWidth = fluidEl.width();
-      //- 		allVideos.each(function() {
-      	
-      //- 			var elel = $(this);
-      //- 			elel
-      //- 				.width(newWidth)
-      //- 				.height(newWidth * elel.attr('data-aspectRatio'));
-      	
-      //- 		});
-      //- 	}).resize();
-      //- });
+      var player;
+      
+      function onYouTubeIframeAPIReady() {
+      	player = new YT.Player('video-placeholder', {
+      		width: 600,
+      		height: 400,
+      		videoId: 'yUYyg6ILgA0',
+      		playerVars: {
+      			rel: 0,
+      			color: 'white',
+      			playlist: 'taJ60kskkns,FG0fTKAqZ5g'
+      		},
+      		events: {
+      			onReady: initialize
+      		}
+      	});
+      }
+      
+      function initialize(){
+      
+      	// Update the controls on load
+      	//- updateTimerDisplay();
+      	//- updateProgressBar();
+      
+      	// Clear any old interval.
+      	//- clearInterval(time_update_interval);
+      
+      	//- // Start interval to update elapsed time display and
+      	//- // the elapsed part of the progress bar every second.
+      	//- time_update_interval = setInterval(function () {
+      	//- 	//- updateTimerDisplay();
+      	//- 	//- updateProgressBar();
+      	//- }, 1000)
+      }
+      
+      // This function is called by initialize()
+      function updateTimerDisplay(){
+      	// Update current time text display.
+      	$('#current-time').text(formatTime( player.getCurrentTime() ));
+      	$('#duration').text(formatTime( player.getDuration() ));
+      }
+      
+      function formatTime(time){
+      	time = Math.round(time);
+      
+      	var minutes = Math.floor(time / 60),
+      	seconds = time - minutes * 60;
+      
+      	seconds = seconds < 10 ? '0' + seconds : seconds;
+      
+      	return minutes + ":" + seconds;
+      }
+      
+      $('#play-button').on('click', function () {
+      	player.playVideo();
+      });
+      
+      $('#pause-button').on('click', function () {
+      	player.pauseVideo();
+      });
     </script>
   </body>
 </html>

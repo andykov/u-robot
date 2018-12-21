@@ -19,37 +19,75 @@ html(lang="ru-RU")
 		main.layout
 			block content
 
-		footer.footer
-			block footer
+		block footer
 		
 		<!-- scripts -->
 		script(src="js/libs/jquery-3.3.1.min.js")
 		script(src="js/libs/aos.js")
 		script(src="js/libs/slick.min.js")
 		script(defer src="js/template.js")
+		script(src="https://www.youtube.com/iframe_api")
 		script.
-			//- $(function() {
-			//- 	var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
-			//- 		fluidEl = $("figure");
-			//- 	allVideos.each(function() {
-			//- 		$(this)
-			//- 			// jQuery .data does not work on object/embed elements
-			//- 			.attr('data-aspectRatio', this.height / this.width)
-			//- 			.removeAttr('height')
-			//- 			.removeAttr('width');
-			//- 	});
-			//- 	$(window).resize(function() {
-			//- 		var newWidth = fluidEl.width();
-			//- 		allVideos.each(function() {
-				
-			//- 			var elel = $(this);
-			//- 			elel
-			//- 				.width(newWidth)
-			//- 				.height(newWidth * elel.attr('data-aspectRatio'));
-				
-			//- 		});
-			//- 	}).resize();
-			//- });
+			var player;
+
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player('video-placeholder', {
+					width: 600,
+					height: 400,
+					videoId: 'yUYyg6ILgA0',
+					playerVars: {
+						rel: 0,
+						color: 'white',
+						playlist: 'taJ60kskkns,FG0fTKAqZ5g'
+					},
+					events: {
+						onReady: initialize
+					}
+				});
+			}
+
+			function initialize(){
+
+				// Update the controls on load
+				//- updateTimerDisplay();
+				//- updateProgressBar();
+
+				// Clear any old interval.
+				//- clearInterval(time_update_interval);
+
+				//- // Start interval to update elapsed time display and
+				//- // the elapsed part of the progress bar every second.
+				//- time_update_interval = setInterval(function () {
+				//- 	//- updateTimerDisplay();
+				//- 	//- updateProgressBar();
+				//- }, 1000)
+			}
+
+			// This function is called by initialize()
+			function updateTimerDisplay(){
+				// Update current time text display.
+				$('#current-time').text(formatTime( player.getCurrentTime() ));
+				$('#duration').text(formatTime( player.getDuration() ));
+			}
+
+			function formatTime(time){
+				time = Math.round(time);
+
+				var minutes = Math.floor(time / 60),
+				seconds = time - minutes * 60;
+
+				seconds = seconds < 10 ? '0' + seconds : seconds;
+
+				return minutes + ":" + seconds;
+			}
+
+			$('#play-button').on('click', function () {
+				player.playVideo();
+			});
+
+			$('#pause-button').on('click', function () {
+				player.pauseVideo();
+			});
 			
 
 

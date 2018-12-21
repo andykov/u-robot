@@ -129,6 +129,6 @@ $(function() {
         console.log(nextSlide);
         AOS.refreshHard();
       });
-});
 
+});
 

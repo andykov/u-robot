@@ -23,6 +23,7 @@
 $aos-distance: 500px;
 
 .slick-arrow {
+    display: none !important;
     position: absolute;
     top: 50%;
     font-size: 0;
@@ -37,6 +38,10 @@ $aos-distance: 500px;
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.2;
+
+    @include tablet {
+        display: block;
+    }
 
     &:focus {
         outline: none;
@@ -312,6 +317,7 @@ $aos-distance: 500px;
 .case {
     position: relative;
     margin-bottom: 64px;
+    min-height: 315px;
 
     &__top {
         display: flex;
@@ -321,11 +327,20 @@ $aos-distance: 500px;
     }
 
     &__inner {
-        padding: ($panel-padding / 2) (($panel-padding / 2) + 20);
+        padding: ($panel-padding / 2) 15px;
         max-width: 900px;
         box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
         border-radius: 10px;
         margin: 0 auto;
+
+        @include mobile {
+            margin-left: -10;
+            margin-right: -10px;
+        }
+
+        @include tablet {
+            padding: ($panel-padding / 2) (($panel-padding / 2) + 20);
+        }
     }
 
     &__item {
@@ -339,6 +354,12 @@ $aos-distance: 500px;
 
     &__inner {
         position: relative;
+        min-height: 270px;
+
+        @include mobile {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
     }
 
     &__slider {
@@ -451,11 +472,16 @@ $aos-distance: 500px;
         text-align: center;
 
         &-title {
-            font-size: 40px;
             font-weight: $weight-normal;
+            font-size: 24px;          
             margin-bottom: 30px;
-            line-height: 64px;
+            line-height: 35px;
             color: #32325C;
+
+            @include tablet {
+                font-size: 40px;
+                line-height: 64px;
+            }
         }
 
         .notice {
@@ -468,11 +494,14 @@ $aos-distance: 500px;
             width: 100%;
             margin: 0 auto;
         }
+
         .button {
             flex-direction: column;
             text-transform: none;
             font-size: 20px;
             font-weight: $weight-normal;
+            flex: 1px;
+            box-shadow: none;
 
             small {
                 display: block;
@@ -483,9 +512,14 @@ $aos-distance: 500px;
     
     &__item {
         background-color: #fff;
-        padding: 49px 20px 40px;
+        padding: 49px 0 40px;
         box-shadow: 0px 0px 0px 0px rgba(10, 138, 255, 0), 0px 7px 0px rgba(83, 83, 83, 0);
         transition: box-shadow 0.175s ease-in-out;
+
+        @include tablet {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
 
         &:hover {
             box-shadow: 0px -3px 0px 0px rgba(10, 138, 255, 1), 0px 7px 24px rgba(83, 83, 83, 0.1);
@@ -526,3 +560,47 @@ $aos-distance: 500px;
         }
     }
 }
+
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 30.75%;
+    padding-top: 25px;
+    height: 0;
+}
+.videowrapper .video-preview {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.videowrapper .video-preview,
+.videowrapper #video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-intro {
+    position: relative;
+}
+.video-intro .play-button,
+.video-intro .pause-button {
+    background: transparent;
+    border: 0;
+    // position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 83px;
+    height: 83px;
+
+    &:focus {
+        outline: none;
+    }
+}
+// sddefault.jpg

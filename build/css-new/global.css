@@ -557,6 +557,10 @@ h1 {
   h1 span {
     font-size: 1.313em;
     font-weight: 700; }
+  @media screen and (max-width: 991px) {
+    h1 {
+      font-size: 34px;
+      line-height: 1; } }
 
 h2 {
   font-size: 2rem;
@@ -1033,10 +1037,10 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   background-color: #4a4a4a !important; }
 
 .has-text-grey {
-  color: #7a7a7a !important; }
+  color: #9c9c9c !important; }
 
 .has-background-grey {
-  background-color: #7a7a7a !important; }
+  background-color: #9c9c9c !important; }
 
 .has-text-grey-light {
   color: #9099a2 !important; }
@@ -1693,8 +1697,8 @@ a.box:active {
     .button:focus:not(:active), .button.is-focused:not(:active) {
       box-shadow: 0 0 0 0.125em rgba(51, 100, 225, 0.25); }
   .button:active, .button.is-active {
-    border-color: #4a4a4a;
-    color: #363636; }
+    border-color: #3364e1;
+    color: #3364e1; }
   .button.is-text {
     background-color: transparent;
     border-color: transparent;
@@ -2353,7 +2357,7 @@ a.box:active {
   .button.is-static {
     background-color: whitesmoke;
     border-color: whitesmoke;
-    color: #7a7a7a;
+    color: #9c9c9c;
     box-shadow: none;
     pointer-events: none; }
   .button.is-rounded {
@@ -2399,8 +2403,8 @@ a.box:active {
   position: relative; }
   @media screen and (max-width: 991px) {
     .container {
-      padding-left: 10px;
-      padding-right: 10px; } }
+      padding-left: 20px;
+      padding-right: 20px; } }
   @media screen and (min-width: 1152px) {
     .container {
       max-width: 1086px;
@@ -2976,19 +2980,19 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
     background-color: whitesmoke;
     border-color: whitesmoke;
     box-shadow: none;
-    color: #7a7a7a; }
+    color: #9c9c9c; }
     .input[disabled]::-moz-placeholder,
     .textarea[disabled]::-moz-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(156, 156, 156, 0.3); }
     .input[disabled]::-webkit-input-placeholder,
     .textarea[disabled]::-webkit-input-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(156, 156, 156, 0.3); }
     .input[disabled]:-moz-placeholder,
     .textarea[disabled]:-moz-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(156, 156, 156, 0.3); }
     .input[disabled]:-ms-input-placeholder,
     .textarea[disabled]:-ms-input-placeholder {
-      color: rgba(122, 122, 122, 0.3); }
+      color: rgba(156, 156, 156, 0.3); }
   .input[readonly],
   .textarea[readonly] {
     box-shadow: none; }
@@ -3152,7 +3156,7 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
     color: #363636; }
   .checkbox[disabled],
   .radio[disabled] {
-    color: #7a7a7a;
+    color: #9c9c9c;
     cursor: not-allowed; }
 
 .radio + .radio {
@@ -3206,15 +3210,15 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
       background-color: whitesmoke;
       border-color: whitesmoke;
       box-shadow: none;
-      color: #7a7a7a; }
+      color: #9c9c9c; }
       .select select[disabled]::-moz-placeholder {
-        color: rgba(122, 122, 122, 0.3); }
+        color: rgba(156, 156, 156, 0.3); }
       .select select[disabled]::-webkit-input-placeholder {
-        color: rgba(122, 122, 122, 0.3); }
+        color: rgba(156, 156, 156, 0.3); }
       .select select[disabled]:-moz-placeholder {
-        color: rgba(122, 122, 122, 0.3); }
+        color: rgba(156, 156, 156, 0.3); }
       .select select[disabled]:-ms-input-placeholder {
-        color: rgba(122, 122, 122, 0.3); }
+        color: rgba(156, 156, 156, 0.3); }
     .select select::-ms-expand {
       display: none; }
     .select select[disabled]:hover {
@@ -3294,7 +3298,7 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
   .select.is-large {
     font-size: 2rem; }
   .select.is-disabled::after {
-    border-color: #7a7a7a; }
+    border-color: #9c9c9c; }
   .select.is-fullwidth {
     width: 100%; }
     .select.is-fullwidth select {
@@ -3825,7 +3829,7 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
     width: 2.25em;
     z-index: 4; }
   .control.has-icon .input:focus + .icon {
-    color: #7a7a7a; }
+    color: #9c9c9c; }
   .control.has-icon .input.is-small + .icon {
     font-size: 0.875rem; }
   .control.has-icon .input.is-medium + .icon {
@@ -3843,7 +3847,7 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
   .control.has-icons-left .input:focus ~ .icon,
   .control.has-icons-left .select:focus ~ .icon, .control.has-icons-right .input:focus ~ .icon,
   .control.has-icons-right .select:focus ~ .icon {
-    color: #7a7a7a; }
+    color: #9c9c9c; }
   .control.has-icons-left .input.is-small ~ .icon,
   .control.has-icons-left .select.is-small ~ .icon, .control.has-icons-right .input.is-small ~ .icon,
   .control.has-icons-right .select.is-small ~ .icon {
@@ -5104,7 +5108,7 @@ a.tag:hover {
     font-size: 0.625rem; }
 
 .subtitle {
-  color: #7a7a7a;
+  color: #9c9c9c;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.25; }
@@ -5527,16 +5531,18 @@ a.tag:hover {
 .panel {
   background: #FFFFFF;
   border-radius: 4px;
-  padding: 20px 30px;
+  padding: 20px 20px;
   box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
   border-radius: 10px;
   max-width: 1260px;
-  margin: 0 auto; }
-  .panel.is-top-outside {
-    margin-top: -35px; }
+  margin: 0 -20px; }
+  @media screen and (min-width: 992px), print {
+    .panel.is-top-outside {
+      margin-top: -35px; } }
   @media screen and (min-width: 992px), print {
     .panel {
-      padding: 40px 60px; } }
+      padding: 40px 60px;
+      margin: 0 auto; } }
   .panel__header {
     display: flex;
     align-items: center;
@@ -5559,7 +5565,10 @@ a.tag:hover {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: 16.5px; }
+  padding: 20px; }
+  @media screen and (min-width: 992px), print {
+    .column {
+      padding: 16.5px; } }
   .columns.is-mobile > .column.is-narrow {
     flex: none; }
   .columns.is-mobile > .column.is-full {
@@ -6338,13 +6347,24 @@ a.tag:hover {
       margin-left: 100%; } }
 
 .columns {
-  margin-left: -16.5px;
-  margin-right: -16.5px;
-  margin-top: -16.5px; }
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -20px; }
+  @media screen and (min-width: 992px), print {
+    .columns {
+      margin-left: -16.5px;
+      margin-right: -16.5px;
+      margin-top: -16.5px; } }
   .columns:last-child {
-    margin-bottom: -16.5px; }
+    margin-bottom: -20px; }
+    @media screen and (min-width: 992px), print {
+      .columns:last-child {
+        margin-bottom: -16.5px; } }
   .columns:not(:last-child) {
-    margin-bottom: calc(1.5rem - 16.5px); }
+    margin-bottom: calc(1.5rem - 20px); }
+    @media screen and (min-width: 992px), print {
+      .columns:not(:last-child) {
+        margin-bottom: calc(1.5rem - 16.5px); } }
   .columns.is-centered {
     justify-content: center; }
   .columns.is-gapless {
@@ -6408,14 +6428,14 @@ a.tag:hover {
 
 .header {
   position: relative;
-  height: 100vh;
   background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
   box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7); }
+  @media screen and (min-width: 992px), print {
+    .header {
+      height: 100vh; } }
   .header .bubble {
     background: url("../img/svg/bg-bubble.svg") no-repeat -58px -20px/cover;
     position: absolute;
-    left: -58px;
-    top: -20px;
     transform-origin: left top;
     width: 100%;
     height: 100%; }
@@ -6424,21 +6444,29 @@ a.tag:hover {
       height: 100%; }
   .header__intro .button {
     width: 100%;
-    max-width: 280px; }
+    max-width: 280px;
+    box-shadow: 0px 10px 20px rgba(51, 99, 224, 0.3);
+    margin-bottom: 30px; }
   .header__logo {
     margin-right: 20px;
     margin-bottom: -22px;
     width: 270px;
-    padding-top: 15px; }
+    padding-top: 30px; }
+    @media screen and (max-width: 991px) {
+      .header__logo {
+        margin: 0 auto 60px; } }
     .header__logo .logo {
-      display: block;
-      padding-top: 25px; }
+      display: block; }
     .header__logo img {
       display: block; }
   .header__title {
     font-weight: 500;
     line-height: 1;
     margin-bottom: 24px; }
+    @media screen and (max-width: 991px) {
+      .header__title {
+        font-size: 34px;
+        line-height: 1; } }
   .header__text {
     font-size: 1.125rem;
     color: #9099a2;
@@ -6476,11 +6504,19 @@ a.tag:hover {
       padding: 18rem 1.5rem; } }
 
 .footer {
-  padding-top: 40px;
-  padding-bottom: 35px;
+  background-color: whitesmoke;
+  padding: 75px 0;
   text-align: center; }
+  .footer__logo {
+    margin-bottom: 30px; }
+  .footer__text {
+    font-size: 22px;
+    line-height: 21px;
+    color: #9c9c9c;
+    margin-bottom: 15px; }
 
 .slick-arrow {
+  display: none !important;
   position: absolute;
   top: 50%;
   font-size: 0;
@@ -6495,6 +6531,9 @@ a.tag:hover {
   cursor: pointer;
   opacity: 1;
   transition: opacity 0.2; }
+  @media screen and (min-width: 992px), print {
+    .slick-arrow {
+      display: block; } }
   .slick-arrow:focus {
     outline: none; }
   .slick-arrow:hover {
@@ -6699,24 +6738,37 @@ a.tag:hover {
 
 .case {
   position: relative;
-  margin-bottom: 64px; }
+  margin-bottom: 64px;
+  min-height: 315px; }
   .case__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 30px; }
   .case__inner {
-    padding: 40px 60px;
+    padding: 40px 15px;
     max-width: 900px;
     box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
     border-radius: 10px;
     margin: 0 auto; }
+    @media screen and (max-width: 991px) {
+      .case__inner {
+        margin-left: -10;
+        margin-right: -10px; } }
+    @media screen and (min-width: 992px), print {
+      .case__inner {
+        padding: 40px 60px; } }
   .case__item {
     outline: none;
     color: #9B9B9B; }
 
 .reviews__inner {
-  position: relative; }
+  position: relative;
+  min-height: 270px; }
+  @media screen and (max-width: 991px) {
+    .reviews__inner {
+      margin-left: -10px;
+      margin-right: -10px; } }
 
 .reviews__slider {
   background-color: #fff;
@@ -6797,11 +6849,15 @@ a.tag:hover {
   .tariff__head {
     text-align: center; }
     .tariff__head-title {
-      font-size: 40px;
       font-weight: 400;
+      font-size: 24px;
       margin-bottom: 30px;
-      line-height: 64px;
+      line-height: 35px;
       color: #32325C; }
+      @media screen and (min-width: 992px), print {
+        .tariff__head-title {
+          font-size: 40px;
+          line-height: 64px; } }
     .tariff__head .notice {
       margin-bottom: 22px; }
     .tariff__head .buttons {
@@ -6813,15 +6869,21 @@ a.tag:hover {
       flex-direction: column;
       text-transform: none;
       font-size: 20px;
-      font-weight: 400; }
+      font-weight: 400;
+      flex: 1px;
+      box-shadow: none; }
       .tariff__head .button small {
         display: block;
         font-size: 0.75rem; }
   .tariff__item {
     background-color: #fff;
-    padding: 49px 20px 40px;
+    padding: 49px 0 40px;
     box-shadow: 0px 0px 0px 0px rgba(10, 138, 255, 0), 0px 7px 0px rgba(83, 83, 83, 0);
     transition: box-shadow 0.175s ease-in-out; }
+    @media screen and (min-width: 992px), print {
+      .tariff__item {
+        padding-left: 20px;
+        padding-right: 20px; } }
     .tariff__item:hover {
       box-shadow: 0px -3px 0px 0px #0a8aff, 0px 7px 24px rgba(83, 83, 83, 0.1);
       cursor: default; }
@@ -6846,3 +6908,43 @@ a.tag:hover {
     margin-bottom: 40px; }
     .tariff__options li {
       margin-bottom: 20px; }
+
+.videowrapper {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 30.75%;
+  padding-top: 25px;
+  height: 0; }
+
+.videowrapper .video-preview {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+.videowrapper .video-preview,
+.videowrapper #video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.video-intro {
+  position: relative; }
+
+.video-intro .play-button,
+.video-intro .pause-button {
+  background: transparent;
+  border: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 83px;
+  height: 83px; }
+  .video-intro .play-button:focus,
+  .video-intro .pause-button:focus {
+    outline: none; }

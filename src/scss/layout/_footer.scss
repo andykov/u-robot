@@ -1,8 +1,19 @@
-$footer-background-color: $white-bis !default;
+$footer-background-color: $grey-lighter !default;
 
 
 .footer {
-  padding-top: 40px;
-  padding-bottom: 35px;
+  background-color: $footer-background-color;
+  padding: 75px 0;
   text-align: center;
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 21px;
+    color: $text-light;
+    margin-bottom: 15px;
+  }
 }

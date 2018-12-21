@@ -3,18 +3,22 @@ $panel-padding: 80px !default;
 .panel {
   background: #FFFFFF;
   border-radius: 4px;
-  padding: ($panel-padding / 4) (($panel-padding / 4) + 10);
+  padding: ($panel-padding / 4) (($panel-padding / 4));
   box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
   border-radius: 10px;
   max-width: 1260px;
-  margin: 0 auto;
+  margin: 0 -20px;
 
   &.is-top-outside {
-    margin-top: -35px;
+    
+    @include tablet {
+      margin-top: -35px;
+    }
   }
 
   @include tablet {
     padding: ($panel-padding / 2) (($panel-padding / 2) + 20);
+    margin: 0 auto;
   }
 
   &__header {

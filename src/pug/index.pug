@@ -17,14 +17,16 @@ block content
 						h1.header__title(data-aos="fade-up" data-aos-delay="500") Автоматизируй продажи и общение с клиентом
 						.header__text(data-aos="fade-up" data-aos-delay="600") Ротоб помощник который поможет легко обрабатывать более 5000 заявок, делать презентацию для ваших клиентов и решать еще огромное кол-во вопросов.
 						a.button.is-link(href="/" data-aos="fade-up" data-aos-delay="650") Попробуй
-						.label(data-aos="fade-up" data-aos-delay="700") 10 дней бесплатно
+						.tag-wrap(data-aos="fade-up" data-aos-delay="700")
+							span.tag.is-green Free
+							span.tag-text 10 дней бесплатно
 				.column.is-5-tablet.is-hidden-mobile
 					.header__img(data-aos="fade-left" data-aos-delay="500")
 						img(src="img/design/personage.png", alt="image robot")
 
 
 	section.section.is-pt-0
-		.container.is-fluid
+		.container
 			.panel.is-top-outside
 				.columns
 					.column
@@ -50,9 +52,14 @@ block content
 							.card__body Настроить и запустить инструмент можно в течении 20 минут
 	
 	section.section.is-paddingless
-		figure.video-fullwidth
-			iframe(width="560" height="315" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1&modestbranding=1&iv_load_policy=3&controls=0&showinfo=0" frameborder="0" allowfullscreen)
-
+		.video-intro
+			.videowrapper
+				#video-placeholder
+				.video-preview(style="background-image: url(//img.youtube.com/vi/yUYyg6ILgA0/maxresdefault.jpg);")
+			//- button.icon#play-button.play-button
+			//- 	| <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path fill="#fff" d="M293.002 78.53C249.646 3.435 153.618-22.296 78.529 21.068 3.434 64.418-22.298 160.442 21.066 235.534c43.35 75.095 139.375 100.83 214.465 57.47 75.096-43.365 100.84-139.384 57.471-214.474zm-73.168 187.271c-60.067 34.692-136.894 14.106-171.576-45.973C13.568 159.761 34.161 82.935 94.23 48.26c60.071-34.69 136.894-14.106 171.578 45.971 34.685 60.076 14.098 136.886-45.974 171.57zm-6.279-115.149l-82.214-47.949c-7.492-4.374-13.535-.877-13.493 7.789l.421 95.174c.038 8.664 6.155 12.191 13.669 7.851l81.585-47.103c7.506-4.332 7.522-11.388.032-15.762z"/></svg>
+			//- button.icon#pause-button.pause-button
+			//- 	| <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path fill="#fff" d="M178.5 357h51V153h-51v204zM255 0C114.75 0 0 114.75 0 255s114.75 255 255 255 255-114.75 255-255S395.25 0 255 0zm0 459c-112.2 0-204-91.8-204-204S142.8 51 255 51s204 91.8 204 204-91.8 204-204 204zm25.5-102h51V153h-51v204z"/></svg>	
 	section.section
 		.container
 			.integration
@@ -283,7 +290,7 @@ block content
 				h2.tariff__head-title Выгодные тарифы для наших пользователей
 				.notice Попробуйте U-Robot бесплатно: если не понравится, отмените подписку, и платить не придется.
 				.buttons.has-addons.is-centered
-					button.button.is-large.js-tariff-period(data-period="1" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0") 1 месяц
+					button.button.is-large.is-active.js-tariff-period(data-period="1" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0") 1 месяц
 					button.button.is-large.js-tariff-period(data-period="3" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100")
 						| 3 месяца
 						small скидка 10%
@@ -310,22 +317,22 @@ block content
 								| Персональный виртуальный ассистент
 							li
 								| Планировщик записи клиентов 
-							li
+							li.has-text-grey
 								| Facebook/VK
-							li
+							li.has-text-grey
 								| Неограниченая работа с существующей базой клиентов
-							li
+							li.has-text-grey
 								| Персонализированные предложения 
-							li
+							li.has-text-grey
 								| Полноценный e-commers
 								| интернет магазин в мессенджере
-							li
+							li.has-text-grey
 								| Онлайн оплата
-							li
+							li.has-text-grey
 								| Автоматизированные воронки продаж
-							li
+							li.has-text-grey
 								| Внутренняя CRM система
-							li
+							li.has-text-grey
 								| Интеграция с 1С и Битрикс
 						a.button(href="").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
 				.column
@@ -350,16 +357,16 @@ block content
 								| Неограниченая работа с существующей базой клиентов
 							li
 								| Персонализированные предложения 
-							li
+							li.has-text-grey
 								| Полноценный e-commers
 								| интернет магазин в мессенджере
-							li
+							li.has-text-grey
 								| Онлайн оплата
-							li
+							li.has-text-grey
 								| Автоматизированные воронки продаж
-							li
+							li.has-text-grey
 								| Внутренняя CRM система
-							li
+							li.has-text-grey
 								| Интеграция с 1С и Битрикс
 						a.button(href="").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
 				.column
@@ -398,10 +405,11 @@ block content
 						a.button(href="").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
 
 block footer
-	footer.footer.is-bg-gray
+	footer.footer
 		.container
 			.footer__logo
-				a.logo(href="index.html")
+				a(href="/")
 					img(src="img/logo.svg", alt="u-robot.ru")
-			p Надежный помощник для вашего бизнеса
-			.footer__copy © 2018, U-Robot
+			.has-text-grey
+				.footer__text Надежный помощник для вашего бизнеса
+				.footer__copy © 2018, U-Robot

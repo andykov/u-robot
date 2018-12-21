@@ -1,4 +1,4 @@
-//$column-gap: 0.75rem !default;
+$column-gap-mobile: 20px !default;
 $column-gap: 16.5px !default;
 
 .column {
@@ -6,7 +6,10 @@ $column-gap: 16.5px !default;
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: $column-gap;
+  padding: $column-gap-mobile;
+  @include tablet {
+    padding: $column-gap;
+  }
   .columns.is-mobile > &.is-narrow {
     flex: none;
   }
@@ -602,14 +605,27 @@ $column-gap: 16.5px !default;
 }
 
 .columns {
-  margin-left: -$column-gap;
-  margin-right: -$column-gap;
-  margin-top: -$column-gap;
+  margin-left: -$column-gap-mobile;
+  margin-right: -$column-gap-mobile;
+  margin-top: -$column-gap-mobile;
+
+  @include tablet {
+    margin-left: -$column-gap;
+    margin-right: -$column-gap;
+    margin-top: -$column-gap;
+  }
+  
   &:last-child {
-    margin-bottom: -$column-gap;
+    margin-bottom: -$column-gap-mobile;
+    @include tablet {
+      margin-bottom: -$column-gap;
+    }
   }
   &:not(:last-child) {
-    margin-bottom: calc(1.5rem - #{$column-gap});
+    margin-bottom: calc(1.5rem - #{$column-gap-mobile});
+    @include tablet {
+      margin-bottom: calc(1.5rem - #{$column-gap});
+    }
   }
   // Modifiers
   &.is-centered {
