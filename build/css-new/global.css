@@ -551,21 +551,25 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1; }
 
 h1 {
-  font-size: 3rem;
+  font-size: 34px;
   font-weight: 500;
-  color: #000; }
+  color: #000;
+  line-height: 1; }
+  @media screen and (min-width: 992px), print {
+    h1 {
+      font-size: 3rem; } }
   h1 span {
     font-size: 1.313em;
     font-weight: 700; }
-  @media screen and (max-width: 991px) {
-    h1 {
-      font-size: 34px;
-      line-height: 1; } }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  color: #000; }
+  color: #000;
+  line-height: 1; }
+  @media screen and (min-width: 992px), print {
+    h2 {
+      font-size: 2rem; } }
   h2 span {
     font-size: 1.313em;
     font-weight: 700; }
@@ -4985,7 +4989,8 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
   letter-spacing: 0.67px;
   font-size: 0.75rem;
   font-weight: 500;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  box-shadow: 0px 0px 10px #2DE691; }
   .tag:not(body) .delete {
     margin-left: 0.25rem;
     margin-right: -0.375rem; }
@@ -5132,15 +5137,21 @@ a.tag:hover {
   .subtitle.is-7 {
     font-size: 0.625rem; }
 
+@media screen and (max-width: 991px) {
+  .card-list {
+    padding-bottom: 100px; } }
+
 .card {
-  position: relative;
-  padding: 20px 0; }
+  position: relative; }
+  @media screen and (min-width: 992px), print {
+    .card {
+      padding: 20px 0; } }
   .card__image {
     margin-bottom: 28px; }
   .card__title {
     position: relative;
-    padding-bottom: 34px;
-    margin-bottom: 19px;
+    padding-bottom: 33px;
+    margin-bottom: 13px;
     line-height: 1;
     color: #031D5B; }
     .card__title::after {
@@ -6442,6 +6453,9 @@ a.tag:hover {
     .header .bubble img {
       max-width: none;
       height: 100%; }
+  @media screen and (max-width: 991px) {
+    .header__intro {
+      padding-bottom: 100px; } }
   .header__intro .button {
     width: 100%;
     max-width: 280px;
@@ -6608,7 +6622,11 @@ a.tag:hover {
   height: 100%; }
 
 .integration-social {
-  position: relative; }
+  position: relative;
+  padding-top: 30px; }
+  @media screen and (max-width: 991px) {
+    .integration-social {
+      padding-bottom: 20px; } }
   .integration-social__list {
     display: flex;
     align-items: center; }
@@ -6624,28 +6642,37 @@ a.tag:hover {
       .integration-social__list .icon img {
         border-radius: 100%; }
   .integration-social__text {
-    position: absolute;
     font-weight: 400;
     font-size: 0.875rem;
     color: #919AA3;
-    padding-left: 107px;
+    padding-left: 55px;
     padding-top: 11px;
-    max-width: 357px;
+    max-width: 252px;
     width: 100%;
-    left: 25px;
-    top: 100%;
-    margin-top: 23px; }
+    margin-top: 20px;
+    margin-left: 25px; }
     @media screen and (min-width: 992px), print {
       .integration-social__text {
-        left: 33%; } }
+        position: absolute;
+        left: 25px;
+        top: 100%;
+        max-width: 330px;
+        padding-left: 107px;
+        left: 33%;
+        margin-top: 23px;
+        margin-left: 0; } }
     .integration-social__text::before {
       content: '';
       position: absolute;
       left: 0;
       top: 0;
       background: url("../img/svg/curve-arrow.svg") no-repeat left top/cover;
-      width: 94px;
-      height: 45px; }
+      width: 45px;
+      height: 38px; }
+      @media screen and (min-width: 992px), print {
+        .integration-social__text::before {
+          width: 94px;
+          height: 45px; } }
     .integration-social__text span {
       color: #000; }
 
@@ -6703,18 +6730,28 @@ a.tag:hover {
           margin-bottom: 32px; } }
 
 .discount {
-  padding: 40px 18px;
+  padding: 32px 18px 40px;
   text-align: center;
   margin-bottom: 41px; }
-  .discount h2 {
-    line-height: 46px; }
-  .discount .column:first-child .discount-item:before {
-    content: none; }
+  @media screen and (min-width: 992px), print {
+    .discount h2 {
+      line-height: 46px; } }
+  @media screen and (max-width: 991px) {
+    .discount .column:nth-child(odd) .discount-item:before {
+      content: none; } }
+  @media screen and (min-width: 992px), print {
+    .discount {
+      padding-top: 40px; }
+      .discount .column:first-child .discount-item:before {
+        content: none; } }
   .discount-item {
     text-align: center;
     font-weight: 500;
-    margin: 30px 0;
+    margin: 20px 0 45px;
     position: relative; }
+    @media screen and (min-width: 992px), print {
+      .discount-item {
+        margin: 30px 0; } }
     .discount-item::before {
       content: '';
       width: 1px;

@@ -12,9 +12,18 @@ $card-content-background-color: none !default;
 $card-footer-background-color: none !default;
 $card-footer-border-top: 1px solid $border !default;
 
+.card-list {
+  @include mobile {
+    padding-bottom: 100px;
+  }
+}
+
 .card {
   position: relative;
-  padding: 20px 0;
+  
+  @include tablet {
+    padding: 20px 0;
+  }
 
   &__image {
     margin-bottom: 28px;
@@ -22,8 +31,8 @@ $card-footer-border-top: 1px solid $border !default;
 
   &__title {
     position: relative;
-    padding-bottom: 34px;
-    margin-bottom: 19px;
+    padding-bottom: 33px;
+    margin-bottom: 13px;
     line-height: 1;
     color: #031D5B;
 

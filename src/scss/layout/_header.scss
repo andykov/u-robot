@@ -34,6 +34,11 @@ $screen-lg-max: ($screen-xl - 1);
   }
   
   &__intro {
+    
+    @include mobile {
+      padding-bottom: 100px;
+    }
+
     .button {
       width: 100%;
       max-width: 280px;
