@@ -1,6 +1,6 @@
 $(function() {
 
-    AOS.init(); // init scroll animation
+    
     
     function blurElement(element, size) {
         var filterVal = 'blur(' + size + 'px)';
@@ -125,10 +125,24 @@ $(function() {
         });
     }
 
+    
+    $('.js-reviews-nav').on('afterChange', function(event, slick, currentSlide, nextSlide){
+
+        var currentImg = $(slick.$slides.get(currentSlide)).find('img[data-src-color]');
+        var currentSrcColor = currentImg.attr('data-src-color');
+        currentImg.siblings().removeAttr('data-src-color');
+        currentImg.attr('src', currentSrcColor);
+        console.log(currentImg);
+        console.log(currentSrcColor);
+    });
+    
+
     $('.js-case, .js-reviews, .js-reviews-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        console.log(nextSlide);
+        // console.log(nextSlide);
         AOS.refreshHard();
-      });
+    });
+
+    AOS.init(); // init scroll animation only after sliders
 
 });
 

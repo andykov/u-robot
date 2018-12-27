@@ -4989,20 +4989,20 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
   letter-spacing: 0.67px;
   font-size: 0.75rem;
   font-weight: 500;
-  text-transform: uppercase;
-  box-shadow: 0px 0px 10px #2DE691; }
+  text-transform: uppercase; }
   .tag:not(body) .delete {
     margin-left: 0.25rem;
     margin-right: -0.375rem; }
   .tag:not(body).is-white {
-    background-color: white;
-    color: #0e1b58; }
+    background-color: transparent;
+    border: 1px solid white;
+    color: white; }
   .tag:not(body).is-black {
     background-color: black;
     color: white; }
   .tag:not(body).is-light {
-    background-color: whitesmoke;
-    color: #363636; }
+    background-color: #D4D4D4;
+    color: #fff; }
   .tag:not(body).is-dark {
     background-color: #363636;
     color: whitesmoke; }
@@ -5016,6 +5016,7 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
     background-color: #209cee;
     color: white; }
   .tag:not(body).is-success {
+    box-shadow: 0px 0px 10px #2DE691;
     background-color: #2de690;
     color: #fff; }
   .tag:not(body).is-warning {
@@ -6530,7 +6531,6 @@ a.tag:hover {
     margin-bottom: 15px; }
 
 .slick-arrow {
-  display: none !important;
   position: absolute;
   top: 50%;
   font-size: 0;
@@ -6682,7 +6682,21 @@ a.tag:hover {
   .devices__toggle {
     margin-bottom: 20px; }
     .devices__toggle .button {
-      margin-right: 20px; }
+      letter-spacing: normal; }
+      .devices__toggle .button:not(:last-child) {
+        margin-right: 10px; }
+        @media screen and (min-width: 992px), print {
+          .devices__toggle .button:not(:last-child) {
+            margin-right: 20px; } }
+  .devices__desc {
+    font-size: 1.125rem;
+    color: #9B9B9B;
+    margin-bottom: 40px; }
+  .devices__action {
+    max-width: 280px;
+    width: 100%;
+    box-shadow: 0px 10px 20px rgba(180, 180, 180, 0.5);
+    margin-bottom: 22px; }
   .devices__img {
     position: relative;
     width: 560px; }
@@ -6699,7 +6713,7 @@ a.tag:hover {
     .devices__img-mobile {
       width: 32.5%;
       position: absolute;
-      bottom: -48.72px;
+      bottom: -58.72px;
       left: -9.67px; }
 
 .trial {
@@ -6714,19 +6728,19 @@ a.tag:hover {
     max-width: 475px;
     font-size: 1.125rem;
     color: #288643;
-    padding-bottom: 35px; }
+    padding-bottom: 38px; }
     @media screen and (min-width: 992px), print {
       .trial__text {
         margin-left: 63px; } }
     .trial__text .button {
       width: 100%;
       max-width: 280px;
-      margin-top: 5px;
+      margin-top: 10px;
       margin-bottom: 20px;
       box-shadow: 0px 10px 20px rgba(40, 134, 67, 0.5); }
       @media screen and (min-width: 992px), print {
         .trial__text .button {
-          margin-top: 15px;
+          margin-top: 20px;
           margin-bottom: 32px; } }
 
 .discount {
@@ -6769,28 +6783,45 @@ a.tag:hover {
       font-size: 32px;
       line-height: 1;
       color: #000; }
+  .discount__special {
+    text-align: center;
+    font-size: 22px;
+    line-height: 34px;
+    color: #9c9c9c;
+    max-width: 640px;
+    margin: 0 auto; }
   .discount .button {
     width: 100%;
     max-width: 400px; }
+    @media screen and (max-width: 991px) {
+      .discount .button {
+        font-size: 1.125rem;
+        white-space: normal;
+        padding-left: 3.42867em;
+        padding-right: 3.42867em;
+        height: 3.667em; } }
 
 .case {
   position: relative;
-  margin-bottom: 64px;
-  min-height: 315px; }
+  margin-bottom: 74px;
+  min-height: 345px; }
+  @media screen and (min-width: 992px), print {
+    .case {
+      margin-bottom: 64px; } }
   .case__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 30px; }
   .case__inner {
-    padding: 40px 15px;
+    padding: 30px 15px;
     max-width: 900px;
     box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
     border-radius: 10px;
     margin: 0 auto; }
     @media screen and (max-width: 991px) {
       .case__inner {
-        margin-left: -10;
+        margin-left: -10px;
         margin-right: -10px; } }
     @media screen and (min-width: 992px), print {
       .case__inner {
@@ -6798,72 +6829,68 @@ a.tag:hover {
   .case__item {
     outline: none;
     color: #9B9B9B; }
+  .case__desc {
+    font-size: 1.125rem; }
 
-.reviews__inner {
-  position: relative;
-  min-height: 270px; }
-  @media screen and (max-width: 991px) {
-    .reviews__inner {
-      margin-left: -10px;
-      margin-right: -10px; } }
-
-.reviews__slider {
-  background-color: #fff;
-  max-width: 900px;
-  margin: 0 auto 72px;
-  border-radius: 10px;
-  box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5); }
-
-@media screen and (min-width: 720px) {
-  .reviews__item-inner {
-    display: flex; } }
-
-.reviews__img {
-  width: 100%;
-  flex: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  min-height: 270px; }
+.reviews {
+  padding-top: 30px; }
+  .reviews__inner {
+    position: relative;
+    min-height: 270px; }
+    @media screen and (max-width: 991px) {
+      .reviews__inner {
+        margin-left: -10px;
+        margin-right: -10px; } }
+  .reviews__slider {
+    background-color: #fff;
+    max-width: 900px;
+    margin: 0 auto 72px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5); }
   @media screen and (min-width: 720px) {
-    .reviews__img {
-      width: 37.77778%;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-      border-top-right-radius: 0;
-      height: auto; } }
-  .reviews__img:before {
-    display: block;
-    content: "";
+    .reviews__item-inner {
+      display: flex; } }
+  .reviews__img {
     width: 100%;
-    padding-top: 79.41176%; }
-
-.reviews__body {
-  padding: 20px 10px; }
-  @media screen and (min-width: 720px) {
-    .reviews__body {
-      padding: 30px 60px; } }
-
-.reviews__author {
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 37px;
-  margin-bottom: 10px; }
-
-.reviews__post, .reviews__text {
-  font-size: 1.125rem;
-  line-height: 24px; }
-
-.reviews__post {
-  color: #919AA3;
-  margin-bottom: 20px; }
-
-.reviews__text {
-  color: #171C34; }
+    flex: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 270px; }
+    @media screen and (min-width: 720px) {
+      .reviews__img {
+        width: 37.77778%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+        height: auto; } }
+    .reviews__img:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 79.41176%; }
+  .reviews__body {
+    padding: 20px 10px; }
+    @media screen and (min-width: 720px) {
+      .reviews__body {
+        padding: 30px 60px; } }
+  .reviews__author {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 37px;
+    margin-bottom: 10px; }
+  .reviews__post, .reviews__text {
+    font-size: 1.125rem;
+    line-height: 24px; }
+  .reviews__post {
+    color: #919AA3;
+    margin-bottom: 20px; }
+  .reviews__text {
+    color: #171C34; }
 
 .reviews-nav {
   max-width: 900px;

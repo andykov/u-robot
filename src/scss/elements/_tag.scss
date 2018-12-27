@@ -80,7 +80,6 @@ $tag-delete-margin: 1px !default;
   font-size: $size-6;
   font-weight: $weight-medium;
   text-transform: uppercase;
-  box-shadow: 0px 0px 10px #2DE691;
 
   .delete {
     margin-left: 0.25rem;
@@ -91,8 +90,23 @@ $tag-delete-margin: 1px !default;
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
     &.is-#{$name} {
-      background-color: $color;
-      color: $color-invert;
+      
+      @if $name == 'white' {
+        background-color: transparent;
+        border: 1px solid $color;
+        color: $color;
+      } @else if $name == 'success' {
+        box-shadow: 0px 0px 10px #2DE691;
+        background-color: $color;
+        color: $color-invert;
+        
+      } @else if $name == 'light' {
+        background-color: #D4D4D4;
+        color: #fff;
+      } @else {
+        background-color: $color;
+        color: $color-invert;
+      }
     }
   }
   // Sizes

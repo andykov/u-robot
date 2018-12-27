@@ -23,7 +23,7 @@
 $aos-distance: 500px;
 
 .slick-arrow {
-    display: none !important;
+    // display: none !important;
     position: absolute;
     top: 50%;
     font-size: 0;
@@ -213,8 +213,28 @@ $aos-distance: 500px;
     &__toggle {
         margin-bottom: 20px;
         .button {
-            margin-right: 20px;
+            letter-spacing: normal;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+                @include tablet {
+                    margin-right: 20px;
+                }
+            }
         }
+    }
+
+    &__desc {
+        font-size: $size-3;
+        color: #9B9B9B;
+        margin-bottom: 40px;
+    }
+
+    &__action {
+        max-width: 280px;
+        width: 100%;
+        box-shadow: 0px 10px 20px rgba(180, 180, 180, 0.5);
+        margin-bottom: 22px;
     }
 
     &__img {
@@ -238,7 +258,7 @@ $aos-distance: 500px;
         &-mobile {
             width: (182 / 560 * 100%);
             position: absolute;
-            bottom: -48.72px;
+            bottom: -58.72px;
             left: -9.67px;
         }
     }
@@ -261,7 +281,7 @@ $aos-distance: 500px;
         max-width: 475px;
         font-size: $size-3;
         color: #288643;
-        padding-bottom: 35px;
+        padding-bottom: 38px;
 
         @include tablet {
             margin-left: 63px;
@@ -270,12 +290,12 @@ $aos-distance: 500px;
         .button {
             width: 100%;
             max-width: 280px;
-            margin-top: 5px;
+            margin-top: 10px;
             margin-bottom: 20px;
             box-shadow: 0px 10px 20px rgba(40, 134, 67, 0.5);
 
             @include tablet {
-                margin-top: 15px;
+                margin-top: 20px;
                 margin-bottom: 32px;
             }
         }
@@ -340,17 +360,38 @@ $aos-distance: 500px;
             color: #000;
         }
     }
+
+    &__special {
+        text-align: center;
+        font-size: 22px;
+        line-height: 34px;
+        color: $grey;
+        max-width: 640px;
+        margin: 0 auto;
+    }
     
     .button {
         width: 100%;
         max-width: 400px;
+
+        @include mobile {
+            font-size: $size-3;
+            white-space: normal;
+            padding-left: 3.42867em;
+            padding-right: 3.42867em;
+            height: 3.667em;
+        }
     }
 }
 
 .case {
     position: relative;
-    margin-bottom: 64px;
-    min-height: 315px;
+    margin-bottom: 74px;
+    min-height: 345px;
+    
+    @include tablet {
+        margin-bottom: 64px;
+    }
 
     &__top {
         display: flex;
@@ -360,14 +401,14 @@ $aos-distance: 500px;
     }
 
     &__inner {
-        padding: ($panel-padding / 2) 15px;
+        padding: (($panel-padding / 2) - 10) 15px;
         max-width: 900px;
         box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
         border-radius: 10px;
         margin: 0 auto;
 
         @include mobile {
-            margin-left: -10;
+            margin-left: -10px;
             margin-right: -10px;
         }
 
@@ -380,10 +421,15 @@ $aos-distance: 500px;
         outline: none;
         color: #9B9B9B;
     }
+
+    &__desc {
+        font-size: $size-3;
+    }
 }
 
 
 .reviews {
+    padding-top: 30px;
 
     &__inner {
         position: relative;
