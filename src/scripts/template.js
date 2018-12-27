@@ -115,6 +115,15 @@ $(function() {
     }
 
     if ($('.js-reviews-nav').length) {
+        $('.js-reviews-nav').on('init', function(event, slick){
+            var current = $(slick.$slides.get(slick.currentSlide));
+            var currentImg = current.find('img[data-src-color]');
+            var srcColor = currentImg.attr('data-src-color');
+            var srcGrey = $(currentImg[0]).attr('src');
+            $(currentImg[0]).attr('src', srcColor);
+            $(currentImg[0]).attr('data-src-color', srcGrey);
+        });
+        
         $('.js-reviews-nav').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -123,24 +132,27 @@ $(function() {
             arrows: false,
             focusOnSelect: true
         });
+
+        $('.js-reviews-nav').on('afterChange', function(event, slick, currentSlide){
+            var current = $(slick.$slides.get(slick.currentSlide));
+            var currentImg = current.find('img[data-src-color]');
+            var srcColor = currentImg.attr('data-src-color');
+            var srcGrey = $(currentImg[0]).attr('src');
+            $(slick.$slides).find('img').attr('src', srcGrey);
+            $(slick.$slides).find('img').attr('data-src-color', srcColor);
+            $(currentImg[0]).attr('src', srcColor);
+            $(currentImg[0]).attr('data-src-color', srcGrey);
+        });
     }
 
     
-    $('.js-reviews-nav').on('afterChange', function(event, slick, currentSlide, nextSlide){
-
-        var currentImg = $(slick.$slides.get(currentSlide)).find('img[data-src-color]');
-        var currentSrcColor = currentImg.attr('data-src-color');
-        currentImg.siblings().removeAttr('data-src-color');
-        currentImg.attr('src', currentSrcColor);
-        console.log(currentImg);
-        console.log(currentSrcColor);
-    });
+    
     
 
-    $('.js-case, .js-reviews, .js-reviews-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        // console.log(nextSlide);
-        AOS.refreshHard();
-    });
+    // $('.js-case, .js-reviews, .js-reviews-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    //     // console.log(nextSlide);
+    //     AOS.refreshHard();
+    // });
 
     AOS.init(); // init scroll animation only after sliders
 
