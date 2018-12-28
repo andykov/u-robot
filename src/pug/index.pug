@@ -312,14 +312,14 @@ block content
 				h2.tariff__head-title Выгодные тарифы для наших пользователей
 				.notice Попробуйте U-Robot бесплатно: если не понравится, отмените подписку, и платить не придется.
 				.buttons.has-addons.is-centered
-					button.button.is-large.is-active.js-tariff-period(data-period="1" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0") 1 месяц
+					button.button.is-large.is-link.js-tariff-period(data-period="1" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0") 1 месяц
 					button.button.is-large.js-tariff-period(data-period="3" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100")
 						| 3 месяца
 						small скидка 10%
-					button.button.is-large.js-tariff-period(data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150")
+					button.button.is-large.js-tariff-period(data-period="6" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150")
 						| 6 месяцев
 						small скидка 20%
-					button.button.is-large.js-tariff-period(data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="200")
+					button.button.is-large.js-tariff-period(data-period="12" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="200")
 						| 12 месяцев
 						small скидка 30%
 			.columns
@@ -330,6 +330,8 @@ block content
 							.tariff__price
 								span(data-period-1).show 4999
 								span(data-period-3) 4499
+								span(data-period-6) 3999
+								span(data-period-12) 3499
 								| ₽/мес
 						ul.tariff__options
 							li
@@ -364,6 +366,8 @@ block content
 							.tariff__price
 								span(data-period-1).show 9999
 								span(data-period-3) 8999
+								span(data-period-6) 7999
+								span(data-period-12) 6999
 								| ₽/мес
 						ul.tariff__options
 							li
@@ -398,6 +402,8 @@ block content
 							.tariff__price
 								span(data-period-1).show 14 999
 								span(data-period-3) 13 499
+								span(data-period-6) 11 999
+								span(data-period-12) 10 499
 								| ₽/мес
 						ul.tariff__options
 							li

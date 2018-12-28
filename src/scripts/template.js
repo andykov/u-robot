@@ -18,62 +18,63 @@ $(function() {
     }
     
     // button change price tariffs
-    // $('.js-tariff-period').on('click', function(){
+    $('.js-tariff-period').on('click', function(){
 
-    //     var period = $(this).attr('data-period');
+        var period = $(this).attr('data-period');
+        $(this).siblings().removeClass('is-link');
+        $(this).addClass('is-link');
 
-    //     $({blurRadius: 0}).animate({blurRadius: 10}, {
-    //         duration: 700,
-    //         easing: 'swing',
-    //         step: function() {
-    //             $('.tariff__price span.show').css({
-    //                 "-webkit-filter": "blur("+this.blurRadius+"px)",
-    //                 "filter": "blur("+this.blurRadius+"px)"
-    //             });
-    //         }
-    //     });
-    //     $({blurRadius: 10}).animate({blurRadius: 0}, {
-    //         duration: 700,
-    //         easing: 'swing',
-    //         step: function() {
-    //             console.log(this.blurRadius);
-    //             $('.tariff__price span').removeClass('show');
-    //             $('.tariff__price span[data-period-'+ period + ']').addClass('show');
-    //             $('.tariff__price span.show').css({
-    //                 "-webkit-filter": "blur("+this.blurRadius+"px)",
-    //                 "filter": "blur("+this.blurRadius+"px)"
-    //             });
-    //         }
-    //     });
+        $({blurRadius: 0}).animate({blurRadius: 10}, {
+            duration: 700,
+            easing: 'swing',
+            step: function() {
+                $('.tariff__price span.show').css({
+                    "-webkit-filter": "blur("+this.blurRadius+"px)",
+                    "filter": "blur("+this.blurRadius+"px)"
+                });
+            }
+        });
+        $({blurRadius: 10}).animate({blurRadius: 0}, {
+            duration: 700,
+            easing: 'swing',
+            step: function() {
+                $('.tariff__price span').removeClass('show');
+                $('.tariff__price span[data-period-'+ period + ']').addClass('show');
+                $('.tariff__price span.show').css({
+                    "-webkit-filter": "blur("+this.blurRadius+"px)",
+                    "filter": "blur("+this.blurRadius+"px)"
+                });
+            }
+        });
+    });
 
 
-
-    //     // var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
-    //     // fluidEl = $("figure");
-    //     // console.log(allVideos);
-    //     // allVideos.each(function() {
+        var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
+        fluidEl = $("figure");
+        console.log(allVideos);
+        allVideos.each(function() {
     
-    //     //   $(this)
-    //     //     // jQuery .data does not work on object/embed elements
-    //     //     .attr('data-aspectRatio', this.height / this.width)
-    //     //     .removeAttr('height')
-    //     //     .removeAttr('width');
+          $(this)
+            // jQuery .data does not work on object/embed elements
+            .attr('data-aspectRatio', this.height / this.width)
+            .removeAttr('height')
+            .removeAttr('width');
     
-    //     // });
+        });
     
-    //     // $(window).resize(function() {
-    //         // console.Log('1111');
-    //     //   var newWidth = fluidEl.width();
-    //     //   allVideos.each(function() {
+        $(window).resize(function() {
+            console.Log('1111');
+          var newWidth = fluidEl.width();
+          allVideos.each(function() {
     
-    //     //     var elel = $(this);
-    //     //     elel
-    //     //         .width(newWidth)
-    //     //         .height(newWidth * elel.attr('data-aspectRatio'));
+            var elel = $(this);
+            elel
+                .width(newWidth)
+                .height(newWidth * elel.attr('data-aspectRatio'));
     
-    //     //   });
+          });
     
-    //     // }).resize();
+        }).resize();
 
 
     //     // $().attr('data-period-'+ period).animate({
@@ -157,4 +158,3 @@ $(function() {
     AOS.init(); // init scroll animation only after sliders
 
 });
-
