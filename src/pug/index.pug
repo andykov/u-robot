@@ -53,13 +53,20 @@ block content
 	
 	section.section.is-paddingless
 		.video-intro
-			.videowrapper
-				#video-placeholder
-				.video-preview(style="background-image: url(//img.youtube.com/vi/yUYyg6ILgA0/maxresdefault.jpg);")
+			| <div data-youcover 
+			| 	data-width="100%" 
+			| 	data-height="500" 
+			| 	data-src='https://www.youtube.com/embed/ctvlUvN6wSE?rel=0&amp;showinfo=0&amp;autoplay=1' 
+			| 	data-wrapperclass='youCover custom'
+			| 	data-allowfullscreen>
+			| </div>
+			//- .videowrapper
+			//- 	#video-placeholder(data-video-id="ctvlUvN6wSE")
+			//- 	.video-preview(style="background-image: url(//img.youtube.com/vi/ctvlUvN6wSE/maxresdefault.jpg);")
 			//- button.icon#play-button.play-button
-			//- 	| <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path fill="#fff" d="M293.002 78.53C249.646 3.435 153.618-22.296 78.529 21.068 3.434 64.418-22.298 160.442 21.066 235.534c43.35 75.095 139.375 100.83 214.465 57.47 75.096-43.365 100.84-139.384 57.471-214.474zm-73.168 187.271c-60.067 34.692-136.894 14.106-171.576-45.973C13.568 159.761 34.161 82.935 94.23 48.26c60.071-34.69 136.894-14.106 171.578 45.971 34.685 60.076 14.098 136.886-45.974 171.57zm-6.279-115.149l-82.214-47.949c-7.492-4.374-13.535-.877-13.493 7.789l.421 95.174c.038 8.664 6.155 12.191 13.669 7.851l81.585-47.103c7.506-4.332 7.522-11.388.032-15.762z"/></svg>
+			//- 	| play <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path fill="#fff" d="M293.002 78.53C249.646 3.435 153.618-22.296 78.529 21.068 3.434 64.418-22.298 160.442 21.066 235.534c43.35 75.095 139.375 100.83 214.465 57.47 75.096-43.365 100.84-139.384 57.471-214.474zm-73.168 187.271c-60.067 34.692-136.894 14.106-171.576-45.973C13.568 159.761 34.161 82.935 94.23 48.26c60.071-34.69 136.894-14.106 171.578 45.971 34.685 60.076 14.098 136.886-45.974 171.57zm-6.279-115.149l-82.214-47.949c-7.492-4.374-13.535-.877-13.493 7.789l.421 95.174c.038 8.664 6.155 12.191 13.669 7.851l81.585-47.103c7.506-4.332 7.522-11.388.032-15.762z"/></svg>
 			//- button.icon#pause-button.pause-button
-			//- 	| <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path fill="#fff" d="M178.5 357h51V153h-51v204zM255 0C114.75 0 0 114.75 0 255s114.75 255 255 255 255-114.75 255-255S395.25 0 255 0zm0 459c-112.2 0-204-91.8-204-204S142.8 51 255 51s204 91.8 204 204-91.8 204-204 204zm25.5-102h51V153h-51v204z"/></svg>	
+			//- 	| pause <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path fill="#fff" d="M178.5 357h51V153h-51v204zM255 0C114.75 0 0 114.75 0 255s114.75 255 255 255 255-114.75 255-255S395.25 0 255 0zm0 459c-112.2 0-204-91.8-204-204S142.8 51 255 51s204 91.8 204 204-91.8 204-204 204zm25.5-102h51V153h-51v204z"/></svg>	
 	section.section
 		.container
 			.columns.is-vcentered
@@ -431,6 +438,42 @@ block content
 							li
 								| Интеграция с 1С и Битрикс
 						a.button(href="").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
+
+	section.section.faq
+		.container
+			h2.faq__title Часто задаваемые вопросы
+			.columns.is-multiline.is-tablet
+				.column.is-6
+					.faq__item
+						span.faq__question.js-faq Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, obcaecati.
+						.faq__answer 
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio fuga cupiditate, inventore iste porro possimus.
+				.column.is-6
+					.faq__item
+						span.faq__question.js-faq Lorem ipsum dolor sit.
+						.faq__answer
+							p Lorem, ipsum.
+				.column.is-6
+					.faq__item
+						span.faq__question.js-faq Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						.faq__answer
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laudantium quae vitae vel quos, officiis repellat expedita ea nulla dicta!
+							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse quasi excepturi accusantium temporibus, sapiente quisquam commodi numquam quas nesciunt suscipit nobis dolor et, minima ea possimus officia, amet quam nostrum mollitia corporis ipsa modi necessitatibus.
+				.column.is-6
+					.faq__item
+						span.faq__question.js-faq Lorem ipsum dolor sit amet consectetur.
+						.faq__answer 
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facere suscipit sint dicta hic numquam excepturi laborum minima nihil quod? Ad autem suscipit eaque?
+				.column.is-6
+					.faq__item
+						span.faq__question.js-faq Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde!
+						.faq__answer
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, doloribus.
+				.column.is-6
+					.faq__item
+						span.faq__question.js-faq Lorem, ipsum dolor sit amet consectetur adipisicing.
+						.faq__answer
+							p Lorem ipsum dolor sit.
 
 block footer
 	footer.footer

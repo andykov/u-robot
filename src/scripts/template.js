@@ -1,7 +1,6 @@
 $(function() {
-
     
-    
+    // price blur effect
     function blurElement(element, size) {
         var filterVal = 'blur(' + size + 'px)';
          $(element).css({
@@ -47,53 +46,6 @@ $(function() {
             }
         });
     });
-
-
-        // var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], object, embed"),
-        // fluidEl = $("figure");
-        // console.log(allVideos);
-        // allVideos.each(function() {
-    
-        //   $(this)
-        //     // jQuery .data does not work on object/embed elements
-        //     .attr('data-aspectRatio', this.height / this.width)
-        //     .removeAttr('height')
-        //     .removeAttr('width');
-    
-        // });
-    
-        // $(window).resize(function() {
-        //     console.Log('1111');
-        //   var newWidth = fluidEl.width();
-        //   allVideos.each(function() {
-    
-        //     var elel = $(this);
-        //     elel
-        //         .width(newWidth)
-        //         .height(newWidth * elel.attr('data-aspectRatio'));
-    
-        //   });
-    
-        // }).resize();
-
-
-    //     // $().attr('data-period-'+ period).animate({
-    //     //     blurRadius: 5
-    //     //   }, 2000, function() {
-    //     //     // Анимация завершена.
-    //     //     console.log('blur');
-    //     //   });
-    //     // function percent(number) {
-
-    //     //     var percent = "30"; // Необходимый процент
-    //     //     var number_percent = 4999 / 100 * percent;
-            
-    //     //     return Number(number_percent) + Number(4999);
-            
-    //     // }
-        
-    //     // var new_price = percent("1000"); // Новая цена
-    // });
 
     // sliders
     if ($('.js-case').length) {
@@ -146,15 +98,17 @@ $(function() {
         });
     }
 
-    
-    
-    
-
-    // $('.js-case, .js-reviews, .js-reviews-nav').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    //     // console.log(nextSlide);
-    //     AOS.refreshHard();
-    // });
+    // accordion faq
+    $('.js-faq').on('click', function(e) {
+        var $this = $(this);
+        
+        if ($this.next().is(':visible')) {
+            $this.next().slideUp(350);
+        } else {
+            $this.next().slideDown(350);
+        }
+    });
 
     AOS.init(); // init scroll animation only after sliders
-
+    
 });

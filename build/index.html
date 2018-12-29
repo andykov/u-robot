@@ -6,6 +6,7 @@
     </title>
     <link rel="stylesheet" href="css-new/libs/aos.css">
     <link rel="stylesheet" href="css-new/libs/slick.css">
+    <link rel="stylesheet" href="css-new/libs/youCover.css">
     <link rel="stylesheet" href="css-new/global.css">
   </head>
   <body>
@@ -59,9 +60,12 @@
       </section>
       <section class="section is-paddingless">
         <div class="video-intro">
-          <div class="videowrapper">
-            <div id="video-placeholder"></div>
-            <div class="video-preview" style="background-image: url(//img.youtube.com/vi/yUYyg6ILgA0/maxresdefault.jpg);"></div>
+          <div data-youcover 
+          	data-width="100%" 
+          	data-height="500" 
+          	data-src='https://www.youtube.com/embed/ctvlUvN6wSE?rel=0&amp;showinfo=0&amp;autoplay=1' 
+          	data-wrapperclass='youCover custom'
+          	data-allowfullscreen>
           </div>
         </div>
       </section>
@@ -420,6 +424,56 @@
           </div>
         </div>
       </section>
+      <section class="section faq">
+        <div class="container">
+          <h2 class="faq__title">Часто задаваемые вопросы</h2>
+          <div class="columns is-multiline is-tablet">
+            <div class="column is-6">
+              <div class="faq__item"><span class="faq__question js-faq">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, obcaecati.</span>
+                <div class="faq__answer"> 
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio fuga cupiditate, inventore iste porro possimus.</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="faq__item"><span class="faq__question js-faq">Lorem ipsum dolor sit.</span>
+                <div class="faq__answer">
+                  <p>Lorem, ipsum.</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="faq__item"><span class="faq__question js-faq">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                <div class="faq__answer">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laudantium quae vitae vel quos, officiis repellat expedita ea nulla dicta!</p>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse quasi excepturi accusantium temporibus, sapiente quisquam commodi numquam quas nesciunt suscipit nobis dolor et, minima ea possimus officia, amet quam nostrum mollitia corporis ipsa modi necessitatibus.</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="faq__item"><span class="faq__question js-faq">Lorem ipsum dolor sit amet consectetur.</span>
+                <div class="faq__answer"> 
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facere suscipit sint dicta hic numquam excepturi laborum minima nihil quod? Ad autem suscipit eaque?</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="faq__item"><span class="faq__question js-faq">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde!</span>
+                <div class="faq__answer">
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, doloribus.</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="faq__item"><span class="faq__question js-faq">Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+                <div class="faq__answer">
+                  <p>Lorem ipsum dolor sit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
@@ -433,6 +487,7 @@
     <script src="js/libs/jquery-3.3.1.min.js"></script>
     <script src="js/libs/aos.js"></script>
     <script src="js/libs/slick.min.js"></script>
+    <script src="js/libs/youCover.js"></script>
     <script defer src="js/template.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script>

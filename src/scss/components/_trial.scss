@@ -1,0 +1,37 @@
+.trial {
+    padding-bottom: 0;
+    overflow: hidden;
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+
+        img {
+            max-width: 444px;
+        }
+    }
+
+    &__text {
+        max-width: 475px;
+        font-size: $size-3;
+        color: #288643;
+        padding-bottom: 38px;
+
+        @include tablet {
+            margin-left: 63px;
+        }
+
+        .button {
+            width: 100%;
+            max-width: 280px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 10px 20px rgba(40, 134, 67, 0.5);
+
+            @include tablet {
+                margin-top: 20px;
+                margin-bottom: 32px;
+            }
+        }
+    }
+}

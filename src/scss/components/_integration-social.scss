@@ -1,0 +1,71 @@
+.integration-social {
+    position: relative;
+    padding-top: 30px;
+
+    @include mobile {
+        padding-bottom: 20px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        li {
+            vertical-align: top;
+            &:not(:first-child) {
+                margin-left: -12px;
+                
+                @include tablet {
+                    margin-left: -5px;
+                }
+            }
+        }
+        .icon {
+            display: inline-block;
+            img {
+                border-radius: 100%;
+            }
+        }
+    }
+
+    &__text {
+        font-weight: $weight-normal;
+        font-size: $size-5;
+        color: #919AA3;
+        padding-left: 55px;
+        padding-top: 11px;
+        max-width: 252px;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 25px;
+
+        @include tablet {
+            position: absolute;
+            left: 25px;
+            top: 100%;
+            max-width: 330px;
+            padding-left: 107px;
+            left: 33%;
+            margin-top: 23px;
+            margin-left: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url('../img/svg/curve-arrow.svg') no-repeat left top / cover;
+            width: 45px;
+            height: 38px;
+
+            @include tablet {
+                width: 94px;
+                height: 45px;
+            }
+        }
+
+        span {
+            color: #000;
+        }
+    }
+}

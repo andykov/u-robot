@@ -1,0 +1,42 @@
+.case {
+    position: relative;
+    margin-bottom: 74px;
+    min-height: 345px;
+    
+    @include tablet {
+        margin-bottom: 64px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+
+    &__inner {
+        padding: (($panel-padding / 2) - 10) 15px;
+        max-width: 900px;
+        box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
+        border-radius: 10px;
+        margin: 0 auto;
+
+        @include mobile {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        @include tablet {
+            padding: ($panel-padding / 2) (($panel-padding / 2) + 20);
+        }
+    }
+
+    &__item {
+        outline: none;
+        color: #9B9B9B;
+    }
+
+    &__desc {
+        font-size: $size-3;
+    }
+}

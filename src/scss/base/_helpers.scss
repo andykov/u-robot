@@ -778,29 +778,107 @@ textarea {
   background-color: $green;
 }
 
+.video-intro {
+  position: relative;
+  height: 320px;
 
+  @include tablet {
+    height: 500px;
+  }
+}
 
-//.icon {
-//  align-items: center;
-//  display: inline-flex;
-//  justify-content: center;
-//  margin: 0;
-//  height: 24px;
-//  width: 24px;
-//  fill: currentColor;
-//  transform: translate3d(0,0,0);
-//  & > * {
-//    //height: 100%;
-//    //width: 100%;
-//    display: block;
-//    pointer-events: none;
-//  }
-//
-//  svg {
-//    transition: inherit;
-//    width: 1em;
-//    height: 1em;
-//    max-height: 100%;
-//    max-width: 100%;
-//  }
-//}
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 0;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #919AA3;
+  width: 34px;
+  height: 34px;
+  border-radius: $radius-rounded;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.2;
+
+  @include tablet {
+      display: block;
+  }
+
+  &:focus {
+      outline: none;
+  }
+
+  &:hover {
+      opacity: 0.7;
+  }
+  
+  &::before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      border-style: solid;
+      border-width: 1px;
+      transform: rotate(45deg);
+  }
+}
+.slide-prev {
+  left: 0;
+
+  &:before {
+      border-color: transparent transparent #919AA3 #919AA3;
+      left: 3px;
+  }
+}
+.slide-next {
+  right: 0;
+
+  &:before {
+      border-color: #919AA3 #919AA3 transparent transparent;
+      right: 3px;
+  }
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -64px;
+  left: 0;
+  right: 0;
+
+  li {
+      padding: 10px;
+  }
+  button {
+      display: block;
+      background: transparent;
+      border: 1px solid #919AA3;
+      padding: 0;
+      width: 14px;
+      height: 14px;
+      border-radius: 14px;
+      font-size: 0;
+      cursor: pointer;
+      &:hover {
+          background-color: #2DE691;
+          border-color: #2DE691;
+      }
+  }
+
+  .slick-active {
+      button {
+          background-color: #2DE691;
+          border-color: #2DE691;
+      }
+  }
+}

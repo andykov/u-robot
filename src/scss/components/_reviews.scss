@@ -1,0 +1,104 @@
+.reviews {
+    padding-top: 30px;
+
+    &__inner {
+        position: relative;
+        min-height: 270px;
+
+        @include mobile {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    }
+
+    &__slider {
+        background-color: #fff;
+        max-width: 900px;
+        margin: 0 auto 72px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
+    }
+
+    &__item {
+        
+    }
+
+    &__item-inner {
+        @media screen and (min-width: 720px) {
+            display: flex;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        flex: none;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        min-height: 270px;
+
+        @media screen and (min-width: 720px) {
+            width: (340 / 900 * 100%);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 0;
+            // width: auto;
+            height: auto;
+        }
+
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: (270 / 340) * 100%;
+        }
+    }
+
+    &__body {
+        padding: 20px 10px;
+
+        @media screen and (min-width: 720px) {
+            padding: 30px 60px;
+        }
+    }
+
+    &__author {
+        font-size: $size-2;
+        font-weight: $weight-medium;
+        line-height: 37px;
+        margin-bottom: 10px;
+    }
+
+    &__post,
+    &__text {
+        font-size: $size-3;
+        line-height: 24px;
+    }
+
+    &__post {
+        color: #919AA3;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        color: #171C34;
+    }
+}
+
+.reviews-nav {
+    max-width: 900px;
+    margin: 0 auto;
+
+    &__item {
+        img {
+            margin: auto;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
