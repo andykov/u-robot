@@ -19,7 +19,8 @@
         }
 
         .notice {
-            margin-bottom: 22px;
+            margin-bottom: 34px;
+            color: #32325C;
         }
 
         .buttons {
@@ -37,22 +38,29 @@
             flex: 1px;
             box-shadow: none;
 
+            @include mobile {
+                width: 100%;
+                flex: auto;
+            }
+
             small {
                 display: block;
                 font-size: $size-6;
+                letter-spacing: normal;
+                padding-top: 4px;
             }
         }
     }
     
     &__item {
         background-color: #fff;
-        padding: 49px 0 40px;
+        padding: 49px 20px 40px;
         box-shadow: 0px 0px 0px 0px rgba(10, 138, 255, 0), 0px 7px 0px rgba(83, 83, 83, 0);
         transition: box-shadow 0.175s ease-in-out;
 
-        @include tablet {
-            padding-left: 20px;
-            padding-right: 20px;
+        @include mobile {
+            margin-left: -20px;
+            margin-right: -20px;
         }
 
         &:hover {

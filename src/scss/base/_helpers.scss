@@ -788,6 +788,7 @@ textarea {
 }
 
 .slick-arrow {
+  visibility: hidden;
   position: absolute;
   top: 50%;
   font-size: 0;
@@ -804,7 +805,7 @@ textarea {
   transition: opacity 0.2;
 
   @include tablet {
-      display: block;
+    visibility: visible;
   }
 
   &:focus {
@@ -880,5 +881,33 @@ textarea {
           background-color: #2DE691;
           border-color: #2DE691;
       }
+  }
+}
+
+.notice {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+
+  
+  @include mobile {
+    font-size: $size-5;
+  }
+
+  &::before {
+    content: '!';
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 30px;
+    height: 30px;
+    background: #2DE691;
+    box-shadow: 0px 0px 10px rgba(45, 230, 145, 0.6);
+    line-height: 30px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 10px;
   }
 }
