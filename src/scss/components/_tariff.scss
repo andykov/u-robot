@@ -3,7 +3,7 @@
     padding-top: 3.75rem;
 
     &__head {
-        text-align: center;
+        // text-align: center;
 
         &-title {
             font-weight: $weight-normal;
@@ -54,18 +54,36 @@
     
     &__item {
         background-color: #fff;
-        padding: 49px 20px 40px;
+        padding: 49px 0 40px;
         box-shadow: 0px 0px 0px 0px rgba(10, 138, 255, 0), 0px 7px 0px rgba(83, 83, 83, 0);
         transition: box-shadow 0.175s ease-in-out;
 
-        @include mobile {
-            margin-left: -20px;
-            margin-right: -20px;
-        }
+        // @include mobile {
+        //     margin-left: -20px;
+        //     margin-right: -20px;
+        // }
 
         &:hover {
             box-shadow: 0px -3px 0px 0px rgba(10, 138, 255, 1), 0px 7px 24px rgba(83, 83, 83, 0.1);
             cursor: default;
+        }
+
+        &--soon {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 101px;
+                height: 101px;
+                background: url(../img/svg/soon.svg) no-repeat;
+            }
+            .tariff__head,
+            .tariff__price {
+                opacity: 0.3;
+                pointer-events: none;
+            }
         }
     }
 
@@ -77,18 +95,18 @@
 
     &__price {
         color: $blue;
-        font-size: 22px;
+        font-size: 20px;
         line-height: 32px;
         margin-bottom: 40px;
 
         span {
             display: none;
             margin-right: 10px;
-            font-size: 62px;
+            font-size: 48px;
             line-height: 64px;
 
             &.show {
-                display: block;
+                display: inline-block;
             }
         }
     }

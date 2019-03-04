@@ -10,6 +10,7 @@ $panel-padding: 80px !default;
   margin: 0 -20px;
 
   &.is-top-outside {
+    position: relative;
     
     @include tablet {
       margin-top: -35px;

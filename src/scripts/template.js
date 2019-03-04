@@ -27,7 +27,7 @@ $(function() {
             duration: 700,
             easing: 'swing',
             step: function() {
-                $('.tariff__price span.show').css({
+                $('.tariff__price:not(.tariff__price--free) span.show').css({
                     "-webkit-filter": "blur("+this.blurRadius+"px)",
                     "filter": "blur("+this.blurRadius+"px)"
                 });
@@ -37,9 +37,9 @@ $(function() {
             duration: 700,
             easing: 'swing',
             step: function() {
-                $('.tariff__price span').removeClass('show');
-                $('.tariff__price span[data-period-'+ period + ']').addClass('show');
-                $('.tariff__price span.show').css({
+                $('.tariff__price:not(.tariff__price--free) span').removeClass('show');
+                $('.tariff__price:not(.tariff__price--free) span[data-period-'+ period + ']').addClass('show');
+                $('.tariff__price:not(.tariff__price--free) span.show').css({
                     "-webkit-filter": "blur("+this.blurRadius+"px)",
                     "filter": "blur("+this.blurRadius+"px)"
                 });
@@ -112,12 +112,3 @@ $(function() {
     AOS.init(); // init scroll animation only after sliders
     
 });
-
-
-
-
-
-
-
-
-
