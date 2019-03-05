@@ -111,22 +111,22 @@ $screen-lg-max: ($screen-xl - 1);
       position: absolute;
 
       &:nth-child(1) {
-        animation:balloon1 6s ease-in-out infinite;
+        animation:balloon1 18s ease-in-out infinite;
       }
       &:nth-child(2) {
-        animation:balloon2 6s ease-in-out infinite;
+        animation:balloon2 18s ease-in-out infinite;
       }
       &:nth-child(3) {
-        animation:balloon4 6s ease-in-out infinite;
+        animation:balloon4 18s ease-in-out infinite;
       }
       &:nth-child(4) {
-        animation:balloon1 5s ease-in-out infinite;
+        animation:balloon1 15s ease-in-out infinite;
       }
       &:nth-child(5) {
-        animation:balloon3 5s ease-in-out infinite;
+        animation:balloon3 15s ease-in-out infinite;
       }
       &:nth-child(6) {
-        animation:balloon2 4s ease-in-out infinite;
+        animation:balloon2 12s ease-in-out infinite;
       }
 
       img {

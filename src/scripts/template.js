@@ -58,45 +58,46 @@ $(function() {
 
     if ($('.js-reviews').length) {
         $('.js-reviews').slick({
-            nextArrow:$('.reviews .slide-next'),
-            prevArrow:$('.reviews .slide-prev'),
+            arrows: false,
+            // nextArrow:$('.reviews .slide-next'),
+            // prevArrow:$('.reviews .slide-prev'),
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: false,
-            asNavFor: '.js-reviews-nav',
+            // asNavFor: '.js-reviews-nav',
         });
     }
 
-    if ($('.js-reviews-nav').length) {
-        $('.js-reviews-nav').on('init', function(event, slick){
-            var current = $(slick.$slides.get(slick.currentSlide));
-            var currentImg = current.find('img[data-src-color]');
-            var srcColor = currentImg.attr('data-src-color');
-            var srcGrey = $(currentImg[0]).attr('src');
-            $(currentImg[0]).attr('src', srcColor);
-            $(currentImg[0]).attr('data-src-color', srcGrey);
-        });
+    // if ($('.js-reviews-nav').length) {
+    //     $('.js-reviews-nav').on('init', function(event, slick){
+    //         var current = $(slick.$slides.get(slick.currentSlide));
+    //         var currentImg = current.find('img[data-src-color]');
+    //         var srcColor = currentImg.attr('data-src-color');
+    //         var srcGrey = $(currentImg[0]).attr('src');
+    //         $(currentImg[0]).attr('src', srcColor);
+    //         $(currentImg[0]).attr('data-src-color', srcGrey);
+    //     });
         
-        $('.js-reviews-nav').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            asNavFor: '.js-reviews',
-            dots: false,
-            arrows: false,
-            focusOnSelect: true
-        });
+    //     $('.js-reviews-nav').slick({
+    //         slidesToShow: 4,
+    //         slidesToScroll: 1,
+    //         asNavFor: '.js-reviews',
+    //         dots: false,
+    //         arrows: false,
+    //         focusOnSelect: true
+    //     });
 
-        $('.js-reviews-nav').on('afterChange', function(event, slick, currentSlide){
-            var current = $(slick.$slides.get(slick.currentSlide));
-            var currentImg = current.find('img[data-src-color]');
-            var srcColor = currentImg.attr('data-src-color');
-            var srcGrey = $(currentImg[0]).attr('src');
-            $(slick.$slides).find('img').attr('src', srcGrey);
-            $(slick.$slides).find('img').attr('data-src-color', srcColor);
-            $(currentImg[0]).attr('src', srcColor);
-            $(currentImg[0]).attr('data-src-color', srcGrey);
-        });
-    }
+    //     $('.js-reviews-nav').on('afterChange', function(event, slick, currentSlide){
+    //         var current = $(slick.$slides.get(slick.currentSlide));
+    //         var currentImg = current.find('img[data-src-color]');
+    //         var srcColor = currentImg.attr('data-src-color');
+    //         var srcGrey = $(currentImg[0]).attr('src');
+    //         $(slick.$slides).find('img').attr('src', srcGrey);
+    //         $(slick.$slides).find('img').attr('data-src-color', srcColor);
+    //         $(currentImg[0]).attr('src', srcColor);
+    //         $(currentImg[0]).attr('data-src-color', srcGrey);
+    //     });
+    // }
 
     // accordion faq
     $('.js-faq').on('click', function(e) {

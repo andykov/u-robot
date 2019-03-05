@@ -62,7 +62,7 @@
         padding: 20px 10px;
 
         @media screen and (min-width: 720px) {
-            padding: 30px 60px;
+            padding: 30px 35px;
         }
     }
 
@@ -73,18 +73,16 @@
         margin-bottom: 10px;
     }
 
-    &__post,
-    &__text {
+    &__post {
         font-size: $size-3;
         line-height: 24px;
-    }
-
-    &__post {
         color: #919AA3;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     &__text {
+        font-size: $size-5;
+        line-height: 17px;
         color: #171C34;
     }
 }

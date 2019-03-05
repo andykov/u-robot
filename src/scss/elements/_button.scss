@@ -54,7 +54,7 @@ $button-static-border-color: $grey-lighter !default;
   padding-left: (2.143em / 1.5);
   padding-right: (2.143em / 1.5);
   min-width: 140px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   @include tablet {
     padding-left: 2.143em;
     padding-right: 2.143em;
@@ -85,7 +85,7 @@ $button-static-border-color: $grey-lighter !default;
   padding-top: $button-padding-vertical;
   text-align: center;
   white-space: nowrap;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-weight: $weight-medium;
   strong {
     color: inherit;

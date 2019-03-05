@@ -6,6 +6,7 @@
         margin-bottom: 20px;
         .button {
             letter-spacing: normal;
+            pointer-events: none;
 
             &:not(:last-child) {
                 margin-right: 10px;

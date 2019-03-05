@@ -1,9 +1,14 @@
 .tariff {
     border-top: 2px solid #F5F5F5;
-    padding-top: 3.75rem;
+    
+
+    &.section {
+        padding-top: 2.8125rem;
+        padding-bottom: 4.0625rem;
+    }
 
     &__head {
-        // text-align: center;
+        text-align: center;
 
         &-title {
             font-weight: $weight-normal;
@@ -11,6 +16,7 @@
             margin-bottom: 30px;
             line-height: 35px;
             color: #32325C;
+            
 
             @include tablet {
                 font-size: 40px;
@@ -24,7 +30,7 @@
         }
 
         .buttons {
-            padding-bottom: 53px;
+            padding-bottom: 72px;
             max-width: 900px;
             width: 100%;
             margin: 0 auto;
@@ -37,6 +43,7 @@
             font-weight: $weight-normal;
             flex: 1px;
             box-shadow: none;
+            height: 3em;
 
             @include mobile {
                 width: 100%;
@@ -54,9 +61,10 @@
     
     &__item {
         background-color: #fff;
-        padding: 49px 0 40px;
+        padding: 40px 15px 15px;
         box-shadow: 0px 0px 0px 0px rgba(10, 138, 255, 0), 0px 7px 0px rgba(83, 83, 83, 0);
         transition: box-shadow 0.175s ease-in-out;
+        border: 1px solid #F5F5F5;
 
         // @include mobile {
         //     margin-left: -20px;
@@ -80,6 +88,7 @@
                 background: url(../img/svg/soon.svg) no-repeat;
             }
             .tariff__head,
+            .tariff__options,
             .tariff__price {
                 opacity: 0.3;
                 pointer-events: none;
@@ -90,14 +99,14 @@
     &__name {
         font-size: 32px;
         line-height: 1;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     &__price {
         color: $blue;
         font-size: 20px;
         line-height: 32px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
 
         span {
             display: none;
@@ -112,11 +121,12 @@
     }
 
     &__options {
-        font-size: $size-4;
-        margin-bottom: 40px;
+        font-size: rem-calc(13px);
+        line-height: 16px;
+        margin-bottom: 30px;
 
         li {
-            margin-bottom: 20px;
+            margin-bottom: 13px;
         }
     }
 }
