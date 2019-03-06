@@ -1642,12 +1642,61 @@ textarea {
 .is-bg-green {
   background-color: #2de690; }
 
-.video-intro {
+.video-container {
   position: relative;
-  height: 320px; }
+  height: 320px;
+  overflow: hidden; }
+  .video-container > div {
+    position: relative;
+    height: 100%;
+    background-color: #F5F5F5; }
+  .video-container .btn {
+    display: block;
+    height: 100%; }
+    .video-container .btn:before {
+      transition: all .2s linear;
+      opacity: .5;
+      filter: alpha(opacity=50);
+      content: " ";
+      position: absolute;
+      width: 83px;
+      height: 83px;
+      background-image: url(../img/svg/play-button.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 50%;
+      left: 50%;
+      margin-left: -50px;
+      margin-top: -35px;
+      cursor: pointer;
+      z-index: 3; }
+    .video-container .btn:hover:before {
+      opacity: 1;
+      filter: alpha(opacity=100); }
+    .video-container .btn.hide:before {
+      opacity: 0 !important;
+      filter: alpha(opacity=0) !important;
+      transform: scale(2);
+      transition: all 1.2s; }
+  .video-container img.hide {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+    transform: scale(1.5);
+    transition: all 1.2s; }
   @media screen and (min-width: 992px), print {
-    .video-intro {
+    .video-container {
       height: 500px; } }
+
+.video-container iframe,
+.video-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  object-fit: cover;
+  transition: all .2s linear; }
 
 .slick-arrow {
   visibility: hidden;
@@ -6995,12 +7044,18 @@ a.tag:hover {
     .header .container,
     .header .columns {
       height: 100%; } }
+  @media screen and (min-width: 2000px) {
+    .header {
+      height: 900px; } }
   .header .bubble {
     background: url("../img/svg/bg-bubble.svg") no-repeat -58px -20px/cover;
     position: absolute;
     transform-origin: left top;
     width: 100%;
     height: 100%; }
+    @media screen and (min-width: 2000px) {
+      .header .bubble {
+        background-position: -58px 90%; } }
     .header .bubble img {
       max-width: none;
       height: 100%; }

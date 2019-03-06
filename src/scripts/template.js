@@ -1,4 +1,7 @@
 $(function() {
+
+    $('.js-load-video').joldLoadVideo();
+    
     
     // price blur effect
     function blurElement(element, size) {

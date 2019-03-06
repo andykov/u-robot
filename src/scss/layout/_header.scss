@@ -25,6 +25,9 @@ $screen-lg-max: ($screen-xl - 1);
       height: 100%;
     }
   }
+  @media screen and (min-width: 2000px) {
+    height: 900px;
+  }
 
   .bubble {
     background: url('../img/svg/bg-bubble.svg') no-repeat -58px -20px / cover;
@@ -32,6 +35,10 @@ $screen-lg-max: ($screen-xl - 1);
     transform-origin: left top;
     width: 100%;
     height: 100%;
+
+    @media screen and (min-width: 2000px) {
+      background-position: -58px 90%;
+    }
 
     img {
       max-width: none;

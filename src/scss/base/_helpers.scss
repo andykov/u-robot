@@ -778,13 +778,79 @@ textarea {
   background-color: $green;
 }
 
-.video-intro {
+.video-container {
   position: relative;
   height: 320px;
+  overflow: hidden;
+
+  > div {
+    position: relative;
+    height: 100%;
+    background-color: #F5F5F5;
+  }
+
+  .btn {
+    display: block;
+    height: 100%;
+
+    &:before {
+      transition: all .2s linear;
+      opacity: .5;
+      filter: alpha(opacity=50);
+      content: " ";
+      position: absolute;
+      width: 83px;
+      height: 83px;
+      background-image: url(../img/svg/play-button.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 50%;
+      left: 50%;
+      margin-left: -50px;
+      margin-top: -35px;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    &:hover:before {
+      opacity: 1;
+      filter: alpha(opacity=100);
+    }
+
+    &.hide:before {
+      opacity: 0 !important;
+      filter: alpha(opacity=0) !important;
+      transform: scale(2);
+      transition: all 1.2s;
+    }
+  }
+
+  img {
+    &.hide {
+      opacity: 0 !important;
+      filter: alpha(opacity=0) !important;
+      transform: scale(1.5);
+      transition: all 1.2s;
+    }
+  }
+
+  
 
   @include tablet {
     height: 500px;
   }
+}
+
+.video-container iframe,
+.video-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  object-fit: cover;
+  transition: all .2s linear;
 }
 
 .slick-arrow {
