@@ -11,34 +11,37 @@ block content
 			.header__logo
 				a.logo(href="index.html")
 					img(src="img/logo.svg", alt="u-robot.ru")
-			.columns.is-vcentered
-				.column.is-8-tablet
-					.header__intro
-						h1.header__title(data-aos="fade-up" data-aos-delay="500") Создай свой сайт во всех мессенджерах за 20 минут
-						.header__text(data-aos="fade-up" data-aos-delay="600")
-							| U-robot — мобильная платформа для работы с клиентами,
-							| по созданию сайтов и платежных онлайн сервисов
-							| в мессенджерах и социальных сетях. 
-						a.button.is-link(href="/" data-aos="fade-up" data-aos-delay="650") Попробуй
-						.tag-wrap(data-aos="fade-up" data-aos-delay="700")
-							span.tag.is-success Free
-							span.tag-text.has-text-grey 10 дней бесплатно
-				.column.is-4-tablet.is-hidden-touch
-					.header__img
-						img(src="img/design/app-mockup.png", data-aos="fade-left" data-aos-delay="500" alt="image robot")
-						.header__img-icons
-							span(data-aos="zoom-in" data-aos-delay="800" style="top: 38%; left: 20%; z-index: -1;")
-								img(src="img/svg/facebook.svg", width="80" height="80" alt="")
-							span(data-aos="zoom-in" data-aos-delay="950" style="top: 10%; left: 67%;")
-								img(src="img/svg/telegram.svg", width="140" height="140" alt="")
-							span(data-aos="zoom-in" data-aos-delay="900" style="top: 62%; left: 16%;")
-								img(src="img/svg/vk.svg", width="116" height="116" alt="")
-							span(data-aos="zoom-in" data-aos-delay="900" style="bottom: 3%; left: 53.5%;")
-								img(src="img/svg/instagram.svg", width="116" height="116" alt="")
-							span(data-aos="zoom-in" data-aos-delay="850" style="top: 66.5%; left: 70%;")
-								img(src="img/svg/whatsapp.svg", width="80" height="80" alt="")
-							span(data-aos="zoom-in" data-aos-delay="900" style="top: 49%; right: 3%;")
-								img(src="img/svg/viber.svg", width="116" height="116" alt="")
+			.header__hero
+				.columns.is-vcentered
+					.column.is-8-tablet
+						.header__intro
+							h1.header__title(data-aos="fade-up" data-aos-delay="500") Создай свой сайт во всех мессенджерах за 20 минут
+							.header__text(data-aos="fade-up" data-aos-delay="600")
+								| U-robot — мобильная платформа для работы с клиентами,
+								| по созданию сайтов и платежных онлайн сервисов
+								| в мессенджерах и социальных сетях.
+							.header__action
+								a.button.is-link(href="/" data-aos="fade-up" data-aos-delay="650") Попробуй
+								.tag-wrap(data-aos="fade-up" data-aos-delay="700")
+									span.tag.is-success Free
+									span.tag-text.has-text-grey 10 дней бесплатно
+					.column.is-4-tablet
+						.header__img-wrap
+							.header__img(data-aos="fade-left" data-aos-delay="500")
+								img(src="img/design/app-mockup.png", alt="image robot")
+							.header__img-icons
+								span(data-aos="zoom-in" data-aos-delay="800" style="top: 40%; left: -14%; z-index: -1;")
+									img(src="img/svg/facebook.svg", width="80" height="80" alt="")
+								span(data-aos="zoom-in" data-aos-delay="950" style="top: 12%; right: -19%;")
+									img(src="img/svg/telegram.svg", width="140" height="140" alt="")
+								span(data-aos="zoom-in" data-aos-delay="900" style="top: 64%; left: -21%;")
+									img(src="img/svg/vk.svg", width="116" height="116" alt="")
+								span(data-aos="zoom-in" data-aos-delay="900" style="bottom: -2%; right: 11%;")
+									img(src="img/svg/instagram.svg", width="116" height="116" alt="")
+								span(data-aos="zoom-in" data-aos-delay="850" style="top: 69.5%; right: -12%;")
+									img(src="img/svg/whatsapp.svg", width="80" height="80" alt="")
+								span(data-aos="zoom-in" data-aos-delay="900" style="top: 40%; right: -41%;")
+									img(src="img/svg/viber.svg", width="116" height="116" alt="")
 
 
 	section.section.is-pt-0
@@ -46,26 +49,29 @@ block content
 			.container
 				.columns
 					.column
-						.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
+						.card.card--mobile(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
 							.card__image
 								span.icon.is-large.is-fill.is-rounded
 									img(src="img/svg/icon-1.svg", alt="")
-							h3.card__title Выгодные тарифы
-							.card__body Доступные цены для разного уровня бизнеса и приятные скидки до 50%
+							.card__body
+								h3.card__title Выгодные тарифы
+								| Доступные цены для разного уровня бизнеса и приятные скидки до 50%
 					.column
-						.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100")
+						.card.card--mobile(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100")
 							.card__image
 								span.icon.is-large.is-fill.is-rounded
 									img(src="img/svg/icon-2.svg", alt="")
-							h3.card__title Максимум возможностей
-							.card__body Поддержка всех мессенджеров и популярных соц. сетей
+							.card__body 
+								h3.card__title Максимум возможностей
+								| Поддержка всех мессенджеров и популярных соц. сетей
 					.column
-						.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150")
+						.card.card--mobile(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150")
 							.card__image
 								span.icon.is-large.is-fill.is-rounded
 									img(src="img/svg/icon-3.svg", alt="")
-							h3.card__title Быстрый старт
-							.card__body Настроить и запустить можно в течении 20 минут
+							.card__body
+								h3.card__title Быстрый старт
+								| Настроить и запустить можно в течении 20 минут
 	
 	section.section.is-paddingless
 		| <div class="video-container">
@@ -111,8 +117,8 @@ block content
 	section.section.is-bg-gray
 		.container
 			h2 Автоматизация процессов — для любого сферы
-			.card-list
-				.columns.is-multiline.is-tablet
+			.card-list.slide-mobile
+				.js-slide-mobile.columns.is-multiline.is-tablet
 					.column.is-4
 						.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
 							.card__image
@@ -209,7 +215,7 @@ block content
 							span.tag.is-white Free
 							span.tag-text 10 дней бесплатно
 					
-	section.section
+	section.section.is-hidden-mobile
 		.container
 			.case
 				button.slide-prev
@@ -272,27 +278,27 @@ block content
 										| Когда я узнал что многие текущие задачи в нашем клубе и у меня лично как у тренера можно автоматизировать и упростит для клиентов, я решил что обязательно должен это внедрить.
 										br
 										| Я тренирую около 20 человек и с каждым из них я общаюсь в разных мессенджерах, они записываются на тренировку и оплачивают их онлайн. Теперь все автоматизированно и я не буду тратить свое время.
-						.reviews__item
-							.reviews__item-inner
-								.reviews__img(style="background-image: url(img/content/review-1-img.png);")
-								.reviews__body
-									.reviews__author Дрозов Алексей
-									.reviews__post Директор депортамента поддержки «Google»
-									.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
-						.reviews__item
-							.reviews__item-inner
-								.reviews__img(style="background-image: url(img/content/review-1-img.png);")
-								.reviews__body
-									.reviews__author Дрозов Алексей
-									.reviews__post Директор депортамента поддержки «Google»
-									.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
-						.reviews__item
-							.reviews__item-inner
-								.reviews__img(style="background-image: url(img/content/review-1-img.png);")
-								.reviews__body
-									.reviews__author Дрозов Алексей
-									.reviews__post Директор депортамента поддержки «Google»
-									.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
+						//- .reviews__item
+						//- 	.reviews__item-inner
+						//- 		.reviews__img(style="background-image: url(img/content/review-1-img.png);")
+						//- 		.reviews__body
+						//- 			.reviews__author Дрозов Алексей
+						//- 			.reviews__post Директор депортамента поддержки «Google»
+						//- 			.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
+						//- .reviews__item
+						//- 	.reviews__item-inner
+						//- 		.reviews__img(style="background-image: url(img/content/review-1-img.png);")
+						//- 		.reviews__body
+						//- 			.reviews__author Дрозов Алексей
+						//- 			.reviews__post Директор депортамента поддержки «Google»
+						//- 			.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
+						//- .reviews__item
+						//- 	.reviews__item-inner
+						//- 		.reviews__img(style="background-image: url(img/content/review-1-img.png);")
+						//- 		.reviews__body
+						//- 			.reviews__author Дрозов Алексей
+						//- 			.reviews__post Директор депортамента поддержки «Google»
+						//- 			.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
 				//- .js-reviews-nav.reviews-nav
 				//- 	.reviews-nav__item
 				//- 		img(src="img/svg/google-grey.svg", data-src-color="img/svg/google-color.svg" alt="")
@@ -340,8 +346,8 @@ block content
 					button.button.is-large.js-tariff-period.is-link(data-period="12" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="200")
 						| 12 месяцев
 						small скидка 30%
-			.columns
-				.column.is-3-desktop
+			.js-slide-tariff.columns
+				.column.is-3-tablet
 					.tariff__item(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-offset="0" data-aos-duration="300" data-aos-delay="0")
 						.tariff__head
 							.tariff__name U-Free
@@ -358,7 +364,7 @@ block content
 							li
 								| Отпарвляйте сообщения сразу всем контактам во все мессенджеры
 						a.button(href="").is-link.is-outlined.is-large.is-fullwidth Начать
-				.column.is-3-desktop
+				.column.is-3-tablet
 					.tariff__item(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-offset="0" data-aos-duration="300" data-aos-delay="0")
 						.tariff__head
 							.tariff__name U-Air
@@ -406,7 +412,7 @@ block content
 								br
 								| 1с: склад
 						a.button(href="").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
-				.column.is-3-desktop
+				.column.is-3-tablet
 					.tariff__item.tariff__item--soon(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-offset="0" data-aos-duration="300" data-aos-delay="100")
 						.tariff__head
 							.tariff__name U-Classic
@@ -454,7 +460,7 @@ block content
 								br
 								| 1с: склад
 						a.button(href="").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
-				.column.is-3-desktop
+				.column.is-3-tablet
 					.tariff__item.tariff__item--soon(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-offset="0" data-aos-duration="300" data-aos-delay="150")
 						.tariff__head
 							.tariff__name U-PRO 

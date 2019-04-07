@@ -59,6 +59,48 @@ $(function() {
         });
     }
 
+    if ($('.js-slide-mobile').length && $(window).width() <= 992) {
+        $('.js-slide-mobile').slick({
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            // responsive: [
+            //     {
+            //       breakpoint: 992,
+            //       settings: {
+            //         slidesToShow: 1,
+            //         slidesToScroll: 1,
+            //         arrows: false,
+            //         dots: true
+            //       }
+            //     },
+            // ]
+        });
+    }
+
+    if ($('.js-slide-tariff').length && $(window).width() <= 992) {
+        $('.js-slide-tariff').slick({
+            infinite: false,
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            variableWidth: true
+            // responsive: [
+            //     {
+            //       breakpoint: 992,
+            //       settings: {
+            //         slidesToShow: 1,
+            //         slidesToScroll: 1,
+            //         arrows: false,
+            //         dots: true
+            //       }
+            //     },
+            // ]
+        });
+    }
+
     if ($('.js-reviews').length) {
         $('.js-reviews').slick({
             arrows: false,

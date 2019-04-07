@@ -2,20 +2,25 @@ $panel-padding: 80px !default;
 
 .panel {
   background: #FFFFFF;
-  border-radius: 4px;
-  padding: ($panel-padding / 4) (($panel-padding / 4));
+  padding: ($panel-padding / 2) (($panel-padding / 4));
   box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
   border-radius: 10px;
   max-width: 1260px;
-  margin: 0 -20px;
+  margin: 0;
+  
 
   &.is-top-outside {
     position: relative;
-    
+    margin-top: -15px;
+    @include mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
     @include tablet {
       margin-top: -35px;
     }
   }
+  
 
   @include tablet {
     padding: ($panel-padding / 2) (($panel-padding / 2) + 20);
