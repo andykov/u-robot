@@ -1646,10 +1646,6 @@ textarea {
   position: relative;
   height: 320px;
   overflow: hidden; }
-  .video-container > div {
-    position: relative;
-    height: 100%;
-    background-color: #F5F5F5; }
   .video-container .btn {
     display: block;
     height: 100%; }
@@ -1686,8 +1682,28 @@ textarea {
   @media screen and (min-width: 992px), print {
     .video-container {
       height: 500px; } }
+  .video-container .plyr {
+    height: 100%; }
+  .video-container .plyr__control,
+  .video-container .plyr__controls {
+    display: none !important; }
+  .video-container .plyr__video-embed {
+    padding-bottom: 0 !important;
+    height: 100%; }
 
-.video-container iframe,
+.video-container .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .2s linear; }
+  .video-container .btn.hide {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+    transform: scale(1.5);
+    transition: all 1.2s; }
+
 .video-container img {
   position: absolute;
   top: 0;

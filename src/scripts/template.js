@@ -1,6 +1,19 @@
 $(function() {
 
-    $('.js-load-video').joldLoadVideo();
+    // $('.js-load-video').joldLoadVideo();
+    var player = new Plyr('#player');
+    // player.source = {
+    //     ratio: '128:25'
+    // };
+
+    var blockVideo = document.querySelector('.video-container a');
+
+    blockVideo.addEventListener('click', function (event) {
+        event.preventDefault();
+        this.classList.add("hide");
+        player.play();
+        $('.plyr__controls').show();
+    });
     
     
     // price blur effect

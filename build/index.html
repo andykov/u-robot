@@ -6,6 +6,7 @@
     <title>Главная страница
     </title>
     <link rel="stylesheet" href="css-new/libs/aos.css">
+    <link rel="stylesheet" href="css-new/libs/plyr.css">
     <link rel="stylesheet" href="css-new/libs/slick.css">
     <link rel="stylesheet" href="css-new/global.css">
   </head>
@@ -73,10 +74,8 @@
         </div>
       </section>
       <section class="section is-paddingless">
-        <div class="video-container">
-        	<div class="js-load-video" data-service="youtube" data-placeholder="" data-embed="vxAI5ZerjtA">
-        		<a href="#" class="btn" title="Play Video"></a>
-        	</div>
+        <div class="video-container"><a class="btn" href="#"><img src="https://img.youtube.com/vi/vxAI5ZerjtA/maxresdefault.jpg" alt=""></a>
+          <div class="plyr__video-embed" id="player" data-plyr-provider="youtube" data-plyr-embed-id="vxAI5ZerjtA"></div>
         </div>
       </section>
       <section class="section about">
@@ -358,7 +357,7 @@
       </div>
     </footer><!-- scripts -->
     <script src="js/libs/jquery-3.3.1.min.js"></script>
-    <script src="js/libs/jquery.jold.js-load-video.min.js"></script>
+    <script src="js/libs/plyr.min.js"></script>
     <script src="js/libs/aos.js"></script>
     <script src="js/libs/slick.min.js"></script>
     <script defer src="js/template.js"></script>

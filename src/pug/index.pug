@@ -74,11 +74,28 @@ block content
 								| Настроить и запустить можно в течении 20 минут
 	
 	section.section.is-paddingless
-		| <div class="video-container">
-		| 	<div class="js-load-video" data-service="youtube" data-placeholder="" data-embed="vxAI5ZerjtA">
-		| 		<a href="#" class="btn" title="Play Video"></a>
-		| 	</div>
-		| </div>
+		.video-container
+			a(href="#").btn
+				img(src="https://img.youtube.com/vi/vxAI5ZerjtA/maxresdefault.jpg", alt="")
+			#player.plyr__video-embed(data-plyr-provider="youtube" data-plyr-embed-id="vxAI5ZerjtA")
+				
+		//- | <div class="video-container">
+		//- | 	<div class="js-load-video" data-service="youtube" data-placeholder="" data-embed="vxAI5ZerjtA">
+		//- | 		<a href="#" class="btn" title="Play Video"></a>
+		//- | 	</div>
+		//- | </div>
+
+		//- | <div class="plyr__video-embed" id="player">
+		//- | 		<iframe
+		//- | 				src="https://www.youtube.com/embed/vxAI5ZerjtA?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+		//- | 				allowfullscreen
+		//- | 				allowtransparency
+		//- | 				allow="autoplay"
+		//- | 		></iframe>
+		//- | </div>
+		//- | <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="vxAI5ZerjtA"></div>
+			
+		
 	section.section.about
 		.container
 			.columns.is-desktop
