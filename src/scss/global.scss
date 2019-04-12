@@ -31,3 +31,64 @@
 
 $aos-distance: 500px;
 
+.canvas-wrap {
+  position: relative;
+}
+canvas{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+.canvas-wrap {
+  
+  background: url('../img/design/bg-win.png') no-repeat center / cover;
+
+  .container {
+    
+  }
+}
+.win {
+  height: 500px;
+  width: 100%;
+  max-width: 934px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include tablet {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    margin-right: 120px;
+    @include mobile {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    &-label {
+      font-size: 18px;
+      font-weight: 500;
+      color: #FFE000;
+      margin-bottom: 15px;
+      @include tablet {
+        margin-bottom: 5px;
+      }
+    }
+    &-title {
+      font-size: 32px;
+      font-weight: 500;
+      color: #fff;
+      line-height: (58 / 48);
+      @include tablet {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
