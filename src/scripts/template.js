@@ -6,14 +6,16 @@ $(function() {
     //     ratio: '128:25'
     // };
 
-    var blockVideo = document.querySelector('.video-container a');
+    if ($('.video-container').length) {
+        var blockVideo = document.querySelector('.video-container a');
 
-    blockVideo.addEventListener('click', function (event) {
-        event.preventDefault();
-        this.classList.add("hide");
-        player.play();
-        $('.plyr__controls').show();
-    });
+        blockVideo.addEventListener('click', function (event) {
+            event.preventDefault();
+            this.classList.add("hide");
+            player.play();
+            $('.plyr__controls').show();
+        });
+    }
     
     
     // price blur effect

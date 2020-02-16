@@ -14,7 +14,6 @@ $screen-lg-max: ($screen-xl - 1);
 .header {
   position: relative;
   
-
   @media screen and (max-width: 767px) {
     .bubble,
     .container {
@@ -32,7 +31,7 @@ $screen-lg-max: ($screen-xl - 1);
     }
   }
 
-  .is-bubble {
+  &.is-bubble {
     background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
     box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7);
 

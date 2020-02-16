@@ -1,11 +1,11 @@
 extends templates/main
 	
 block title
-	| Робот
+	| Главная страница
 
 block content
 
-	header.header.is-bubble
+	header.header
 		.bubble(data-aos="zoom-in-right" data-aos-duration="700")
 		.container
 			.header__bar
@@ -58,7 +58,7 @@ block content
 		.container
 			h2 Кому нужно нанимать Робота
 			.card-list.slide-mobile
-				.js-slide-mobile.columns.is-multiline.is-tablet
+				.columns.is-multiline.is-tablet
 					.column.is-4
 						.card(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
 							.card__image
@@ -101,46 +101,6 @@ block content
 									img(src="img/svg/icon-8.svg", alt="")
 							h3.card__title Ваш бизнес
 							.card__body Для всех сфер, которые сталкиваются с потерей клиентов, привлечению новых и работой уже с существующей клиентской базой
-			.has-text-centered
-				a.button.is-link(href="https://docs.google.com/forms/d/1T6Dezqa7URN4IYcG1Q4RmeYXEAVgEhvMjTbuGx_6Hfc/edit" data-aos="fade-up" data-aos-delay="650") Получиь робота для самых смелых
-			//- .panel.discount
-			//- 	h2.has-text-left-mobile Скидка !{'<span class="has-text-green">50%</span>'} на месяц пользования, !{'<br>'}5-ти первым представителям разных ниши
-			//- 	.columns.is-gapless.is-mobile.is-multiline
-			//- 		.column.is-6-mobile
-			//- 			.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="0")
-			//- 				.discount-item__cat Рекламные !{'<br>'}агенства
-			//- 				.discount-item__count 4
-			//- 		.column.is-6-mobile
-			//- 			.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="100")
-			//- 				.discount-item__cat Салон !{'<br>'}красоты
-			//- 				.discount-item__count 1
-			//- 		.column.is-6-mobile
-			//- 			.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="150")
-			//- 				.discount-item__cat Кафе и !{'<br>'}рестораны
-			//- 				.discount-item__count 1
-			//- 		.column.is-6-mobile
-			//- 			.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="200")
-			//- 				.discount-item__cat Интернет !{'<br>'}магазины
-			//- 				.discount-item__count 1
-			//- 		.column.is-6-mobile
-			//- 			.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="250")
-			//- 				.discount-item__cat Фитнес !{'<br>'}клубы
-			//- 				.discount-item__count 1
-			//- 		.column.is-6-mobile
-			//- 			.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="300")
-			//- 				.discount-item__cat IT !{'<br>'}компании
-			//- 				.discount-item__count 1
-			//- 		.column.is-full-mobile
-			//- 			.discount-item(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="350")
-			//- 				.discount-item__cat Преподователи !{'<br>'}и репетиторы
-			//- 				.discount-item__count 1
-				
-			//- 	a.button(href="#" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300").is-link.is-medium Хочу U-Robot для свой ниши
-			//- div.discount__special
-			//- 	p
-			//- 		| Если не нашли свою нишу, 
-			//- 		a(href="") напишите нам 
-			//- 		| и мы подберем для вас индивидуальное решение
 
 	section.capability
 		.container
@@ -163,8 +123,7 @@ block content
 			span.capability__item.capability__item--7 
 				| Он знает Ваш продукт 
 				br
-				| не хуже вас
-				
+				| не хуже вас			
 	section.section.tariff
 		.container
 			.tariff__head
@@ -343,7 +302,6 @@ block content
 								br
 								| 1с: склад
 						a.button(href="https://docs.google.com/forms/d/1T6Dezqa7URN4IYcG1Q4RmeYXEAVgEhvMjTbuGx_6Hfc/edit").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
-
 	section.form-question.is-bg-gray
 		.container
 			.columns
@@ -375,7 +333,6 @@ block content
 					.has-text-centered
 						| Остались вопросы?
 						| Спросите нашего робота, он уже давно за вами наблюдает
-
 block footer
 	footer.footer
 		.container
