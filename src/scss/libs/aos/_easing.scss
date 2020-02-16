@@ -34,7 +34,9 @@ $aos-easing: (
   @each $key, $val in $aos-easing {
     body[data-aos-easing="#{$key}"] &,
     &[data-aos][data-aos-easing="#{$key}"] {
-      transition-timing-function: $val;
+      -webkit-transition-timing-function: $val;
+       -o-transition-timing-function: $val;
+          transition-timing-function: $val;
     }
   }
 }

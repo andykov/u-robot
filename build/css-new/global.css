@@ -1646,10 +1646,6 @@ textarea {
   position: relative;
   height: 320px;
   overflow: hidden; }
-  .video-container > div {
-    position: relative;
-    height: 100%;
-    background-color: #F5F5F5; }
   .video-container .btn {
     display: block;
     height: 100%; }
@@ -1686,8 +1682,28 @@ textarea {
   @media screen and (min-width: 992px), print {
     .video-container {
       height: 500px; } }
+  .video-container .plyr {
+    height: 100%; }
+  .video-container .plyr__control,
+  .video-container .plyr__controls {
+    display: none !important; }
+  .video-container .plyr__video-embed {
+    padding-bottom: 0 !important;
+    height: 100%; }
 
-.video-container iframe,
+.video-container .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .2s linear; }
+  .video-container .btn.hide {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+    transform: scale(1.5);
+    transition: all 1.2s; }
+
 .video-container img {
   position: absolute;
   top: 0;
@@ -7056,3 +7072,50 @@ a.tag:hover {
     line-height: 21px;
     color: #9c9c9c;
     margin-bottom: 15px; }
+
+.canvas-wrap {
+  position: relative; }
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
+.canvas-wrap {
+  background: url("../img/design/bg-win.png") no-repeat center/cover; }
+
+.win {
+  height: 500px;
+  width: 100%;
+  max-width: 934px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  @media screen and (min-width: 992px), print {
+    .win {
+      align-items: center;
+      flex-direction: row; } }
+  .win__img {
+    flex-shrink: 0;
+    margin-right: 120px; }
+    @media screen and (max-width: 991px) {
+      .win__img {
+        margin-bottom: 15px; } }
+  .win__text-label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFE000;
+    margin-bottom: 15px; }
+    @media screen and (min-width: 992px), print {
+      .win__text-label {
+        margin-bottom: 5px; } }
+  .win__text-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.20833; }
+    @media screen and (min-width: 992px), print {
+      .win__text-title {
+        font-size: 48px; } }

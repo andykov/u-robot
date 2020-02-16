@@ -783,11 +783,11 @@ textarea {
   height: 320px;
   overflow: hidden;
 
-  > div {
-    position: relative;
-    height: 100%;
-    background-color: #F5F5F5;
-  }
+  // > div {
+  //   position: relative;
+  //   height: 100%;
+  //   background-color: #F5F5F5;
+  // }
 
   .btn {
     display: block;
@@ -839,9 +839,36 @@ textarea {
   @include tablet {
     height: 500px;
   }
+  .plyr {
+    height: 100%;
+  }
+  .plyr__control,
+  .plyr__controls {
+    display: none !important;
+  }
+  .plyr__video-embed {
+    padding-bottom: 0 !important;
+    height: 100%;
+  }
 }
+.video-container .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .2s linear;
 
-.video-container iframe,
+
+
+  &.hide {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+    transform: scale(1.5);
+    transition: all 1.2s;
+  }
+}
+// .video-container iframe,
 .video-container img {
   position: absolute;
   top: 0;
