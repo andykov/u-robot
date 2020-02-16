@@ -13,8 +13,7 @@ $screen-lg-max: ($screen-xl - 1);
 
 .header {
   position: relative;
-  background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
-  box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7);
+  
 
   @media screen and (max-width: 767px) {
     .bubble,
@@ -33,39 +32,56 @@ $screen-lg-max: ($screen-xl - 1);
     }
   }
 
-  @include tablet {
-    height: 100vh;
-  }
-  @include touch {
-    .container,
-    .columns {
-      height: 100%;
-    }
-  }
-  @media screen and (min-width: 2000px) {
-    height: 900px;
-  }
+  .is-bubble {
+    background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
+    box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7);
 
-  .bubble {
-    background: url('../img/svg/bg-bubble.svg') no-repeat -58px -20px / cover;
-    position: absolute;
-    transform-origin: left top;
-    width: 100%;
-    height: 100%;
+    @include tablet {
+      height: 100vh;
+    }
+    @include touch {
+      .container,
+      .columns {
+        height: 100%;
+      }
+    }
 
     @media screen and (min-width: 2000px) {
-      background-position: -58px 90%;
+      height: 900px;
     }
-
-    @include mobile {
-      background-size: 390% 103%;
-      background-position: center top;
-    }
-
-    img {
-      max-width: none;
+  
+    .bubble {
+      background: url('../img/svg/bg-bubble.svg') no-repeat -58px -20px / cover;
+      position: absolute;
+      transform-origin: left top;
+      width: 100%;
       height: 100%;
+  
+      @media screen and (min-width: 2000px) {
+        background-position: -58px 90%;
+      }
+  
+      @include mobile {
+        background-size: 390% 103%;
+        background-position: center top;
+      }
+  
+      img {
+        max-width: none;
+        height: 100%;
+      }
     }
+  }
+  
+  &__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
   }
 
   &__hero {
@@ -76,10 +92,11 @@ $screen-lg-max: ($screen-xl - 1);
   }
   
   &__intro {
-    
+      
     @include tablet {
-      max-width: 650px;
+      max-width: 700px;
     }
+
     @include mobile {
       // padding-bottom: 100px;
     }
@@ -93,8 +110,8 @@ $screen-lg-max: ($screen-xl - 1);
   }
 
   &__logo {
-    margin-right: 20px;
-    margin-bottom: -22px;
+    // margin-right: 20px;
+    // margin-bottom: -22px;
     width: 270px;
     padding-top: 30px;
 

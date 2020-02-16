@@ -1,7 +1,7 @@
 extends templates/main
 	
 block title
-	| Главная страница
+	| Робот
 
 block content
 
@@ -54,90 +54,9 @@ block content
 								span(data-aos="zoom-in" data-aos-delay="900" style="top: 40%; right: -41%;")
 									img(src="img/svg/viber.svg", width="116" height="116" alt="")
 
-
-	section.section.is-pt-0
-		.panel.is-top-outside
-			.container
-				.columns
-					.column
-						.card.card--mobile(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
-							.card__image
-								span.icon.is-large.is-fill.is-rounded
-									img(src="img/svg/icon-1.svg", alt="")
-							.card__body
-								h3.card__title Выгодные тарифы
-								| Доступные цены для разного уровня бизнеса и приятные скидки до 50%
-					.column
-						.card.card--mobile(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="100")
-							.card__image
-								span.icon.is-large.is-fill.is-rounded
-									img(src="img/svg/icon-2.svg", alt="")
-							.card__body 
-								h3.card__title Максимум возможностей
-								| Поддержка всех мессенджеров и популярных соц. сетей
-					.column
-						.card.card--mobile(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="150")
-							.card__image
-								span.icon.is-large.is-fill.is-rounded
-									img(src="img/svg/icon-3.svg", alt="")
-							.card__body
-								h3.card__title Быстрый старт
-								| Настроить и запустить можно в течении 20 минут
-	
-	section.is-paddingless.canvas-wrap
-		.container
-			.win
-				.win__img
-					img(src="img/logo_forum.png")
-				.win__text
-					.win__text-label KAZAN EXPO
-					.win__text-title Победители Российского венчурного форума 2019
-	
-	section.section.is-paddingless
-		| <div class="video-container">
-		| 	<div class="js-load-video" data-service="youtube" data-placeholder="" data-embed="vxAI5ZerjtA">
-		| 		<a href="#" class="btn" title="Play Video"></a>
-		| 	</div>
-		| </div>
-	
-	section.section.about
-		.container
-			.columns.is-desktop
-				.column.is-6.is-hidden-touch
-					img(src="img/content/screen2.png", alt="" class="about_img" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="200")
-				.column.is-6
-					.about_text
-						h2 Личный сайт во всех мессенджерах и соц. сетях
-						p.is-size-3.has-text-grey Теперь презентовать услуги и рассказать о себе - намного проще. Установи приложение U-robot и создай свой персональный сайт, используя простой алгоритм действий.
-						.integration-social
-							ul.integration-social__list
-								li
-									span.icon.is-medium(data-aos="fade-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
-										img(src="img/svg/telegram.svg", alt="telegram")
-								li
-									span.icon.is-medium(data-aos="fade-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
-										img(src="img/svg/viber.svg", alt="viber")
-								li
-									span.icon.is-medium(data-aos="fade-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
-										img(src="img/svg/whatsapp.svg", alt="whatsapp")
-								li
-									span.icon.is-medium(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="200" data-aos-delay="0")
-										img(src="img/svg/messenger.svg", alt="messenger")
-								li
-									span.icon.is-medium(data-aos="fade-right" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
-										img(src="img/svg/vk.svg", alt="vkontakte")
-								li
-									span.icon.is-medium(data-aos="fade-right" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
-										img(src="img/svg/instagram.svg", alt="instagram")
-								li
-									span.icon.is-medium(data-aos="fade-right" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0")
-										img(src="img/svg/facebook.svg", alt="facebook")
-							div.integration-social__text(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="300" data-aos-delay="0") Выбери мессенжер который !{'<br>'} тебе удобен и посмотри как это !{'<span>'}работает прямо сейчас!!{'</span>'}
-
-	
 	section.section.is-bg-gray
 		.container
-			h2 Автоматизация процессов — для любого сферы
+			h2 Кому нужно нанимать Робота
 			.card-list.slide-mobile
 				.js-slide-mobile.columns.is-multiline.is-tablet
 					.column.is-4
@@ -182,6 +101,8 @@ block content
 									img(src="img/svg/icon-8.svg", alt="")
 							h3.card__title Ваш бизнес
 							.card__body Для всех сфер, которые сталкиваются с потерей клиентов, привлечению новых и работой уже с существующей клиентской базой
+			.has-text-centered
+				a.button.is-link(href="https://docs.google.com/forms/d/1T6Dezqa7URN4IYcG1Q4RmeYXEAVgEhvMjTbuGx_6Hfc/edit" data-aos="fade-up" data-aos-delay="650") Получиь робота для самых смелых
 			//- .panel.discount
 			//- 	h2.has-text-left-mobile Скидка !{'<span class="has-text-green">50%</span>'} на месяц пользования, !{'<br>'}5-ти первым представителям разных ниши
 			//- 	.columns.is-gapless.is-mobile.is-multiline
@@ -221,159 +142,33 @@ block content
 			//- 		a(href="") напишите нам 
 			//- 		| и мы подберем для вас индивидуальное решение
 
-	section.section.trial.is-bg-green
+	section.capability
 		.container
-			.columns.is-gapless
-				.column.is-5.is-hidden-mobile
-					.trial__img(data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-offset="150" data-aos-duration="300" data-aos-delay="0")
-						img(src="img/design/app-calendar-crop.png", alt="")
-				.column.is-7
-					.trial__text
-						h2(data-aos="fade-up" data-aos-offset="0" data-aos-delay="100") 10 дней абсолютно бесплатно
-						p(data-aos="fade-up" data-aos-offset="0" data-aos-delay="150") Попробуй инструмент бесплатно в своем бизнесе:  если за 10 дней ты не увидишь пользы, просто отменяй подписку 
-						a.button.is-white.is-size-3(href="https://docs.google.com/forms/d/1T6Dezqa7URN4IYcG1Q4RmeYXEAVgEhvMjTbuGx_6Hfc/edit" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200") Попробуй
-						.tag-wrap(data-aos="fade-up" data-aos-offset="0" data-aos-delay="250")
-							span.tag.is-white Free
-							span.tag-text 10 дней бесплатно
-					
-	section.section.is-hidden-mobile
-		.container
-			.case
-				button.slide-prev
-				button.slide-next
-				.js-case.case__inner
-					.case__item
-						.case__top
-							img(src="img/content/case-store77.png", alt="")
-							a.is-hidden-mobile(href="www.store77.net") www.store77.net
-						h2 Интернет-магазин электронных товаров
-						.case__desc
-							p Мы давно думали о продаже товаров через мессенджеры, но не могли найти подходящий инструмент, в котором можно было бы оплачивать товары, заказывать доставку или самовывоз в определенное время, и который мог бы работать сразу во всех мессенджерах.
-							p Надеемся что с приходом U-robot наш бизнес сможет не только радовать наших существующих клиентов, но и увеличит продажи в автоматическом режиме, а это - существенная экономия на персонале.
-					.case__item
-						.case__top
-							img(src="img/content/case-store77.png", alt="")
-							a.is-hidden-mobile(href="www.store77.net") www.store77.net
-						h2 Интернет-магазин электронных товаров
-						.case__desc
-							p После внедрения U-Robota, штат менеждеров сократился на 40%, теперь большинство вопросов клиентов обрабатывается в автоматическом режиме.
-							p Еще мы создали STORE77 в социальных сетях (VK и FB), интегрировали онлайн оплату и теперь пользователь может покупать любые товары из нашего ассортимента не покидая свою страницу.
-			
-	section.section.devices
-		.container
-			.columns
-				.column.is-5.is-offset-1
-					.devices__toggle
-						a(href="javascript:void(0);").button.is-small.js-devices-mobile.is-success Мобильное приложение
-						a(href="javascript:void(0);").button.is-small.js-devices-desktop Веб версия
-						
-					h2 
-						| Контролируйте бизнес 
-						br
-						| на любых устройствах
-					.devices__desc
-						p В веб-версии продукта разработан полноценный личный кабинет, в котором вы можете настраивать инструмент, аналитику и просматривать статистику.
-					a.devices__action.button.is-white(href="https://docs.google.com/forms/d/1T6Dezqa7URN4IYcG1Q4RmeYXEAVgEhvMjTbuGx_6Hfc/edit" data-aos="fade-up" data-aos-duration="300" data-aos-delay="0") Попробуй
-					.tag-wrap(data-aos="fade-up" data-aos-duration="300" data-aos-delay="30")
-						span.tag.is-light Free
-						span.tag-text.has-text-grey 10 дней бесплатно
-				.column.is-6
-					.devices__img
-						img(src="img/content/macbook.png", alt="macbook.png" data-aos="flip-up" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices__img-desktop
-						img(src="img/content/iPhone.png", alt="iPhone.png" data-aos="flip-left" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0").devices__img-mobile
-	
-	section.section
-		.container
-			.reviews
-				.reviews__inner
-					//- button.slide-prev
-					//- button.slide-next
-					.js-reviews.reviews__slider
-						.reviews__item
-							.reviews__item-inner
-								.reviews__img(style="background-image: url(img/content/review-author-photo.jpg);")
-								.reviews__body
-									.reviews__author Вячеслав Горбенко
-									.reviews__post Личный тренер/ совладелец фитнес клуба RoadToTheDream
-									.reviews__text 
-										| Когда я узнал что многие текущие задачи в нашем клубе и у меня лично как у тренера можно автоматизировать и упростит для клиентов, я решил что обязательно должен это внедрить.
-										br
-										| Я тренирую около 20 человек и с каждым из них я общаюсь в разных мессенджерах, они записываются на тренировку и оплачивают их онлайн. Теперь все автоматизированно и я не буду тратить свое время.
-						//- .reviews__item
-						//- 	.reviews__item-inner
-						//- 		.reviews__img(style="background-image: url(img/content/review-1-img.png);")
-						//- 		.reviews__body
-						//- 			.reviews__author Дрозов Алексей
-						//- 			.reviews__post Директор депортамента поддержки «Google»
-						//- 			.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
-						//- .reviews__item
-						//- 	.reviews__item-inner
-						//- 		.reviews__img(style="background-image: url(img/content/review-1-img.png);")
-						//- 		.reviews__body
-						//- 			.reviews__author Дрозов Алексей
-						//- 			.reviews__post Директор депортамента поддержки «Google»
-						//- 			.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
-						//- .reviews__item
-						//- 	.reviews__item-inner
-						//- 		.reviews__img(style="background-image: url(img/content/review-1-img.png);")
-						//- 		.reviews__body
-						//- 			.reviews__author Дрозов Алексей
-						//- 			.reviews__post Директор депортамента поддержки «Google»
-						//- 			.reviews__text После внедрения U-Robot количество звонков в офисным сотрудником сокатилось на 38%. Мы собрали частые вопросы и теперь робот если понимает что с таким вопросом уже сталкивался консультирует пользователей.
-				//- .js-reviews-nav.reviews-nav
-				//- 	.reviews-nav__item
-				//- 		img(src="img/svg/google-grey.svg", data-src-color="img/svg/google-color.svg" alt="")
-				//- 	.reviews-nav__item
-				//- 		img(src="img/svg/google-grey.svg", data-src-color="img/svg/google-color.svg" alt="")
-				//- 	.reviews-nav__item
-				//- 		img(src="img/svg/google-grey.svg", data-src-color="img/svg/google-color.svg" alt="")
-				//- 	.reviews-nav__item
-				//- 		img(src="img/svg/google-grey.svg", data-src-color="img/svg/google-color.svg" alt="")
-
-			.clients
-				h2 Наши клиенты
-				.clients__list
-					.columns.is-multiline.is-mobile.is-vcentered.has-text-centered
-						.column.is-6-mobile.is-3-tablet
-							img(src="img/content/clients/mygadget.png", alt="")
-						.column.is-6-mobile.is-3-tablet
-							img(src="img/content/clients/store77.png", alt="")
-						.column.is-6-mobile.is-3-tablet
-							img(src="img/content/clients/roaddream.png", alt="")
-						.column.is-6-mobile.is-3-tablet
-							img(src="img/content/clients/marfa.png", alt="")
-						.column.is-6-mobile.is-3-tablet
-							img(src="img/content/clients/support.png", alt="")
-						.column.is-6-mobile.is-3-tablet
-							img(src="img/content/clients/regra.png", alt="")
-						.column.is-6-mobile.is-3-tablet
-							img(src="img/content/clients/dufa.png", alt="")
-						.column.is-6-mobile.is-3-tablet
-							img(src="img/content/clients/salad.png", alt="")
-	section.section.news
-		.container
-			h2.news__title Новости проекта
-			.js-slide-news.columns
-				.column.is-4-tablet
-					.news__item
-						.news__date April 28, 2015
-						.news__title Architecture Gets a Little Sweeter 
-						.news__short Most people can think of two things gum is good for: freshening your breath, and blowing bubbles. Sam Kaplan found a third: crafting colorful models of futuristic architecture
-				.column.is-4-tablet
-					.news__item
-						.news__date April 11, 2015
-						.news__title Let's Explore an Ancient Volcanic Eruption
-						.news__short The photographer used thousands of sticks of Double Mint and 5 Gum like you might use Legos to create the vaguely Brutalist buildings in his series Unwrapped
-				.column.is-4-tablet
-					.news__item
-						.news__date April 19, 2015
-						.news__title The Web Isn’t Dead After All. Google Made Sure of It
-						.news__short Chris Anderson proclaimed the demise of the World Wide Web—that vast, interconnected, wonderfully egalitarian universe of internet pages and services we can visit through browser software
-
+			//- .capability__img
+			img(src="img/design/personage-2.png", alt="").capability__img
+			span.capability__item.capability__item--1 Он знает о вашем бизнесе все!
+			span.capability__item.capability__item--2 
+				| Он отличный
+				br 
+				| Маркетолог
+			span.capability__item.capability__item--3 Он Аналитик
+			span.capability__item.capability__item--4 Он быстро учится
+			span.capability__item.capability__item--5 Он общается с клиентами
+			span.capability__item.capability__item--6 
+				| А вы?
+				br
+				| А вы еще лучше, потому 
+				br
+				| что решили его нанять!
+			span.capability__item.capability__item--7 
+				| Он знает Ваш продукт 
+				br
+				| не хуже вас
+				
 	section.section.tariff
 		.container
 			.tariff__head
-				h2.tariff__head-title Выгодные тарифы для наших пользователей
+				h2.tariff__head-title Сколько стоит робот
 				.notice Попробуйте U-Robot бесплатно: если не понравится, отмените подписку, и платить не придется.
 				.buttons.has-addons.is-centered
 					button.button.is-large.js-tariff-period(data-period="1" data-aos="zoom-in" data-aos-easing="ease-out-sine" data-aos-duration="300" data-aos-delay="0") 1 месяц
@@ -549,41 +344,37 @@ block content
 								| 1с: склад
 						a.button(href="https://docs.google.com/forms/d/1T6Dezqa7URN4IYcG1Q4RmeYXEAVgEhvMjTbuGx_6Hfc/edit").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
 
-	section.section.faq
+	section.form-question.is-bg-gray
 		.container
-			h2.faq__title Часто задаваемые вопросы
-			.columns.is-multiline.is-tablet
-				.column.is-6
-					.faq__item
-						span.faq__question.js-faq Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, obcaecati.
-						.faq__answer 
-							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio fuga cupiditate, inventore iste porro possimus.
-				.column.is-6
-					.faq__item
-						span.faq__question.js-faq Lorem ipsum dolor sit.
-						.faq__answer
-							p Lorem, ipsum.
-				.column.is-6
-					.faq__item
-						span.faq__question.js-faq Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						.faq__answer
-							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laudantium quae vitae vel quos, officiis repellat expedita ea nulla dicta!
-							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse quasi excepturi accusantium temporibus, sapiente quisquam commodi numquam quas nesciunt suscipit nobis dolor et, minima ea possimus officia, amet quam nostrum mollitia corporis ipsa modi necessitatibus.
-				.column.is-6
-					.faq__item
-						span.faq__question.js-faq Lorem ipsum dolor sit amet consectetur.
-						.faq__answer 
-							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facere suscipit sint dicta hic numquam excepturi laborum minima nihil quod? Ad autem suscipit eaque?
-				.column.is-6
-					.faq__item
-						span.faq__question.js-faq Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde!
-						.faq__answer
-							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, doloribus.
-				.column.is-6
-					.faq__item
-						span.faq__question.js-faq Lorem, ipsum dolor sit amet consectetur adipisicing.
-						.faq__answer
-							p Lorem ipsum dolor sit.
+			.columns
+				.column
+					form(action="")
+						|<div class="field">
+						| 	<div class="control">
+						| 		<input class="input" type="text" placeholder="Имя" value="bulma">
+						| 	</div>
+						|</div>
+						|<div class="field">
+						| 	<div class="control">
+						| 		<input class="input is-danger" type="email" placeholder="e-mail" value="hello@">
+						| 	</div>
+						| 	<p class="help is-danger">This email is invalid</p>
+						|</div>
+						|<div class="field">
+						|	<div class="control">
+						|		<textarea class="textarea" placeholder="Сообщение"></textarea>
+						|	</div>
+						|</div>
+						|<div class="field">
+						|	<div class="control">
+						|		<button type="submit" class="button is-link">Отправить</button>
+						|	</div>
+						|</div>
+						
+				.column.has-background-info
+					.has-text-centered
+						| Остались вопросы?
+						| Спросите нашего робота, он уже давно за вами наблюдает
 
 block footer
 	footer.footer

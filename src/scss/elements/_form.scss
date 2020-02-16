@@ -5,11 +5,11 @@
 
 $input-color: $grey-darker !default;
 $input-background-color: $white !default;
-$input-border-color: $grey-lighter !default;
+$input-border-color: rgba(27,27,27, 0.1) !default;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1) !default;
 
 $input-hover-color: $grey-darker !default;
-$input-hover-border-color: $green !default;
+$input-hover-border-color: #3364e1 !default;
 
 $input-focus-color: $grey-darker !default;
 $input-focus-border-color: $green !default;
@@ -57,15 +57,14 @@ $checkradio-top-offset: 0rem !default;
 @mixin input {
   @include control;
   font-size: $size-3;
-  font-weight: $weight-semibold;
+  font-weight: $weight-normal;
   background-color: $input-background-color;
-  //border-color: $input-border-color;
-  border-color: transparent transparent $input-border-color transparent;
-  border-radius: 0;
+  border-color: $input-border-color;
+  border-radius: 4px;
   transition: background-color 0.3s, border-color 0.3s;
   color: $input-color;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: calc(1.15em - 1px);
+  padding-right: calc(1.15em - 1px);
   height: 2.2225em; // добавил
   @include placeholder {
     color: rgba($input-color, 0.3);
@@ -78,15 +77,16 @@ $checkradio-top-offset: 0rem !default;
 
   &:hover,
   &.is-hovered {
-    border-bottom-color: $input-hover-border-color;
+    border-color: $input-hover-border-color;
   }
   &:focus,
   &.is-focused,
   &:active,
   &.is-active {
+    border-color: $input-hover-border-color;
     //border-color: $input-border-color $input-border-color $input-focus-border-color $input-border-color;
-    border-bottom-color: $input-hover-border-color;
-    background-color: $input-focus-background-color;
+    // border-bottom-color: $input-hover-border-color;
+    // background-color: $input-focus-background-color;
     //box-shadow: $input-focus-box-shadow-size $input-focus-box-shadow-color;
   }
   &[disabled] {

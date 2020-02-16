@@ -1,0 +1,70 @@
+extends templates/main
+	
+block title
+	| Робот
+
+block content
+
+	header.header.is-bubble
+		.bubble(data-aos="zoom-in-right" data-aos-duration="700")
+		.container
+			.header__bar
+				.header__logo
+					a.logo(href="index.html")
+						img(src="img/logo.svg", alt="u-robot.ru")
+				.header__nav
+					ul.nav
+						li.nav__item
+							a.nav__link(href="about.html") Робот
+						li.nav__item
+							a.nav__link(href="location.html") Робот в твоем городе
+						li.nav__item
+							a.nav__link(href="#") Создатели
+						li.nav__item
+							a.button.is-link(href="https://docs.google.com/forms/d/1T6Dezqa7URN4IYcG1Q4RmeYXEAVgEhvMjTbuGx_6Hfc/edit" data-aos="fade-down" data-aos-delay="650") Попробовать
+	section.section.map
+		.container
+			.map__title Наш робот не имеет гражданства, поэтому свободен развиваться без ограничений по всему миру, но для этого нам нужны сильные партнеры, которые помогут развиваться проекту в каждой точке земли
+			img(src="img/design/Map.png", alt="")
+
+	section.section.partner
+		.container
+			h2.partner__title Если у Вас есть желание развивать проект U-Robot в своем регионе, давайте обсудим это лично.
+			p.partner__subtitle Пройдите короткий опрос и оставьте свои контактные данные, а наша команда с радостью обсудит возможности такого бизнес-партнерства.
+			form.partner__form
+				|<div class="field">
+				| 	<div class="control">
+				| 		<input class="input" type="text" placeholder="Вопрос" value="Ответ на вопрос">
+				| 	</div>
+				|</div>
+				|<div class="field">
+				| 	<div class="control">
+				| 		<input class="input" type="text" placeholder="Вопрос" value="">
+				| 	</div>
+				|</div>
+				|<div class="field">
+				| 	<div class="control">
+				| 		<input class="input" type="text" placeholder="Вопрос" value="">
+				| 	</div>
+				|</div>
+				|<div class="field">
+				| 	<div class="control">
+				| 		<input class="input" type="text" placeholder="Вопрос" value="">
+				| 	</div>
+				|</div>
+				|<div class="field">
+				|	<div class="control">
+				|		<button type="submit" class="button is-link">Отправить</button>
+				|	</div>
+				|</div>
+
+
+block footer
+	footer.footer
+		.container
+			.footer__logo
+				a(href="/")
+					img(src="img/logo.svg", alt="u-robot.ru")
+			.has-text-grey
+				.footer__text Надежный помощник для вашего бизнеса
+				.footer__copy © 2018, U-Robot

@@ -1,0 +1,16 @@
+.map {
+    background: linear-gradient(317.75deg, #2B53D9 18.65%, #53A0FD 94.13%);
+
+    img {
+        margin-top: 40px;
+    }
+
+    &__title {
+        font-size: $size-2;
+        font-weight: $weight-medium;
+        text-align: center;
+        color: #fff;
+        max-width: 904px;
+        margin: 0 auto;
+    }
+}
