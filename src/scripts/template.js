@@ -162,11 +162,11 @@ $(function() {
     // accordion faq
     $('.js-faq').on('click', function(e) {
         var $this = $(this);
-        
+        $this.parent().toggleClass('active');
         if ($this.next().is(':visible')) {
-            $this.next().slideUp(350);
+            $this.next().slideUp(250);
         } else {
-            $this.next().slideDown(350);
+            $this.next().slideDown(250);
         }
     });
 

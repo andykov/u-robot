@@ -1,20 +1,46 @@
 .capability {
+    &__inner {
+        position: relative;
+    }
+
     &__item {
         display: inline-block;
         background-color: #fff;
         border-radius: 18px;
         box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
         color: #0657FF;
-        padding: 30px;
+        padding: 20px 35px;
         font-size: $size-4;
         font-weight: $weight-medium;
+        position: absolute;
 
-        &--1 {}
-        &--2 {}
-        &--3 {}
-        &--4 {}
-        &--5 {}
-        &--6 {}
-        &--7 {}
+        &--1 {
+            top: 0;
+            left: 38.8%;
+        }
+        &--2 {
+            top: calc(0% + 20px);
+            right: 7.5%;
+        }
+        &--3 {
+            top: 27%;
+            left: 43.5%;
+        }
+        &--4 {
+            top: 27%;
+            left: 73%;
+        }
+        &--5 {
+            top: 50%;
+            left: 38.8%;
+        }
+        &--6 {
+            top: 52%;
+            left: 70%;
+        }
+        &--7 {
+            bottom: 5%;
+            left: 31.5%;
+        }
     }
 }

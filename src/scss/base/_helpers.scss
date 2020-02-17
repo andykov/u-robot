@@ -780,8 +780,14 @@ textarea {
 
 .video-container {
   position: relative;
+  max-width: 1256px;
   height: 320px;
+  margin: 0 auto;
   overflow: hidden;
+
+  @include tablet {
+    height: 474px;
+  }
 
   // > div {
   //   position: relative;
@@ -834,11 +840,6 @@ textarea {
     }
   }
 
-  
-
-  @include tablet {
-    height: 500px;
-  }
   .plyr {
     height: 100%;
   }
