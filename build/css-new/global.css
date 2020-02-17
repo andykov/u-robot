@@ -569,10 +569,11 @@ h2 {
   font-size: 1.5rem;
   font-weight: 500;
   color: #000;
-  line-height: 1; }
+  line-height: 29px; }
   @media screen and (min-width: 992px), print {
     h2 {
-      font-size: 2rem; } }
+      font-size: 2rem;
+      line-height: 38px; } }
   h2 span {
     font-size: 1.313em;
     font-weight: 700; }
@@ -2530,8 +2531,7 @@ a.box:active {
   .button.is-large {
     font-size: 1.125rem;
     font-weight: 500;
-    height: 3.333em;
-    text-transform: uppercase; }
+    height: 3.333em; }
   .button[disabled] {
     background-color: white;
     border-color: whitesmoke;
@@ -3145,7 +3145,7 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
   color: #363636;
   padding-left: calc(1.15em - 1px);
   padding-right: calc(1.15em - 1px);
-  height: 2.2225em;
+  height: 3.333em;
   max-width: 100%;
   width: 100%; }
   .input::-moz-placeholder,
@@ -3316,6 +3316,24 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
   padding-left: 0;
   padding-right: 0; }
 
+.input.is-floating + .floating-label {
+  position: absolute;
+  left: 20px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1.125rem;
+  color: #9B9B9B; }
+
+.input.is-floating:focus + .floating-label, .input.is-floating:not(:placeholder-shown) + .floating-label {
+  font-size: 0.75rem;
+  transform: translateY(-155%);
+  transition: all 0.5s; }
+
+.input.is-floating::placeholder {
+  color: transparent; }
+
 .textarea {
   display: block;
   max-width: 100%;
@@ -3382,7 +3400,7 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
     color: #363636;
     padding-left: calc(1.15em - 1px);
     padding-right: calc(1.15em - 1px);
-    height: 2.2225em;
+    height: 3.333em;
     cursor: pointer;
     display: block;
     font-size: 1.125rem;
@@ -3882,7 +3900,7 @@ Converts a pixel value to matching rem value. *Any* value passed, regardless of 
 .field {
   position: relative; }
   .field:not(:last-child) {
-    margin-bottom: 0.75rem; }
+    margin-bottom: 0.9375rem; }
   .field.has-addons {
     display: flex;
     justify-content: flex-start; }
@@ -5427,9 +5445,19 @@ a.tag:hover {
   .nav__item a.button {
     margin-left: 15px; }
   .nav__link {
-    color: #919AA3; }
+    color: #919AA3;
+    line-height: 24px;
+    display: block; }
     .nav__link:hover, .nav__link.active {
       color: #141414; }
+    .nav__link.active {
+      position: relative; }
+      .nav__link.active::after {
+        content: '';
+        height: 2px;
+        width: 39px;
+        background-color: #2DE691;
+        display: block; }
 
 .status-ride {
   display: block;
@@ -5768,6 +5796,8 @@ a.tag:hover {
   max-width: 900px;
   margin: 0 auto;
   padding-top: 5px; }
+  .clients__head {
+    text-align: center; }
   .clients__list {
     padding-top: 25px; }
 
@@ -5969,6 +5999,9 @@ a.tag:hover {
     color: #fff;
     max-width: 904px;
     margin: 0 auto; }
+    @media screen and (max-width: 991px) {
+      .map__title {
+        font-size: 24px; } }
 
 .canvas-wrap {
   position: relative; }
@@ -6013,6 +6046,54 @@ a.tag:hover {
   @media screen and (min-width: 992px), print {
     .win__text-title {
       font-size: 48px; } }
+
+.partner__head {
+  text-align: center;
+  max-width: 877px;
+  margin: 0 auto; }
+
+.partner__title {
+  padding-bottom: 10px; }
+  @media screen and (max-width: 991px) {
+    .partner__title {
+      font-size: 1.125rem;
+      line-height: 23px; } }
+
+.partner__subtitle {
+  font-size: 22px;
+  line-height: 27px;
+  opacity: 0.54; }
+  @media screen and (max-width: 991px) {
+    .partner__subtitle {
+      font-size: 1rem;
+      line-height: 21px; } }
+
+.partner__form {
+  max-width: 560px;
+  margin: 0 auto;
+  padding-top: 30px; }
+  .partner__form .button {
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto; }
+
+.news__head {
+  text-align: center;
+  margin-bottom: 34px; }
+
+.news__item {
+  text-align: center; }
+
+.news__date, .news__short {
+  font-size: 1rem;
+  line-height: 26px;
+  color: #9B9B9B; }
+
+.news__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-top: 7px; }
 
 .column {
   display: block;
@@ -6927,7 +7008,8 @@ a.tag:hover {
   .header__bar {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding: 30px 0; }
   .header__nav {
     display: flex;
     align-items: center; }
@@ -6944,8 +7026,7 @@ a.tag:hover {
     box-shadow: 0 0 0 1px #fff, 0px 10px 20px rgba(51, 99, 224, 0.3);
     margin-bottom: 30px; }
   .header__logo {
-    width: 270px;
-    padding-top: 30px; }
+    width: 270px; }
     @media screen and (max-width: 991px) {
       .header__logo {
         margin: 0 auto 60px; } }

@@ -17,7 +17,7 @@ block content
 						li.nav__item
 							a.nav__link(href="about.html") Робот
 						li.nav__item
-							a.nav__link(href="location.html") Робот в твоем городе
+							a.nav__link.active(href="location.html") Робот в твоем городе
 						li.nav__item
 							a.button.is-link(href="https://docs.google.com/forms/d/1T6Dezqa7URN4IYcG1Q4RmeYXEAVgEhvMjTbuGx_6Hfc/edit" data-aos="fade-down" data-aos-delay="650") Попробовать
 	section.section.map
@@ -27,17 +27,20 @@ block content
 
 	section.section.partner
 		.container
-			h2.partner__title Если у Вас есть желание развивать проект U-Robot в своем регионе, давайте обсудим это лично.
-			p.partner__subtitle Пройдите короткий опрос и оставьте свои контактные данные, а наша команда с радостью обсудит возможности такого бизнес-партнерства.
+			.partner__head
+				h2.partner__title Если у Вас есть желание развивать проект U-Robot в своем регионе, давайте обсудим это лично.
+				p.partner__subtitle Пройдите короткий опрос и оставьте свои контактные данные, а наша команда с радостью обсудит возможности такого бизнес-партнерства.
 			form.partner__form
 				|<div class="field">
 				| 	<div class="control">
-				| 		<input class="input" type="text" placeholder="Вопрос" value="Ответ на вопрос">
+				| 		<input class="input is-floating" type="text" placeholder="Вопрос" value="">
+				|		<span class="floating-label">Вопрос</span>
 				| 	</div>
 				|</div>
 				|<div class="field">
 				| 	<div class="control">
-				| 		<input class="input" type="text" placeholder="Вопрос" value="">
+				| 		<input class="input is-floating" type="text" placeholder="Вопрос" value="">
+				|		<span class="floating-label">Вопрос</span>
 				| 	</div>
 				|</div>
 				|<div class="field">
@@ -52,7 +55,7 @@ block content
 				|</div>
 				|<div class="field">
 				|	<div class="control">
-				|		<button type="submit" class="button is-link">Отправить</button>
+				|		<button type="submit" class="button is-link is-large is-fullwidth">Отправить</button>
 				|	</div>
 				|</div>
 

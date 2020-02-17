@@ -188,10 +188,11 @@ h2 {
   font-size: 1.5rem;
   font-weight: 500;
   color: #000;
-  line-height: 1;
+  line-height: 29px;
 
   @include tablet {
     font-size: $size-2;
+    line-height: 38px;
   }
 
   span {

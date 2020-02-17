@@ -65,7 +65,7 @@ $checkradio-top-offset: 0rem !default;
   color: $input-color;
   padding-left: calc(1.15em - 1px);
   padding-right: calc(1.15em - 1px);
-  height: 2.2225em; // добавил
+  height: 3.333em; // добавил
   @include placeholder {
     color: rgba($input-color, 0.3);
   }
@@ -156,6 +156,32 @@ $checkradio-top-offset: 0rem !default;
     padding-left: 0;
     padding-right: 0;
   }
+  &.is-floating {
+    & + .floating-label {
+      position: absolute;
+      left: 20px;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: $size-3;
+      color: #9B9B9B;
+    }
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + .floating-label {
+        font-size: $size-6;
+        transform: translateY(-155%);
+        transition: all 0.5s;
+      }
+    }
+    &::placeholder {
+      color: transparent;
+    }
+  }
+  
+  
+  
 }
 
 .textarea {
@@ -662,7 +688,7 @@ $checkradio-top-offset: 0rem !default;
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.9375rem;
   }
   // Modifiers
   &.has-addons {

@@ -24,10 +24,23 @@ $screen-lg-max: ($screen-xl - 1);
 
   &__link {
     color: #919AA3;
+    line-height: 24px;
+    display: block;
 
     &:hover,
     &.active {
       color: #141414;
+    }
+
+    &.active {
+      position: relative;
+      &::after {
+        content: '';
+        height: 2px;
+        width: 39px;
+        background-color: #2DE691;
+        display: block;
+      }
     }
   }
 }

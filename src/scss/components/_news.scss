@@ -1,0 +1,24 @@
+.news {
+    &__head {
+        text-align: center;
+        margin-bottom: 34px;
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__date,
+    &__short {
+        font-size: $size-4;
+        line-height: 26px;
+        color: #9B9B9B;
+    }
+    
+    &__title {
+        font-size: 24px;
+        font-weight: $weight-medium;
+        line-height: 36px;
+        margin-top: 7px;
+    }
+}

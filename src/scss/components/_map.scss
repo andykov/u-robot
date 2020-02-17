@@ -12,5 +12,9 @@
         color: #fff;
         max-width: 904px;
         margin: 0 auto;
+
+        @include mobile {
+            font-size: 24px;
+        }
     }
 }
