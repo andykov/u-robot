@@ -302,36 +302,35 @@ block content
 								| 1с: склад
 						a.button(href="https://docs.google.com/forms/d/1T6Dezqa7URN4IYcG1Q4RmeYXEAVgEhvMjTbuGx_6Hfc/edit").is-link.is-outlined.is-large.is-fullwidth Начать бесплатно
 	section.form-question.is-bg-gray
-		.container
-			.columns
-				.column
-					form(action="")
-						|<div class="field">
-						| 	<div class="control">
-						| 		<input class="input" type="text" placeholder="Имя" value="bulma">
-						| 	</div>
-						|</div>
-						|<div class="field">
-						| 	<div class="control">
-						| 		<input class="input is-danger" type="email" placeholder="e-mail" value="hello@">
-						| 	</div>
-						| 	<p class="help is-danger">This email is invalid</p>
-						|</div>
-						|<div class="field">
-						|	<div class="control">
-						|		<textarea class="textarea" placeholder="Сообщение"></textarea>
-						|	</div>
-						|</div>
-						|<div class="field">
-						|	<div class="control">
-						|		<button type="submit" class="button is-link">Отправить</button>
-						|	</div>
-						|</div>
-						
-				.column.has-background-info
-					.has-text-centered
-						| Остались вопросы?
-						| Спросите нашего робота, он уже давно за вами наблюдает
+		.columns
+			.column
+				form(action="").form-question__form
+					|<div class="field">
+					| 	<div class="control">
+					| 		<input class="input" type="text" placeholder="Имя" value="bulma">
+					| 	</div>
+					|</div>
+					|<div class="field">
+					| 	<div class="control">
+					| 		<input class="input is-danger" type="email" placeholder="e-mail" value="hello@">
+					| 	</div>
+					| 	<p class="help is-danger">This email is invalid</p>
+					|</div>
+					|<div class="field">
+					|	<div class="control">
+					|		<textarea class="textarea" placeholder="Сообщение"></textarea>
+					|	</div>
+					|</div>
+					|<div class="field">
+					|	<div class="control">
+					|		<button type="submit" class="button is-link">Отправить</button>
+					|	</div>
+					|</div>	
+			.column.has-background-info
+				.form-question__text
+					p Остались вопросы?
+					br
+					p Спросите нашего робота, он уже давно за вами наблюдает
 block footer
 	footer.footer
 		.container
