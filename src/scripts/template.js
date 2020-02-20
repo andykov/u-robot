@@ -1,4 +1,9 @@
 $(function() {
+    $('.js-nav-mobile').on('click', function(){
+        $(this).toggleClass('is-active');
+        $(this).parent().find('.nav').toggleClass('is-active');
+        $('html, body').toggleClass('scroll-off');
+    });
 
     // $('.js-load-video').joldLoadVideo();
     var player = new Plyr('#player');

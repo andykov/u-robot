@@ -110,10 +110,14 @@ $screen-lg-max: ($screen-xl - 1);
   }
 
   &__logo {
-    width: 270px;
+    width: 180px;
+    
+    @media screen and (min-width: 375px) {
+      width: 220px;
+    }
 
-    @include mobile {
-      margin: 0 auto 60px;
+    @include tablet {
+      width: 270px;
     }
 
     .logo {

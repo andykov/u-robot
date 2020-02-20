@@ -10,6 +10,13 @@
 @import "base/_all.scss";
 @import "elements/_all.scss";
 
+html, body {
+    &.scroll-off {
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
 // компоненты на весь сайт
 @import "components/_card.scss";
 @import "components/_nav.scss";
