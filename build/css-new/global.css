@@ -5804,37 +5804,92 @@ a.tag:hover {
 .capability__inner {
   position: relative; }
 
+.capability__img {
+  width: calc(500 / 1086 * 100%); }
+  @media screen and (min-width: 568px) {
+    .capability__img {
+      width: calc(380 / 1086 * 100%); } }
+
 .capability__item {
   display: inline-block;
   background-color: #fff;
-  border-radius: 18px;
+  border-radius: 9px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
   color: #0657FF;
-  padding: 20px 35px;
-  font-size: 1rem;
   font-weight: 500;
-  position: absolute; }
+  position: absolute;
+  font-size: 0.5rem;
+  padding: 6px 10px; }
+  @media screen and (min-width: 568px) {
+    .capability__item {
+      font-size: 0.625rem;
+      padding: 10px 15px; } }
+  @media screen and (min-width: 667px) {
+    .capability__item {
+      font-size: 0.75rem;
+      padding: 15px; } }
+  @media screen and (min-width: 768px) {
+    .capability__item {
+      font-size: 0.75rem;
+      padding: 15px 25px;
+      border-radius: 18px; } }
+  @media screen and (min-width: 991px) {
+    .capability__item {
+      font-size: 1rem;
+      padding: 20px 35px; } }
   .capability__item--1 {
-    top: 0;
+    top: -16%;
     left: 38.8%; }
+    @media screen and (min-width: 568px) {
+      .capability__item--1 {
+        top: 0;
+        left: 38.8%; } }
   .capability__item--2 {
-    top: calc(0% + 20px);
-    right: 7.5%; }
+    top: calc(0% + 4px);
+    right: 2.5%; }
+    @media screen and (min-width: 568px) {
+      .capability__item--2 {
+        top: calc(0% + 10px);
+        right: 2.5%; } }
+    @media screen and (min-width: 667px) {
+      .capability__item--2 {
+        top: calc(0% + 10px);
+        right: 2.5%; } }
+    @media screen and (min-width: 768px) {
+      .capability__item--2 {
+        top: calc(0% + 20px);
+        right: 7.5%; } }
   .capability__item--3 {
     top: 27%;
     left: 43.5%; }
+    @media screen and (min-width: 568px) {
+      .capability__item--3 {
+        top: 27%;
+        left: 43.5%; } }
   .capability__item--4 {
     top: 27%;
     left: 73%; }
   .capability__item--5 {
-    top: 50%;
-    left: 38.8%; }
+    top: 51%;
+    left: 33.8%; }
+    @media screen and (min-width: 568px) {
+      .capability__item--5 {
+        top: 50%;
+        left: 38.8%; } }
   .capability__item--6 {
-    top: 52%;
+    top: 71%;
     left: 70%; }
+    @media screen and (min-width: 568px) {
+      .capability__item--6 {
+        top: 52%;
+        left: 70%; } }
   .capability__item--7 {
-    bottom: 5%;
-    left: 31.5%; }
+    bottom: -13%;
+    left: 25.5%; }
+    @media screen and (min-width: 568px) {
+      .capability__item--7 {
+        bottom: 5%;
+        left: 31.5%; } }
 
 .tariff {
   border-top: 2px solid #F5F5F5; }
