@@ -7220,35 +7220,32 @@ html.scroll-off, body.scroll-off {
       height: 20%;
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 20%, white 100%);
       opacity: 0.4; } }
-  .header.is-bubble {
-    background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
-    box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7); }
-    @media screen and (min-width: 992px), print {
-      .header.is-bubble {
-        height: 100vh; } }
-    @media screen and (max-width: 1151px) {
-      .header.is-bubble .container,
-      .header.is-bubble .columns {
-        height: 100%; } }
+  @media screen and (min-width: 992px), print {
+    .header.is-bubble {
+      height: 100vh; } }
+  @media screen and (max-width: 1151px) {
+    .header.is-bubble .container,
+    .header.is-bubble .columns {
+      height: 100%; } }
+  @media screen and (min-width: 2000px) {
+    .header.is-bubble {
+      height: 900px; } }
+  .header.is-bubble .bubble {
+    background: url("../img/svg/bg-bubble.svg") no-repeat -58px -20px/cover;
+    position: absolute;
+    transform-origin: left top;
+    width: 100%;
+    height: 100%; }
     @media screen and (min-width: 2000px) {
-      .header.is-bubble {
-        height: 900px; } }
-    .header.is-bubble .bubble {
-      background: url("../img/svg/bg-bubble.svg") no-repeat -58px -20px/cover;
-      position: absolute;
-      transform-origin: left top;
-      width: 100%;
+      .header.is-bubble .bubble {
+        background-position: -58px 90%; } }
+    @media screen and (max-width: 991px) {
+      .header.is-bubble .bubble {
+        background-size: 390% 103%;
+        background-position: center top; } }
+    .header.is-bubble .bubble img {
+      max-width: none;
       height: 100%; }
-      @media screen and (min-width: 2000px) {
-        .header.is-bubble .bubble {
-          background-position: -58px 90%; } }
-      @media screen and (max-width: 991px) {
-        .header.is-bubble .bubble {
-          background-size: 390% 103%;
-          background-position: center top; } }
-      .header.is-bubble .bubble img {
-        max-width: none;
-        height: 100%; }
   .header__bar {
     display: flex;
     align-items: center;
@@ -7316,7 +7313,6 @@ html.scroll-off, body.scroll-off {
       transform: none !important; } }
   .header__img-wrap {
     position: relative;
-    max-width: 322px;
     width: 100%;
     text-align: center;
     margin-right: 28px;
@@ -7379,17 +7375,28 @@ html.scroll-off, body.scroll-off {
         border-radius: 100%; }
     .header__img-wrap img {
       max-height: 100vh; }
-  .header__img::after {
-    content: '';
-    position: absolute;
-    left: -10%;
-    right: -10%;
-    bottom: -14px;
-    height: 28px;
-    border-radius: 100%;
-    filter: blur(4px);
-    z-index: -1;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 80%); }
+  .header--home {
+    background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
+    box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7); }
+    .header--home .header__img-wrap {
+      max-width: 322px; }
+    .header--home .header__img::after {
+      content: '';
+      position: absolute;
+      left: -10%;
+      right: -10%;
+      bottom: -14px;
+      height: 28px;
+      border-radius: 100%;
+      filter: blur(4px);
+      z-index: -1;
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 80%); }
+  .header--about {
+    background-color: #CAE8FF; }
+    .header--about .header__img-wrap {
+      max-width: 800px; }
+    .header--about.is-bubble .bubble {
+      opacity: 0.6; }
 
 @keyframes balloon1 {
   0%, 100% {

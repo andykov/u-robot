@@ -13,7 +13,7 @@ $screen-lg-max: ($screen-xl - 1);
 
 .header {
   position: relative;
-  
+
   @media screen and (max-width: 767px) {
     .bubble,
     .container {
@@ -32,8 +32,7 @@ $screen-lg-max: ($screen-xl - 1);
   }
 
   &.is-bubble {
-    background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
-    box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7);
+    
 
     @include tablet {
       height: 100vh;
@@ -179,7 +178,7 @@ $screen-lg-max: ($screen-xl - 1);
 
   &__img-wrap {
     position: relative;
-    max-width: 322px;
+    
     width: 100%;
     text-align: center;
     margin-right: 28px;
@@ -263,19 +262,47 @@ $screen-lg-max: ($screen-xl - 1);
   }
 
   &__img {
-    &::after {
-      content: '';
-      position: absolute;
-      left: -10%;
-      right: -10%;
-      bottom: -14px;
-      height: 28px;
-      border-radius: 100%;
-      filter: blur(4px);
-      z-index: -1;
-      background: radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 80%);
+    
+  }
+
+  &--home {
+    background: linear-gradient(334.42deg, #2B53D9 6.85%, #53A0FD 100%);
+    box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7);
+
+    .header__img-wrap {
+      max-width: 322px;
+    }
+
+    .header__img {
+      &::after {
+        content: '';
+        position: absolute;
+        left: -10%;
+        right: -10%;
+        bottom: -14px;
+        height: 28px;
+        border-radius: 100%;
+        filter: blur(4px);
+        z-index: -1;
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 80%);
+      }
     }
   }
+
+  &--about {
+    background-color: #CAE8FF;
+
+    .header__img-wrap {
+      max-width: 800px;
+    }
+    
+    &.is-bubble {
+      .bubble {
+        opacity: 0.6;
+      }
+    }
+  }
+  
 
 }
 @keyframes balloon1 {
