@@ -5354,11 +5354,13 @@ html.scroll-off, body.scroll-off {
   overflow: hidden;
   height: 100%; }
 
-@media screen and (max-width: 991px) {
-  .card-list {
-    padding-bottom: 20px; }
-    .card-list.slide-mobile {
-      padding-top: 20px; } }
+.card-list {
+  margin-bottom: 40px; }
+  @media screen and (max-width: 991px) {
+    .card-list {
+      padding-bottom: 20px; }
+      .card-list.slide-mobile {
+        padding-top: 20px; } }
 
 .card {
   position: relative; }
