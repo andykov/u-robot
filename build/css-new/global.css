@@ -5919,9 +5919,39 @@ html.scroll-off, body.scroll-off {
     padding-top: 25px; }
 
 .capability__inner {
-  position: relative; }
+  position: relative;
+  margin-bottom: 60px; }
+  @media screen and (min-width: 568px) {
+    .capability__inner {
+      margin-bottom: 40px; } }
+  .capability__inner .button {
+    position: absolute;
+    height: 30px;
+    border-radius: 6px;
+    left: 0;
+    right: 0;
+    bottom: -85px;
+    font-size: 10px;
+    height: 40px;
+    max-width: 280px;
+    margin: 0 auto; }
+    @media screen and (min-width: 568px) {
+      .capability__inner .button {
+        bottom: -65px; } }
+    @media screen and (min-width: 667px) {
+      .capability__inner .button {
+        font-size: 12px; } }
+    @media screen and (min-width: 992px), print {
+      .capability__inner .button {
+        font-size: 18px;
+        bottom: 0;
+        left: 56.5%;
+        height: 68px;
+        border-radius: 10px;
+        max-width: 100%; } }
 
 .capability__img {
+  display: block;
   width: calc(500 / 1086 * 100%); }
   @media screen and (min-width: 568px) {
     .capability__img {
@@ -7377,7 +7407,8 @@ html.scroll-off, body.scroll-off {
 
 .form-question__form {
   max-width: 460px;
-  margin: auto 90px auto auto; }
+  margin: auto 90px auto auto;
+  padding: 55px 0; }
 
 .form-question__text {
   max-width: 540px;
