@@ -1,7 +1,6 @@
 .tariff {
     border-top: 2px solid #F5F5F5;
     
-
     &.section {
         padding-top: 2.8125rem;
         padding-bottom: 4.0625rem;
@@ -11,15 +10,14 @@
         text-align: center;
 
         &-title {
-            font-weight: $weight-normal;
-            font-size: 24px;          
+            font-size: 24px;
+            font-weight: $weight-medium;
             margin-bottom: 30px;
             line-height: 35px;
-            color: #32325C;
-            
+            color: #000;
 
             @include tablet {
-                font-size: 40px;
+                font-size: $size-2;
                 line-height: 64px;
             }
         }

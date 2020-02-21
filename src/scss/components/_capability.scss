@@ -40,6 +40,28 @@
         }
     }
 
+    &__text {
+        font-size: $size-6;
+        font-weight: $weight-medium;
+        text-align: center;
+        max-width: 930px;
+        margin: 0 auto;
+        padding: 60px 0 10px;
+
+        @include tablet {
+            font-size: $size-2;
+            padding: 90px 0 10px;
+        }
+
+        p {
+            margin-bottom: 25px;
+
+            @include tablet {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
     &__img {
         display: block;
         width: calc(500 / 1086 * 100%);

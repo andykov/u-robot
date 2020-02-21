@@ -5356,7 +5356,7 @@ html.scroll-off, body.scroll-off {
 
 @media screen and (max-width: 991px) {
   .card-list {
-    padding-bottom: 100px; }
+    padding-bottom: 20px; }
     .card-list.slide-mobile {
       padding-top: 20px; } }
 
@@ -5474,6 +5474,11 @@ html.scroll-off, body.scroll-off {
       margin-left: 25px; }
     .nav__item a.button {
       margin-left: 15px; } }
+  @media screen and (max-width: 767px) {
+    .nav__item a.button {
+      transition: none;
+      transform: none;
+      opacity: 1; } }
   @media screen and (min-width: 992px), print {
     .nav__item {
       margin-left: 50px; } }
@@ -5510,6 +5515,9 @@ html.scroll-off, body.scroll-off {
   color: inherit;
   border: 0;
   background-color: transparent; }
+  @media screen and (min-width: 768px) {
+    .nav-mobile {
+      display: none; } }
   .nav-mobile:focus {
     outline: none; }
 
@@ -5950,6 +5958,23 @@ html.scroll-off, body.scroll-off {
         border-radius: 10px;
         max-width: 100%; } }
 
+.capability__text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 60px 0 10px; }
+  @media screen and (min-width: 992px), print {
+    .capability__text {
+      font-size: 2rem;
+      padding: 90px 0 10px; } }
+  .capability__text p {
+    margin-bottom: 25px; }
+    @media screen and (min-width: 992px), print {
+      .capability__text p {
+        margin-bottom: 50px; } }
+
 .capability__img {
   display: block;
   width: calc(500 / 1086 * 100%); }
@@ -6046,14 +6071,14 @@ html.scroll-off, body.scroll-off {
   .tariff__head {
     text-align: center; }
     .tariff__head-title {
-      font-weight: 400;
       font-size: 24px;
+      font-weight: 500;
       margin-bottom: 30px;
       line-height: 35px;
-      color: #32325C; }
+      color: #000; }
       @media screen and (min-width: 992px), print {
         .tariff__head-title {
-          font-size: 40px;
+          font-size: 2rem;
           line-height: 64px; } }
     .tariff__head .notice {
       margin-bottom: 34px;

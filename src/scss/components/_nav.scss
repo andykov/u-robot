@@ -56,6 +56,14 @@ $screen-lg-max: ($screen-xl - 1);
       }
     }
 
+    @media screen and (max-width: 767px) {
+      a.button {
+        transition: none;
+        transform: none;
+        opacity: 1;
+      }
+    }
+
     @include tablet {
       margin-left: 50px;
     }
@@ -106,6 +114,10 @@ $screen-lg-max: ($screen-xl - 1);
   color: inherit;
   border: 0;
   background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
   
   &:focus {
     outline: none;
