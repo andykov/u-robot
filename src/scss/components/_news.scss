@@ -21,4 +21,52 @@
         line-height: 36px;
         margin-top: 7px;
     }
+
+    .slick-dots {
+        bottom: -34px;
+    }
+
+    .slick-arrow {
+        border: 0;
+
+        &:before {
+            width: 22px;
+            height: 22px;
+            border: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: none;
+        }
+
+        &.slick-prev {
+            
+            @media screen and (min-width: 992px) {
+                left: -10px;
+            }
+
+            @include fullhd {
+                left: -94px;
+            }
+
+            &:before {
+                background-image: url('../img/svg/slide-arrow-left.svg');
+            }
+        }
+
+        &.slick-next {
+
+            @media screen and (min-width: 992px) {
+                right: -10px;
+            }
+
+            @include fullhd {
+                right: -94px;
+            }
+            
+            &:before {
+                background-image: url('../img/svg/slide-arrow-right.svg');
+            }
+        }
+    }
+    // slide-arrow-right.svg
 }

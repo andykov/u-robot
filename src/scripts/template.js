@@ -79,6 +79,27 @@ $(function() {
         });
     }
 
+    // news
+    if ($('.js-slide-news').length) {
+        $('.js-slide-news').slick({
+            arrows: true,
+            dots: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 991,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    dots: true
+                  }
+                },
+            ]
+        });
+    }
+
     if ($('.js-slide-mobile').length && $(window).width() <= 992) {
         $('.js-slide-mobile').slick({
             arrows: false,

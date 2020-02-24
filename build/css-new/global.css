@@ -1877,7 +1877,6 @@ a.box:active {
   padding-right: 1.57143em;
   padding-top: calc(0.375em - 1px);
   text-align: center;
-  white-space: nowrap;
   letter-spacing: 0.5px;
   font-weight: 500; }
   .button strong {
@@ -6338,6 +6337,35 @@ html.scroll-off, body.scroll-off {
   font-weight: 500;
   line-height: 36px;
   margin-top: 7px; }
+
+.news .slick-dots {
+  bottom: -34px; }
+
+.news .slick-arrow {
+  border: 0; }
+  .news .slick-arrow:before {
+    width: 22px;
+    height: 22px;
+    border: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: none; }
+  @media screen and (min-width: 992px) {
+    .news .slick-arrow.slick-prev {
+      left: -10px; } }
+  @media screen and (min-width: 1326px) {
+    .news .slick-arrow.slick-prev {
+      left: -94px; } }
+  .news .slick-arrow.slick-prev:before {
+    background-image: url("../img/svg/slide-arrow-left.svg"); }
+  @media screen and (min-width: 992px) {
+    .news .slick-arrow.slick-next {
+      right: -10px; } }
+  @media screen and (min-width: 1326px) {
+    .news .slick-arrow.slick-next {
+      right: -94px; } }
+  .news .slick-arrow.slick-next:before {
+    background-image: url("../img/svg/slide-arrow-right.svg"); }
 
 .column {
   display: block;
