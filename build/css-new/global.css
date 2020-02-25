@@ -7408,6 +7408,10 @@ html.scroll-off, body.scroll-off {
     box-shadow: inset 0px 2px 6px rgba(44, 81, 191, 0.7); }
     .header--home .header__img-wrap {
       max-width: 322px; }
+      @media screen and (max-width: 991px) {
+        .header--home .header__img-wrap {
+          max-width: 170px;
+          margin: 0 auto; } }
     .header--home .header__img::after {
       content: '';
       position: absolute;

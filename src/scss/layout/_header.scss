@@ -271,6 +271,11 @@ $screen-lg-max: ($screen-xl - 1);
 
     .header__img-wrap {
       max-width: 322px;
+      
+      @media screen and (max-width: 991px) {
+        max-width: 170px;
+        margin: 0 auto;
+      }
     }
 
     .header__img {
